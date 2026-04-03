@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="../static/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div>
+        <h1>{{TITLE}}</h1>
+        <p class="subtitle">{{SUBTITLE}}</p>
+      </div>
+      <div class="badge">Base de conocimiento generada con Python</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="intro-grid">
+        <div class="card">
+          <h2 class="section-title">Cómo usar esta base</h2>
+          <p>{{INTRO_HOW_TO_USE}}</p>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Escalabilidad</h2>
+          <p>{{INTRO_SCALABILITY}}</p>
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="card">
+          <div class="nav-title">Secciones</div>
+          <nav class="nav-list">
+            {{NAV}}
+          </nav>
+        </aside>
+
+        <div class="sections">
+          {{SECTIONS}}
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
