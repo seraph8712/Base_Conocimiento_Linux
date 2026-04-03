@@ -430,6 +430,20 @@
           "date_learned": "2026-04-02",
           "confidence": "high"
         },
+
+        {
+          "command": "git remote add origin https://linkderepositorio",
+          "description": "Para agregar una conexión de mi repositorio local hacia un repositorio remoto",
+          "use_case": "Conectar tu repositorio local con uno remoto",
+          "problem_solved": "Necesitaba conectar mi repositorio local a github",
+          "example": "git remote add origin https://github.com/seraph8712/Base_Conocimiento_Linux",
+          "tags": ["git", "github", "remote"],
+          "level": "basic",
+          "notes": "Tuve que colocar mi usuario y un token asignado en github para hacer la conexión",
+          "related": ["git push -u origin master", "git pull", "git branch -vv"],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
         {
           "command": "git pull",
           "description": "Descarga cambios del remoto y los integra a tu rama local.",
