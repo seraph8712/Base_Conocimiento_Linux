@@ -34,6 +34,24 @@ def render_nav(sections: list[dict]) -> str:
     return "\n".join(links)
 
 
+def collect_all_tags(sections: list[dict]) -> list[str]:
+    tags = set()
+
+    for section in sections:
+        for item in section.get("items", []):
+            for tag in item.get("tags", []):
+                tags.add(tag)
+
+    return sorted(tags)
+
+
+def render_tag_options(tags: list[str]) -> str:
+    options = ['<option value="">Todos los tags</option>']
+    for tag in tags:
+        options.append(f'<option value="{escape(tag)}">{escape(tag)}</option>')
+    return "\n".join(options)
+
+
 def render_tags(tags: list[str]) -> str:
     if not tags:
         return '<span class="muted">Sin tags</span>'
@@ -54,7 +72,24 @@ def render_related(related: list[str]) -> str:
     )
 
 
-def render_items(items: list[dict]) -> str:
+def build_search_text(item: dict, section_title: str) -> str:
+    parts = [
+        item.get("command", ""),
+        item.get("description", ""),
+        item.get("use_case", ""),
+        item.get("problem_solved", ""),
+        item.get("example", ""),
+        item.get("notes", ""),
+        section_title,
+        " ".join(item.get("tags", [])),
+        " ".join(item.get("related", [])),
+        item.get("level", ""),
+        item.get("confidence", ""),
+    ]
+    return " ".join(parts).strip().lower()
+
+
+def render_items(items: list[dict], section_title: str) -> str:
     html_parts = []
 
     for item in items:
@@ -67,12 +102,16 @@ def render_items(items: list[dict]) -> str:
         notes = escape(item.get("notes", ""))
         date_learned = escape(item.get("date_learned", ""))
         confidence = escape(item.get("confidence", ""))
-        tags_html = render_tags(item.get("tags", []))
+        tags = item.get("tags", [])
+        tags_html = render_tags(tags)
         related_html = render_related(item.get("related", []))
+
+        data_tags = " ".join(tags).lower()
+        data_search = escape(build_search_text(item, section_title))
 
         html_parts.append(
             f"""
-            <article class="item">
+            <article class="item searchable-item" data-tags="{escape(data_tags)}" data-search="{data_search}">
               <div class="label">Comando</div>
               <pre><code>{command}</code></pre>
 
@@ -143,7 +182,7 @@ def render_sections(sections: list[dict]) -> str:
     for section in sections:
         section_id = section.get("id") or slugify(section["title"])
         title = escape(section["title"])
-        items_html = render_items(section.get("items", []))
+        items_html = render_items(section.get("items", []), section["title"])
 
         html_parts.append(
             f"""
@@ -169,6 +208,8 @@ def generate_html(data: dict, template: str) -> str:
 
     nav_html = render_nav(sections)
     sections_html = render_sections(sections)
+    all_tags = collect_all_tags(sections)
+    tag_options_html = render_tag_options(all_tags)
 
     html = template
     html = html.replace("{{TITLE}}", title)
@@ -177,6 +218,7 @@ def generate_html(data: dict, template: str) -> str:
     html = html.replace("{{INTRO_SCALABILITY}}", scalability)
     html = html.replace("{{NAV}}", nav_html)
     html = html.replace("{{SECTIONS}}", sections_html)
+    html = html.replace("{{TAG_OPTIONS}}", tag_options_html)
 
     return html
 

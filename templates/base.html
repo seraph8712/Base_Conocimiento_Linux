@@ -30,6 +30,23 @@
         </div>
       </section>
 
+      <section class="card filters-card">
+        <h2 class="section-title">Buscar y filtrar</h2>
+        <div class="filters-grid">
+          <div>
+            <label class="label" for="searchInput">Buscar</label>
+            <input type="text" id="searchInput" placeholder="Escribe comando, problema, tag o descripción..." />
+          </div>
+          <div>
+            <label class="label" for="tagFilter">Filtrar por tag</label>
+            <select id="tagFilter">
+              {{TAG_OPTIONS}}
+            </select>
+          </div>
+        </div>
+        <p id="resultsInfo" class="results-info">Mostrando todas las entradas.</p>
+      </section>
+
       <div class="layout">
         <aside class="card">
           <div class="nav-title">Secciones</div>
@@ -44,5 +61,46 @@
       </div>
     </div>
   </main>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const tagFilter = document.getElementById("tagFilter");
+    const resultsInfo = document.getElementById("resultsInfo");
+    const items = Array.from(document.querySelectorAll(".searchable-item"));
+
+    function updateFilters() {
+      const searchText = searchInput.value.trim().toLowerCase();
+      const selectedTag = tagFilter.value.trim().toLowerCase();
+
+      let visibleCount = 0;
+
+      items.forEach((item) => {
+        const itemSearch = item.dataset.search || "";
+        const itemTags = item.dataset.tags || "";
+
+        const matchesSearch = !searchText || itemSearch.includes(searchText);
+        const matchesTag = !selectedTag || itemTags.split(" ").includes(selectedTag);
+
+        const shouldShow = matchesSearch && matchesTag;
+
+        item.style.display = shouldShow ? "" : "none";
+
+        if (shouldShow) {
+          visibleCount += 1;
+        }
+      });
+
+      if (!searchText && !selectedTag) {
+        resultsInfo.textContent = `Mostrando todas las entradas (${visibleCount}).`;
+      } else {
+        resultsInfo.textContent = `Resultados visibles: ${visibleCount}.`;
+      }
+    }
+
+    searchInput.addEventListener("input", updateFilters);
+    tagFilter.addEventListener("change", updateFilters);
+
+    updateFilters();
+  </script>
 </body>
 </html>

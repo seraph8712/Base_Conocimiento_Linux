@@ -30,6 +30,88 @@
         </div>
       </section>
 
+      <section class="card filters-card">
+        <h2 class="section-title">Buscar y filtrar</h2>
+        <div class="filters-grid">
+          <div>
+            <label class="label" for="searchInput">Buscar</label>
+            <input type="text" id="searchInput" placeholder="Escribe comando, problema, tag o descripción..." />
+          </div>
+          <div>
+            <label class="label" for="tagFilter">Filtrar por tag</label>
+            <select id="tagFilter">
+              <option value="">Todos los tags</option>
+<option value="arp">arp</option>
+<option value="automation">automation</option>
+<option value="bash">bash</option>
+<option value="branches">branches</option>
+<option value="cleanup">cleanup</option>
+<option value="clone">clone</option>
+<option value="commit">commit</option>
+<option value="config">config</option>
+<option value="cron">cron</option>
+<option value="debugging">debugging</option>
+<option value="dependencies">dependencies</option>
+<option value="deployment">deployment</option>
+<option value="diagnostics">diagnostics</option>
+<option value="discovery">discovery</option>
+<option value="dns">dns</option>
+<option value="editor">editor</option>
+<option value="environment">environment</option>
+<option value="execution">execution</option>
+<option value="files">files</option>
+<option value="filesystem">filesystem</option>
+<option value="git">git</option>
+<option value="github">github</option>
+<option value="history">history</option>
+<option value="ip">ip</option>
+<option value="laptop">laptop</option>
+<option value="latency">latency</option>
+<option value="linux">linux</option>
+<option value="logging">logging</option>
+<option value="logs">logs</option>
+<option value="monitoring">monitoring</option>
+<option value="mount">mount</option>
+<option value="navigation">navigation</option>
+<option value="network">network</option>
+<option value="nginx">nginx</option>
+<option value="nmap">nmap</option>
+<option value="performance">performance</option>
+<option value="permissions">permissions</option>
+<option value="pip">pip</option>
+<option value="ports">ports</option>
+<option value="power">power</option>
+<option value="python">python</option>
+<option value="realtime">realtime</option>
+<option value="refs">refs</option>
+<option value="remote">remote</option>
+<option value="remote-access">remote-access</option>
+<option value="routing">routing</option>
+<option value="scheduler">scheduler</option>
+<option value="server">server</option>
+<option value="server-block">server-block</option>
+<option value="services">services</option>
+<option value="setup">setup</option>
+<option value="ssh">ssh</option>
+<option value="staging">staging</option>
+<option value="startup">startup</option>
+<option value="storage">storage</option>
+<option value="sync">sync</option>
+<option value="systemd">systemd</option>
+<option value="tracking">tracking</option>
+<option value="troubleshooting">troubleshooting</option>
+<option value="usb">usb</option>
+<option value="validation">validation</option>
+<option value="venv">venv</option>
+<option value="version-control">version-control</option>
+<option value="web">web</option>
+<option value="workflow">workflow</option>
+            </select>
+          </div>
+        </div>
+        <p id="resultsInfo" class="results-info">Mostrando todas las entradas.</p>
+      </section>
+
       <div class="layout">
         <aside class="card">
           <div class="nav-title">Secciones</div>
@@ -56,7 +138,7 @@
               <h2 class="section-title">Navegación básica</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux files navigation" data-search="ls -la lista archivos y carpetas. la opción -la muestra detalles y archivos ocultos. cuando quieres revisar qué hay dentro de una carpeta en linux. no sabía qué archivos existían ni cuáles estaban ocultos. ls -la /var/www muy útil para revisar permisos, propietario y tamaño. navegación básica linux files navigation pwd cd carpeta mkdir nombre basic high">
               <div class="label">Comando</div>
               <pre><code>ls -la</code></pre>
 
@@ -117,7 +199,7 @@
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux files navigation" data-search="ls -ltr lista archivos y carpetas. la opción -ltr muestra detalles y los archivos están en orden cronológico(parámetro t), el parámetro r invierte el orden y muestra los archivos más nuevos hasta el final de la lista. cuando quieres revisar qué hay dentro de una carpeta en linux. no sabía qué archivos existían ni cuáles estaban ocultos. ls -ltr /documents/proyectos_sam muy útil para revisar permisos, propietario y tamaño y los archivos más nuevos al final de la lista. navegación básica linux files navigation pwd cd carpeta mkdir nombre basic high">
               <div class="label">Comando</div>
               <pre><code>ls -ltr</code></pre>
 
@@ -178,7 +260,7 @@
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux navigation" data-search="pwd muestra la ruta completa de la carpeta actual. cuando quieres confirmar en qué directorio estás antes de ejecutar comandos importantes. no estaba seguro de mi ubicación actual en el sistema. pwd especialmente útil antes de usar rm, cp, mv o git. navegación básica linux navigation ls cd carpeta basic high">
               <div class="label">Comando</div>
               <pre><code>pwd</code></pre>
 
@@ -239,7 +321,9 @@
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux navigation" data-search="cd carpeta
+cd ..
+cd /ruta/completa cambia de directorio. &#x27;..&#x27; sube un nivel. moverte entre carpetas mientras administras tu servidor o tu proyecto. necesitaba navegar por el sistema de archivos desde terminal. cd ~/proyectos/ligamx_tv_scraper usa rutas absolutas cuando quieras evitar confusiones. navegación básica linux navigation pwd ls basic high">
               <div class="label">Comando</div>
               <pre><code>cd carpeta
 cd ..
@@ -309,7 +393,8 @@ cd /ruta/completa</code></pre>
               <h2 class="section-title">Archivos y carpetas</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux filesystem setup" data-search="mkdir nombre
+mkdir -p ruta/completa crea carpetas. la opción -p permite crear rutas completas con carpetas intermedias. preparar la estructura de un proyecto o una ruta de despliegue. necesitaba crear varias carpetas de una sola vez. mkdir -p ~/proyectos/linux_cheatsheet/output muy útil al crear estructuras de proyecto. archivos y carpetas linux filesystem setup touch archivo.txt ls -la basic high">
               <div class="label">Comando</div>
               <pre><code>mkdir nombre
 mkdir -p ruta/completa</code></pre>
@@ -371,7 +456,7 @@ mkdir -p ruta/completa</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux files" data-search="touch archivo.txt crea un archivo vacío si no existe. preparar archivos de log, configuración o prueba. necesitaba crear rápidamente un archivo desde terminal. touch scraper.log también actualiza la fecha de modificación si el archivo ya existe. archivos y carpetas linux files cat archivo.txt nano archivo.txt basic high">
               <div class="label">Comando</div>
               <pre><code>touch archivo.txt</code></pre>
 
@@ -432,7 +517,7 @@ mkdir -p ruta/completa</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux files debugging" data-search="cat archivo.txt muestra el contenido completo de un archivo en terminal. ver rápidamente el contenido de un archivo pequeño. necesitaba leer un archivo sin abrir un editor. cat scraper.log para archivos grandes suele ser mejor usar less. archivos y carpetas linux files debugging less archivo.txt tail -n 50 scraper.log basic high">
               <div class="label">Comando</div>
               <pre><code>cat archivo.txt</code></pre>
 
@@ -493,7 +578,7 @@ mkdir -p ruta/completa</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux files logs" data-search="less archivo.txt abre un visor paginado para leer archivos largos. inspeccionar logs o archivos extensos sin imprimir todo de golpe. cat era incómodo para archivos grandes. less /var/log/syslog puedes salir con la tecla q. archivos y carpetas linux files logs cat archivo.txt tail -f scraper.log basic high">
               <div class="label">Comando</div>
               <pre><code>less archivo.txt</code></pre>
 
@@ -554,7 +639,7 @@ mkdir -p ruta/completa</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux editor config" data-search="nano archivo.txt abre un editor de texto simple en terminal. editar archivos de configuración o scripts rápidamente. necesitaba editar archivos sin entorno gráfico. sudo nano /etc/ssh/sshd_config ctrl+o guarda, enter confirma y ctrl+x sale. archivos y carpetas linux editor config cat archivo.txt sudo nano /etc/systemd/logind.conf basic high">
               <div class="label">Comando</div>
               <pre><code>nano archivo.txt</code></pre>
 
@@ -622,7 +707,7 @@ mkdir -p ruta/completa</code></pre>
               <h2 class="section-title">Permisos y scripts</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="linux permissions bash" data-search="chmod +x run_scraper.sh da permiso de ejecución a un archivo de script. poder ejecutar scripts .sh directamente. el sistema no me dejaba correr un script con ./script.sh. chmod +x scripts/run_scraper.sh muy común cuando trabajas con scripts de despliegue o automatización. permisos y scripts linux permissions bash ./run_scraper.sh bash run_scraper.sh basic high">
               <div class="label">Comando</div>
               <pre><code>chmod +x run_scraper.sh</code></pre>
 
@@ -683,7 +768,8 @@ mkdir -p ruta/completa</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="bash automation linux" data-search="./run_scraper.sh
+bash run_scraper.sh ejecuta un script de shell. automatizar la ejecución de tu scraper o el despliegue de tu sitio. necesitaba encapsular varios comandos en una sola ejecución. ./scripts/run_scraper.sh usa ./script.sh cuando tenga permiso de ejecución; bash script.sh funciona aunque no lo tenga. permisos y scripts bash automation linux chmod +x run_scraper.sh crontab -e basic high">
               <div class="label">Comando</div>
               <pre><code>./run_scraper.sh
 bash run_scraper.sh</code></pre>
@@ -752,7 +838,7 @@ bash run_scraper.sh</code></pre>
               <h2 class="section-title">Red y conectividad</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="network linux ip" data-search="ip a muestra interfaces de red e ips asignadas. conocer la ip de tu laptop servidora en la red local. no sabía qué ip tenía mi equipo en la red. ip a busca la línea que empiece con &#x27;inet&#x27;. red y conectividad network linux ip ip route ping 192.168.100.42 basic high">
               <div class="label">Comando</div>
               <pre><code>ip a</code></pre>
 
@@ -813,7 +899,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="network routing linux" data-search="ip route muestra rutas de red y ayuda a identificar tu red local. saber el segmento de red correcto para escanear con nmap. tenía dudas sobre cómo identificar mi red a partir de la ip. ip route si ves 192.168.100.0/24, esa es tu red local. red y conectividad network routing linux ip a nmap -sn 192.168.100.0/24 basic high">
               <div class="label">Comando</div>
               <pre><code>ip route</code></pre>
 
@@ -874,7 +960,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="network latency troubleshooting" data-search="ping 192.168.100.42 mide la latencia hacia otro equipo. diagnosticar si una conexión ssh lenta se debe a la red. la sesión ssh se sentía lenta y se congelaba al escribir. ping 192.168.100.42 si hay picos altos, el problema suele ser la red o el wifi. red y conectividad network latency troubleshooting ssh -c usuario@192.168.100.42 nmap -sn 192.168.100.0/24 basic high">
               <div class="label">Comando</div>
               <pre><code>ping 192.168.100.42</code></pre>
 
@@ -935,7 +1021,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="network discovery nmap" data-search="nmap -sn 192.168.100.0/24 escanea la red y muestra dispositivos activos sin revisar puertos. encontrar equipos conectados a la red local. necesitaba localizar mi laptop servidora en la red. nmap -sn 192.168.100.0/24 muy útil para descubrir ips activas en la lan. red y conectividad network discovery nmap ip route nmap -p 22 192.168.100.42 intermediate high">
               <div class="label">Comando</div>
               <pre><code>nmap -sn 192.168.100.0/24</code></pre>
 
@@ -996,7 +1082,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="network ssh nmap ports" data-search="nmap -p 22 192.168.100.42 verifica si el puerto 22 está abierto en un host. saber si un dispositivo tiene servidor ssh activo. quería identificar qué dispositivo de la red aceptaba conexiones ssh. nmap -p 22 192.168.100.42 si sale open ssh, puedes intentar conectarte con ssh. red y conectividad network ssh nmap ports ssh usuario@192.168.100.42 sudo systemctl status ssh intermediate high">
               <div class="label">Comando</div>
               <pre><code>nmap -p 22 192.168.100.42</code></pre>
 
@@ -1057,7 +1143,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="network arp diagnostics" data-search="arp -a muestra dispositivos que tu máquina ya conoce en la red mediante arp. obtener una lista rápida de equipos vistos recientemente. necesitaba identificar otros dispositivos en la red local. arp -a no es un escaneo completo, solo muestra equipos conocidos. red y conectividad network arp diagnostics ip neigh nmap -sn 192.168.100.0/24 intermediate medium">
               <div class="label">Comando</div>
               <pre><code>arp -a</code></pre>
 
@@ -1118,7 +1204,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="network arp linux" data-search="ip neigh muestra vecinos de red conocidos por el sistema. revisar qué dispositivos han sido detectados recientemente. quería una alternativa moderna a arp -a. ip neigh es similar a arp, pero más moderno. red y conectividad network arp linux arp -a nmap -sn 192.168.100.0/24 intermediate medium">
               <div class="label">Comando</div>
               <pre><code>ip neigh</code></pre>
 
@@ -1186,7 +1272,7 @@ bash run_scraper.sh</code></pre>
               <h2 class="section-title">SSH</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="ssh server remote-access" data-search="ssh usuario@192.168.100.42 abre una sesión remota por terminal hacia otra máquina. administrar tu laptop servidora sin entorno gráfico. necesitaba controlar remotamente la laptop de producción. ssh sergio@192.168.100.42 requiere que el servicio ssh esté activo en la máquina remota. ssh ssh server remote-access sudo systemctl status ssh nmap -p 22 192.168.100.42 basic high">
               <div class="label">Comando</div>
               <pre><code>ssh usuario@192.168.100.42</code></pre>
 
@@ -1247,7 +1333,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="ssh performance network" data-search="ssh -c usuario@192.168.100.42 abre una sesión ssh usando compresión. cuando la conexión remota se siente lenta o con lag. había retraso al escribir en la terminal remota. ssh -c sergio@192.168.100.42 puede ayudar si la red es lenta o inestable. ssh ssh performance network ping 192.168.100.42 sudo nano /etc/ssh/sshd_config intermediate medium">
               <div class="label">Comando</div>
               <pre><code>ssh -C usuario@192.168.100.42</code></pre>
 
@@ -1308,7 +1394,7 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="ssh systemd server" data-search="sudo systemctl status ssh muestra si el servidor ssh está activo. verificar si una máquina acepta conexiones ssh. no sabía si el servicio ssh ya estaba habilitado. sudo systemctl status ssh debe mostrar active (running) si todo está bien. ssh ssh systemd server sudo systemctl start ssh sudo systemctl enable ssh basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl status ssh</code></pre>
 
@@ -1369,7 +1455,8 @@ bash run_scraper.sh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="ssh systemd startup" data-search="sudo systemctl start ssh
+sudo systemctl enable ssh inicia el servicio ssh y lo deja configurado para arrancar automáticamente. preparar una laptop linux como servidor administrable por red. el servicio ssh no estaba disponible o no arrancaba al encender. sudo systemctl enable ssh muy importante para una laptop usada como servidor. ssh ssh systemd startup sudo systemctl status ssh ssh usuario@192.168.100.42 basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl start ssh
 sudo systemctl enable ssh</code></pre>
@@ -1431,7 +1518,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="ssh config server" data-search="sudo nano /etc/ssh/sshd_config abre el archivo de configuración del servidor ssh. modificar opciones como usedns o endurecer seguridad. necesitaba ajustar el comportamiento de ssh. sudo nano /etc/ssh/sshd_config después de cambiarlo, normalmente debes reiniciar ssh. ssh ssh config server usedns no sudo systemctl restart ssh intermediate high">
               <div class="label">Comando</div>
               <pre><code>sudo nano /etc/ssh/sshd_config</code></pre>
 
@@ -1492,7 +1579,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="ssh performance dns" data-search="usedns no desactiva búsquedas dns inversas por parte del servidor ssh. mejorar la velocidad de conexión ssh cuando hay problemas de resolución de nombres. la sesión ssh se sentía lenta al conectar. agregar usedns no en /etc/ssh/sshd_config después debes reiniciar el servicio ssh. ssh ssh performance dns sudo nano /etc/ssh/sshd_config sudo systemctl restart ssh intermediate medium">
               <div class="label">Comando</div>
               <pre><code>UseDNS no</code></pre>
 
@@ -1553,7 +1640,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="ssh systemd config" data-search="sudo systemctl restart ssh reinicia el servicio ssh para aplicar cambios. aplicar modificaciones en sshd_config. los cambios en la configuración ssh no se reflejaban. sudo systemctl restart ssh úsalo después de editar /etc/ssh/sshd_config. ssh ssh systemd config sudo nano /etc/ssh/sshd_config sudo nginx -t basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl restart ssh</code></pre>
 
@@ -1621,7 +1708,7 @@ sudo systemctl enable ssh</code></pre>
               <h2 class="section-title">Git</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git version-control" data-search="git init inicializa un repositorio git local en la carpeta actual. empezar a versionar un proyecto desde cero. necesitaba guardar historial de cambios de mi proyecto. git init solo se hace una vez al inicio del proyecto. git git version-control git status git add . git commit -m &quot;mensaje&quot; basic high">
               <div class="label">Comando</div>
               <pre><code>git init</code></pre>
 
@@ -1682,7 +1769,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git workflow" data-search="git status muestra el estado actual del repositorio. ver qué archivos cambiaron, cuáles están staged y cuáles no. no sabía qué cambios había pendientes. git status es uno de los comandos más usados de git. git git workflow git add . git commit -m &quot;mensaje&quot; basic high">
               <div class="label">Comando</div>
               <pre><code>git status</code></pre>
 
@@ -1743,7 +1830,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git staging" data-search="git add . agrega cambios al área de preparación (staging). preparar archivos para el siguiente commit. necesitaba indicar qué cambios quería guardar. git add . respeta lo definido en .gitignore. git git staging git status git commit -m &quot;mensaje&quot; basic high">
               <div class="label">Comando</div>
               <pre><code>git add .</code></pre>
 
@@ -1804,7 +1891,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git commit workflow" data-search="git commit -m &quot;mensaje&quot; guarda una versión del proyecto con un mensaje descriptivo. registrar un bloque de cambios estable. necesitaba guardar el progreso del proyecto de forma ordenada. git commit -m &quot;versión inicial del scraper liga mx&quot; es buena práctica que el mensaje describa el cambio real. git git commit workflow git add . git log basic high">
               <div class="label">Comando</div>
               <pre><code>git commit -m &quot;mensaje&quot;</code></pre>
 
@@ -1865,7 +1952,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git github remote" data-search="git push sube commits locales al repositorio remoto. sincronizar tus cambios con github. necesitaba respaldar y compartir mi código. git push funciona sin parámetros cuando ya existe tracking con la rama remota. git git github remote git push -u origin master git pull git branch -vv basic high">
               <div class="label">Comando</div>
               <pre><code>git push</code></pre>
 
@@ -1926,7 +2013,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git github remote" data-search="git remote add origin https://linkderepositorio para agregar una conexión de mi repositorio local hacia un repositorio remoto conectar tu repositorio local con uno remoto necesitaba conectar mi repositorio local a github git remote add origin https://github.com/seraph8712/base_conocimiento_linux tuve que colocar mi usuario y un token asignado en github para hacer la conexión git git github remote git push -u origin master git pull git branch -vv basic high">
               <div class="label">Comando</div>
               <pre><code>git remote add origin https://linkderepositorio</code></pre>
 
@@ -1987,7 +2074,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git github remote" data-search="git pull descarga cambios del remoto y los integra a tu rama local. actualizar el proyecto en la laptop de producción. necesitaba traer la última versión de github al servidor. git pull equivale conceptualmente a fetch + merge. git git github remote git fetch git push basic high">
               <div class="label">Comando</div>
               <pre><code>git pull</code></pre>
 
@@ -2048,7 +2135,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git remote sync" data-search="git fetch descarga información del remoto sin mezclarla automáticamente con tu rama local. revisar cambios remotos antes de integrarlos. quería tener más control antes de actualizar el código local. git fetch es más seguro que pull cuando quieres revisar qué cambió. git git remote sync git pull git log git branch -vv intermediate high">
               <div class="label">Comando</div>
               <pre><code>git fetch</code></pre>
 
@@ -2109,7 +2196,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git branches tracking" data-search="git branch -vv muestra ramas locales y qué rama remota siguen. entender el tracking entre tu rama local y el remoto. quería entender qué rama local seguía a origin/master. git branch -vv muy útil para entender ahead/behind. git git branches tracking git push -u origin master git show-ref intermediate high">
               <div class="label">Comando</div>
               <pre><code>git branch -vv</code></pre>
 
@@ -2170,7 +2257,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git history" data-search="git log muestra el historial de commits. revisar versiones anteriores y entender el historial. necesitaba ver qué cambios había guardado en el repositorio. git log también puedes usar git log --oneline para una vista compacta. git git history git show-ref git branch -vv basic high">
               <div class="label">Comando</div>
               <pre><code>git log</code></pre>
 
@@ -2231,7 +2318,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git refs debugging" data-search="git show-ref muestra referencias internas como ramas locales y remotas. diagnosticar por qué git mostraba ramas duplicadas como origin/master. encontré una rama local incorrecta llamada origin/master. git show-ref útil para detectar referencias raras o duplicadas. git git refs debugging git branch -d origin/master git branch -vv intermediate high">
               <div class="label">Comando</div>
               <pre><code>git show-ref</code></pre>
 
@@ -2292,7 +2379,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git branches cleanup" data-search="git branch -d origin/master elimina una rama local incluso si tiene el mismo nombre que una referencia remota. eliminar una rama local creada por error con nombre origin/master. git mostraba origin/master duplicado porque existía una rama local mal creada. git branch -d origin/master asegúrate primero de no estar parado sobre esa rama. git git branches cleanup git show-ref git checkout master intermediate high">
               <div class="label">Comando</div>
               <pre><code>git branch -D origin/master</code></pre>
 
@@ -2353,7 +2440,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git remote github" data-search="git remote -v muestra las urls asociadas a los remotos configurados. verificar a qué repositorio github está conectado el proyecto. necesitaba confirmar si origin apuntaba al repo correcto. git remote -v muestra urls para fetch y push. git git remote github git remote add origin url git push basic high">
               <div class="label">Comando</div>
               <pre><code>git remote -v</code></pre>
 
@@ -2414,7 +2501,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git github remote" data-search="git remote add origin https://github.com/usuario/repo.git conecta el repositorio local con un repositorio remoto llamado origin. subir por primera vez un proyecto local a github. necesitaba enlazar mi proyecto local con github. git remote add origin https://github.com/seraph8712/ligamx_tv_scraper.git solo se hace una vez por proyecto. git git github remote git remote -v git push -u origin master basic high">
               <div class="label">Comando</div>
               <pre><code>git remote add origin https://github.com/usuario/repo.git</code></pre>
 
@@ -2475,7 +2562,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git github tracking" data-search="git push -u origin master sube la rama local al remoto y crea la relación de tracking. primer push de una rama hacia github. quería que después git push funcionara sin parámetros. git push -u origin master el parámetro -u conecta tu rama local con la remota. git git github tracking git branch -vv git push git pull intermediate high">
               <div class="label">Comando</div>
               <pre><code>git push -u origin master</code></pre>
 
@@ -2536,7 +2623,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="git github clone deployment" data-search="git clone https://github.com/usuario/repo.git descarga un repositorio remoto completo a tu máquina. llevar el proyecto a la laptop de producción o a otra máquina. necesitaba instalar el proyecto en la laptop viejita desde github. git clone https://github.com/seraph8712/ligamx_tv_scraper.git después del clone no necesitas hacer git init. git git github clone deployment git pull python3 -m venv .venv basic high">
               <div class="label">Comando</div>
               <pre><code>git clone https://github.com/usuario/repo.git</code></pre>
 
@@ -2604,7 +2691,7 @@ sudo systemctl enable ssh</code></pre>
               <h2 class="section-title">Python y entorno virtual</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="python venv environment" data-search="python3 -m venv .venv crea un entorno virtual aislado para el proyecto. instalar dependencias sin afectar el python global del sistema. no quería mezclar librerías de distintos proyectos. python3 -m venv .venv crea una carpeta .venv con python y pip aislados. python y entorno virtual python venv environment source .venv/bin/activate pip install -r requirements.txt basic high">
               <div class="label">Comando</div>
               <pre><code>python3 -m venv .venv</code></pre>
 
@@ -2665,7 +2752,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="python venv" data-search="source .venv/bin/activate activa el entorno virtual actual. usar el python y pip del proyecto. necesitaba trabajar dentro del entorno virtual correcto. source .venv/bin/activate cuando se activa, suele aparecer (.venv) al inicio de la terminal. python y entorno virtual python venv python3 -m venv .venv pip install -r requirements.txt basic high">
               <div class="label">Comando</div>
               <pre><code>source .venv/bin/activate</code></pre>
 
@@ -2726,7 +2813,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="python pip dependencies" data-search="pip install -r requirements.txt instala las dependencias listadas en requirements.txt. preparar una máquina de desarrollo o producción para correr el proyecto. necesitaba instalar exactamente las librerías requeridas. pip install -r requirements.txt úsalo tanto en desarrollo como en producción. python y entorno virtual python pip dependencies pip freeze &gt; requirements.txt python main.py basic high">
               <div class="label">Comando</div>
               <pre><code>pip install -r requirements.txt</code></pre>
 
@@ -2787,7 +2874,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="python pip dependencies" data-search="pip freeze &gt; requirements.txt guarda las dependencias instaladas actualmente en requirements.txt. versionar las librerías necesarias del proyecto. quería replicar el mismo entorno en otra máquina. pip freeze &gt; requirements.txt ideal después de agregar nuevas librerías al proyecto. python y entorno virtual python pip dependencies pip install -r requirements.txt python3 -m venv .venv basic high">
               <div class="label">Comando</div>
               <pre><code>pip freeze &gt; requirements.txt</code></pre>
 
@@ -2848,7 +2935,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="python execution" data-search="python main.py ejecuta el script principal del proyecto. probar manualmente el scraper antes de automatizarlo. necesitaba validar que todo funcionara antes de cron. python main.py hazlo primero manualmente antes de programarlo con cron. python y entorno virtual python execution crontab -e .venv/bin/python main.py &gt;&gt; scraper.log 2&gt;&amp;1 basic high">
               <div class="label">Comando</div>
               <pre><code>python main.py</code></pre>
 
@@ -2916,7 +3003,7 @@ sudo systemctl enable ssh</code></pre>
               <h2 class="section-title">Cron y automatización</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="cron automation linux" data-search="crontab -e abre el archivo de tareas programadas del usuario actual. programar scripts para que corran automáticamente. quería que el scraper se ejecutara todos los días a las 12 pm. crontab -e la primera vez puede pedirte elegir un editor, como nano. cron y automatización cron automation linux crontab -l 0 12 * * * /ruta/proyecto/scripts/run_scraper.sh basic high">
               <div class="label">Comando</div>
               <pre><code>crontab -e</code></pre>
 
@@ -2977,7 +3064,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="cron automation" data-search="crontab -l lista las tareas programadas actuales. verificar que la tarea se guardó correctamente. necesitaba confirmar la programación del scraper. crontab -l úsalo después de editar el cron. cron y automatización cron automation crontab -e basic high">
               <div class="label">Comando</div>
               <pre><code>crontab -l</code></pre>
 
@@ -3038,7 +3125,7 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="cron automation scheduler" data-search="0 12 * * * /ruta/proyecto/scripts/run_scraper.sh ejemplo de tarea cron que se ejecuta todos los días a las 12:00 pm. automatizar la ejecución diaria del scraper. no quería correr el scraper manualmente cada día. 0 12 * * * /home/sergio/proyectos/ligamx_tv_scraper/scripts/run_scraper.sh usa rutas absolutas para evitar problemas en cron. cron y automatización cron automation scheduler crontab -e ./scripts/run_scraper.sh intermediate high">
               <div class="label">Comando</div>
               <pre><code>0 12 * * * /ruta/proyecto/scripts/run_scraper.sh</code></pre>
 
@@ -3099,7 +3186,11 @@ sudo systemctl enable ssh</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="bash cron python logging" data-search="#!/bin/bash
+
+cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
+
+.venv/bin/python main.py &gt;&gt; scraper.log 2&gt;&amp;1 script bash para ejecutar el scraper desde la raíz del proyecto y guardar salida y errores en un log. usarlo manualmente o desde cron. necesitaba una forma limpia y reutilizable de correr el scraper. scripts/run_scraper.sh usa el python del entorno virtual y hace el script portable. cron y automatización bash cron python logging chmod +x run_scraper.sh crontab -e tail -f scraper.log intermediate high">
               <div class="label">Comando</div>
               <pre><code>#!/bin/bash
 
@@ -3171,7 +3262,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
               <h2 class="section-title">Logs y depuración</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="logs debugging linux" data-search="cat scraper.log muestra el contenido completo del log. revisar una ejecución puntual del scraper. necesitaba ver qué produjo la última ejecución. cat scraper.log para logs largos, mejor usar tail o less. logs y depuración logs debugging linux tail -n 50 scraper.log tail -f scraper.log basic high">
               <div class="label">Comando</div>
               <pre><code>cat scraper.log</code></pre>
 
@@ -3232,7 +3323,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="logs debugging" data-search="tail -n 50 scraper.log muestra las últimas 50 líneas del log. ver errores recientes sin leer el archivo completo. el log era demasiado largo para verlo completo. tail -n 50 scraper.log puedes cambiar 50 por cualquier otro número. logs y depuración logs debugging cat scraper.log tail -f scraper.log basic high">
               <div class="label">Comando</div>
               <pre><code>tail -n 50 scraper.log</code></pre>
 
@@ -3293,7 +3384,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="logs debugging realtime" data-search="tail -f scraper.log sigue el log en tiempo real. observar una ejecución mientras ocurre. quería ver en vivo qué estaba pasando con el scraper. tail -f scraper.log sal con ctrl+c. logs y depuración logs debugging realtime tail -n 50 scraper.log python main.py basic high">
               <div class="label">Comando</div>
               <pre><code>tail -f scraper.log</code></pre>
 
@@ -3361,7 +3452,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
               <h2 class="section-title">Servicios y sistema</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="systemd services linux" data-search="sudo systemctl status servicio muestra el estado de un servicio del sistema. verificar si un servicio como ssh o nginx está activo. no sabía si el servicio estaba corriendo correctamente. sudo systemctl status nginx busca active (running) para confirmar que está funcionando. servicios y sistema systemd services linux sudo systemctl start servicio sudo systemctl restart servicio basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl status servicio</code></pre>
 
@@ -3422,7 +3513,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="systemd services" data-search="sudo systemctl start servicio inicia un servicio del sistema. arrancar un servicio que está detenido. un servicio necesario no estaba corriendo. sudo systemctl start nginx no garantiza que arranque automáticamente tras reinicio. servicios y sistema systemd services sudo systemctl enable servicio sudo systemctl status servicio basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl start servicio</code></pre>
 
@@ -3483,7 +3574,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="systemd services config" data-search="sudo systemctl restart servicio reinicia un servicio. aplicar cambios de configuración. cambios en la configuración no se reflejaban. sudo systemctl restart ssh útil después de cambiar archivos de configuración. servicios y sistema systemd services config sudo systemctl status servicio sudo nginx -t basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl restart servicio</code></pre>
 
@@ -3544,7 +3635,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="systemd startup services" data-search="sudo systemctl enable servicio hace que el servicio arranque automáticamente al iniciar el sistema. preparar una máquina como servidor persistente. no quería iniciar manualmente servicios clave tras reiniciar. sudo systemctl enable ssh muy útil para ssh, nginx y otros servicios permanentes. servicios y sistema systemd startup services sudo systemctl start servicio sudo systemctl status servicio basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl enable servicio</code></pre>
 
@@ -3605,7 +3696,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="monitoring performance linux" data-search="top muestra procesos y uso de cpu/ram en tiempo real. ver si tu servidor está saturado. necesitaba diagnosticar lentitud del sistema. top es la herramienta clásica; htop suele ser más amigable. servicios y sistema monitoring performance linux htop basic high">
               <div class="label">Comando</div>
               <pre><code>top</code></pre>
 
@@ -3666,7 +3757,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="monitoring performance linux" data-search="htop versión más visual y amigable de top. monitorear procesos con mejor legibilidad. top era más difícil de leer. htop puede requerir instalación previa con apt. servicios y sistema monitoring performance linux top sudo apt install -y htop basic high">
               <div class="label">Comando</div>
               <pre><code>htop</code></pre>
 
@@ -3734,7 +3825,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
               <h2 class="section-title">Montar USB sin entorno gráfico</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="usb storage linux" data-search="lsblk lista discos y particiones conectadas al sistema. identificar una memoria usb conectada sin entorno gráfico. necesitaba ver qué dispositivo correspondía a la usb. lsblk busca algo como /dev/sdb1. montar usb sin entorno gráfico usb storage linux sudo mount /dev/sdb1 /mnt/usb sudo umount /mnt/usb basic high">
               <div class="label">Comando</div>
               <pre><code>lsblk</code></pre>
 
@@ -3795,7 +3886,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="usb mount linux" data-search="sudo mkdir -p /mnt/usb crea un punto de montaje para la usb. preparar una ruta donde montar la memoria. necesitaba acceder a la usb desde terminal. sudo mkdir -p /mnt/usb normalmente solo hay que hacerlo una vez. montar usb sin entorno gráfico usb mount linux sudo mount /dev/sdb1 /mnt/usb basic high">
               <div class="label">Comando</div>
               <pre><code>sudo mkdir -p /mnt/usb</code></pre>
 
@@ -3856,7 +3947,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="usb mount storage" data-search="sudo mount /dev/sdb1 /mnt/usb monta la usb en una carpeta del sistema. leer archivos de una memoria conectada a un servidor sin gui. quería pasar información al servidor usando una usb. sudo mount /dev/sdb1 /mnt/usb cambia sdb1 según el dispositivo que detectes con lsblk. montar usb sin entorno gráfico usb mount storage ls /mnt/usb sudo umount /mnt/usb basic high">
               <div class="label">Comando</div>
               <pre><code>sudo mount /dev/sdb1 /mnt/usb</code></pre>
 
@@ -3917,7 +4008,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="usb files mount" data-search="ls /mnt/usb lista los archivos dentro de la usb ya montada. ver si la memoria se montó correctamente. necesitaba confirmar el contenido disponible. ls /mnt/usb úsalo después de mount. montar usb sin entorno gráfico usb files mount cat /mnt/usb/token.txt sudo mount /dev/sdb1 /mnt/usb basic high">
               <div class="label">Comando</div>
               <pre><code>ls /mnt/usb</code></pre>
 
@@ -3978,7 +4069,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="usb mount storage" data-search="sudo umount /mnt/usb desmonta la usb de forma segura. cerrar correctamente la memoria antes de desconectarla. quería evitar corrupción o pérdida de datos. sudo umount /mnt/usb hazlo antes de desconectar físicamente la usb. montar usb sin entorno gráfico usb mount storage sudo mount /dev/sdb1 /mnt/usb basic high">
               <div class="label">Comando</div>
               <pre><code>sudo umount /mnt/usb</code></pre>
 
@@ -4046,7 +4137,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
               <h2 class="section-title">Energía y tapa</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="systemd power server laptop" data-search="sudo nano /etc/systemd/logind.conf abre el archivo de configuración del comportamiento de energía y tapa. cambiar lo que pasa cuando cierras la tapa de una laptop usada como servidor. la laptop se suspendía al cerrar la tapa. sudo nano /etc/systemd/logind.conf después de modificar este archivo debes reiniciar systemd-logind. energía y tapa systemd power server laptop sudo systemctl restart systemd-logind intermediate high">
               <div class="label">Comando</div>
               <pre><code>sudo nano /etc/systemd/logind.conf</code></pre>
 
@@ -4107,7 +4198,9 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="power server systemd" data-search="handlelidswitch=ignore
+handlelidswitchexternalpower=ignore
+handlelidswitchdocked=ignore indica que el sistema ignore el cierre de la tapa. mantener la laptop encendida aunque esté cerrada. la laptop no podía funcionar como servidor porque se suspendía al cerrar la tapa. agregar estas líneas en /etc/systemd/logind.conf ideal para una laptop conectada permanentemente a corriente. energía y tapa power server systemd sudo nano /etc/systemd/logind.conf sudo systemctl restart systemd-logind intermediate high">
               <div class="label">Comando</div>
               <pre><code>HandleLidSwitch=ignore
 HandleLidSwitchExternalPower=ignore
@@ -4170,7 +4263,7 @@ HandleLidSwitchDocked=ignore</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="systemd power services" data-search="sudo systemctl restart systemd-logind reinicia el servicio que aplica la configuración de tapa y sesión. aplicar cambios en logind.conf. los cambios del archivo no se reflejaban. sudo systemctl restart systemd-logind la sesión ssh puede cerrarse y tendrás que reconectarte. energía y tapa systemd power services sudo nano /etc/systemd/logind.conf intermediate high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl restart systemd-logind</code></pre>
 
@@ -4231,7 +4324,7 @@ HandleLidSwitchDocked=ignore</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="systemd power server" data-search="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target bloquea por completo varios modos de suspensión e hibernación. forzar que la laptop no se suspenda como servidor. quería evitar cualquier suspensión accidental. sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target útil si la configuración de tapa no fue suficiente. energía y tapa systemd power server handlelidswitch=ignore intermediate medium">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</code></pre>
 
@@ -4299,7 +4392,7 @@ HandleLidSwitchDocked=ignore</code></pre>
               <h2 class="section-title">Nginx y servidor web</h2>
               <div class="items">
                 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx web server" data-search="sudo apt install -y nginx instala nginx, un servidor web ligero y rápido. convertir la laptop viejita en un servidor web para alojar páginas html. quería servir mi guía linux como sitio web dentro de la red. sudo apt install -y nginx muy buena opción para hardware limitado y sitios estáticos. nginx y servidor web nginx web server sudo systemctl status nginx sudo nginx -t basic high">
               <div class="label">Comando</div>
               <pre><code>sudo apt install -y nginx</code></pre>
 
@@ -4360,7 +4453,7 @@ HandleLidSwitchDocked=ignore</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx systemd web" data-search="sudo systemctl status nginx muestra si nginx está activo y corriendo. verificar si el servidor web ya está funcionando. no sabía si nginx estaba levantado. sudo systemctl status nginx debe mostrar active (running). nginx y servidor web nginx systemd web sudo systemctl start nginx sudo systemctl enable nginx basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl status nginx</code></pre>
 
@@ -4421,7 +4514,8 @@ HandleLidSwitchDocked=ignore</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx systemd startup" data-search="sudo systemctl start nginx
+sudo systemctl enable nginx inicia nginx y lo configura para arrancar automáticamente. dejar el servidor web funcionando de manera persistente. necesitaba que el sitio estuviera disponible después de reinicios. sudo systemctl enable nginx muy importante para servidores permanentes. nginx y servidor web nginx systemd startup sudo systemctl status nginx basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl start nginx
 sudo systemctl enable nginx</code></pre>
@@ -4483,7 +4577,7 @@ sudo systemctl enable nginx</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx filesystem deployment" data-search="sudo mkdir -p /var/www/linux-cheatsheet crea una carpeta para alojar tu sitio web estático. preparar la ruta donde nginx servirá tus archivos html y css. necesitaba una ubicación ordenada para publicar el sitio. sudo mkdir -p /var/www/linux-cheatsheet luego puedes copiar ahí index.html y static/styles.css. nginx y servidor web nginx filesystem deployment cp output/index.html /var/www/linux-cheatsheet/index.html basic high">
               <div class="label">Comando</div>
               <pre><code>sudo mkdir -p /var/www/linux-cheatsheet</code></pre>
 
@@ -4544,7 +4638,7 @@ sudo systemctl enable nginx</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx permissions deployment" data-search="sudo chown -r $user:$user /var/www/linux-cheatsheet cambia el propietario de la carpeta del sitio a tu usuario actual. poder copiar archivos sin usar sudo constantemente. quería simplificar la publicación del sitio. sudo chown -r $user:$user /var/www/linux-cheatsheet útil si tú serás quien publique nuevas versiones del sitio. nginx y servidor web nginx permissions deployment sudo mkdir -p /var/www/linux-cheatsheet intermediate medium">
               <div class="label">Comando</div>
               <pre><code>sudo chown -R $USER:$USER /var/www/linux-cheatsheet</code></pre>
 
@@ -4605,7 +4699,7 @@ sudo systemctl enable nginx</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx config web" data-search="sudo nano /etc/nginx/sites-available/linux-cheatsheet crea o edita la configuración del sitio en nginx. configurar un server block para tu sitio web. necesitaba decirle a nginx dónde estaba mi sitio. sudo nano /etc/nginx/sites-available/linux-cheatsheet ahí defines listen, root e index. nginx y servidor web nginx config web sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/ intermediate high">
               <div class="label">Comando</div>
               <pre><code>sudo nano /etc/nginx/sites-available/linux-cheatsheet</code></pre>
 
@@ -4666,7 +4760,17 @@ sudo systemctl enable nginx</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx server-block web" data-search="server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+    root /var/www/linux-cheatsheet;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+} configuración básica de nginx para servir un sitio estático. publicar tu guía linux desde la laptop servidora. necesitaba una configuración mínima pero funcional para servir html. guardar este bloque en /etc/nginx/sites-available/linux-cheatsheet root indica dónde vive el sitio e index define el archivo principal. nginx y servidor web nginx server-block web sudo nano /etc/nginx/sites-available/linux-cheatsheet sudo nginx -t intermediate high">
               <div class="label">Comando</div>
               <pre><code>server {
     listen 80;
@@ -4737,7 +4841,7 @@ sudo systemctl enable nginx</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx deployment config" data-search="sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/ activa el sitio creando un enlace simbólico en sites-enabled. hacer que nginx cargue esa configuración de sitio. la configuración existía, pero nginx aún no la estaba usando. sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/ es el patrón típico de configuración en debian/ubuntu. nginx y servidor web nginx deployment config sudo nginx -t sudo systemctl reload nginx intermediate high">
               <div class="label">Comando</div>
               <pre><code>sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</code></pre>
 
@@ -4798,7 +4902,7 @@ sudo systemctl enable nginx</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx validation config" data-search="sudo nginx -t valida la sintaxis de la configuración de nginx. comprobar que tu server block no tiene errores antes de recargar. quería evitar romper nginx por una mala configuración. sudo nginx -t siempre deberías correrlo antes de reload o restart. nginx y servidor web nginx validation config sudo systemctl reload nginx sudo nano /etc/nginx/sites-available/linux-cheatsheet basic high">
               <div class="label">Comando</div>
               <pre><code>sudo nginx -t</code></pre>
 
@@ -4859,7 +4963,7 @@ sudo systemctl enable nginx</code></pre>
             </article>
             
 
-            <article class="item">
+            <article class="item searchable-item" data-tags="nginx systemd deployment" data-search="sudo systemctl reload nginx recarga nginx sin apagar el servicio. aplicar cambios de configuración de forma segura. necesitaba refrescar la configuración del sitio. sudo systemctl reload nginx es preferible a restart cuando solo cambias configuración. nginx y servidor web nginx systemd deployment sudo nginx -t sudo systemctl status nginx basic high">
               <div class="label">Comando</div>
               <pre><code>sudo systemctl reload nginx</code></pre>
 
@@ -4926,5 +5030,46 @@ sudo systemctl enable nginx</code></pre>
       </div>
     </div>
   </main>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const tagFilter = document.getElementById("tagFilter");
+    const resultsInfo = document.getElementById("resultsInfo");
+    const items = Array.from(document.querySelectorAll(".searchable-item"));
+
+    function updateFilters() {
+      const searchText = searchInput.value.trim().toLowerCase();
+      const selectedTag = tagFilter.value.trim().toLowerCase();
+
+      let visibleCount = 0;
+
+      items.forEach((item) => {
+        const itemSearch = item.dataset.search || "";
+        const itemTags = item.dataset.tags || "";
+
+        const matchesSearch = !searchText || itemSearch.includes(searchText);
+        const matchesTag = !selectedTag || itemTags.split(" ").includes(selectedTag);
+
+        const shouldShow = matchesSearch && matchesTag;
+
+        item.style.display = shouldShow ? "" : "none";
+
+        if (shouldShow) {
+          visibleCount += 1;
+        }
+      });
+
+      if (!searchText && !selectedTag) {
+        resultsInfo.textContent = `Mostrando todas las entradas (${visibleCount}).`;
+      } else {
+        resultsInfo.textContent = `Resultados visibles: ${visibleCount}.`;
+      }
+    }
+
+    searchInput.addEventListener("input", updateFilters);
+    tagFilter.addEventListener("change", updateFilters);
+
+    updateFilters();
+  </script>
 </body>
 </html>
