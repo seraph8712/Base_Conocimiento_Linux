@@ -1,3 +1,6 @@
+/* Tema base:
+   Define la paleta por defecto y las variables compartidas por todas las páginas.
+   Luego cada página puede sobrescribir estas variables con una clase en <body>. */
 :root {
   --bg: #f8fafc;
   --card: #ffffff;
@@ -10,16 +13,77 @@
   --radius: 18px;
   --tag-bg: #e0f2fe;
   --tag-text: #075985;
+  --accent-soft: #f1f5f9;
+  --accent-border: #cbd5e1;
+  --accent-strong: #0ea5e9;
+  --accent-contrast: #ffffff;
+  --hero-bg: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
 
+/* Tema Linux:
+   Sobrescribe solo variables, así el resto de componentes reutiliza los mismos estilos. */
+body.theme-linux {
+  --bg: #f3f8ff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #48627d;
+  --border: #d8e6f8;
+  --tag-bg: #dbeafe;
+  --tag-text: #1d4ed8;
+  --accent-soft: #e0f2fe;
+  --accent-border: #93c5fd;
+  --accent-strong: #2563eb;
+  --accent-contrast: #eff6ff;
+  --hero-bg: linear-gradient(135deg, #f8fbff 0%, #e0f2fe 100%);
+}
+
+/* Tema de la portada:
+   Usa verdes suaves para que la página inicial se sienta más "fresca" y motivacional. */
+body.theme-home {
+  --bg: #f4fbf6;
+  --card: #ffffff;
+  --text: #123524;
+  --muted: #4f6f5c;
+  --border: #d4ebd8;
+  --tag-bg: #ddf6e4;
+  --tag-text: #1f7a3f;
+  --accent-soft: #dff7e6;
+  --accent-border: #8fd0a3;
+  --accent-strong: #15803d;
+  --accent-contrast: #effcf2;
+  --hero-bg: linear-gradient(135deg, #f8fff9 0%, #dff7e6 100%);
+}
+
+/* Tema Git:
+   Mantiene la misma estructura visual, pero cambia la identidad cromática a rojos suaves. */
+body.theme-git {
+  --bg: #fff5f5;
+  --card: #fffdfd;
+  --text: #4a1414;
+  --muted: #7f3b3b;
+  --border: #f3c9c9;
+  --tag-bg: #ffe2e2;
+  --tag-text: #b42318;
+  --accent-soft: #ffe4e6;
+  --accent-border: #fda4af;
+  --accent-strong: #dc2626;
+  --accent-contrast: #fff1f2;
+  --hero-bg: linear-gradient(135deg, #fffafa 0%, #ffe4e6 100%);
+}
+
+/* Hace que width/height incluyan padding y border.
+   Evita cálculos inesperados al construir layouts con grid/flex. */
 * {
   box-sizing: border-box;
 }
 
+/* Permite desplazamiento suave al navegar a anclas internas de sección. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Estilos globales del documento:
+   Usa las variables del tema activo para fondo, texto y ritmo vertical. */
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -28,6 +92,8 @@ body {
   line-height: 1.6;
 }
 
+/* Header fijo:
+   Se mantiene visible al hacer scroll y usa blur para dar sensación de capa flotante. */
 header {
   position: sticky;
   top: 0;
@@ -37,12 +103,15 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
+/* Contenedor horizontal común:
+   Limita el ancho máximo y centra el contenido principal. */
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
+/* Alinea el título del header con la navegación y badge superior. */
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -52,6 +121,7 @@ header {
   flex-wrap: wrap;
 }
 
+/* Agrupa badge + links del header cuando existen en la misma fila. */
 .header-actions {
   display: flex;
   align-items: center;
@@ -60,9 +130,10 @@ header {
   justify-content: flex-end;
 }
 
+/* Pequeña etiqueta informativa del header. */
 .badge {
-  background: #f1f5f9;
-  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
   padding: 10px 14px;
   border-radius: 999px;
   font-size: 14px;
@@ -70,24 +141,29 @@ header {
   white-space: nowrap;
 }
 
+/* Título principal de cada página. */
 h1 {
   margin: 0;
   font-size: 2rem;
   line-height: 1.1;
 }
 
+/* Texto secundario bajo el título principal. */
 .subtitle {
   margin-top: 8px;
   color: var(--muted);
   font-size: 0.98rem;
 }
 
+/* Navegación superior entre páginas:
+   Se usa tanto en portada como en Linux/Git. */
 .page-links {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
+/* Cada link parece una pastilla para reforzar visualmente la navegación global. */
 .page-links a {
   text-decoration: none;
   color: var(--muted);
@@ -99,17 +175,21 @@ h1 {
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
+/* Estado hover/activo para reforzar la página actual o el elemento interactivo. */
 .page-links a:hover,
 .page-links a.active {
   color: var(--text);
-  background: #e0f2fe;
-  border-color: #bae6fd;
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
 }
 
+/* Espacio vertical general del contenido principal. */
 main {
   padding: 32px 0 56px;
 }
 
+/* Primer bloque informativo en páginas de contenido:
+   Dos columnas, una más ancha para "cómo usar" y otra más corta para "escalabilidad". */
 .intro-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -117,6 +197,8 @@ main {
   margin-bottom: 28px;
 }
 
+/* Tarjeta reutilizable:
+   Es la base visual de secciones, filtros, portada y bloques informativos. */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -125,6 +207,8 @@ main {
   padding: 24px;
 }
 
+/* Layout principal de páginas Linux/Git:
+   Sidebar a la izquierda y contenido grande a la derecha. */
 .layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -132,17 +216,20 @@ main {
   align-items: start;
 }
 
+/* El menú lateral queda fijo mientras recorres las secciones. */
 aside {
   position: sticky;
   top: 106px;
 }
 
+/* Estos elementos comparten peso alto para actuar como encabezados visuales. */
 .nav-title,
 .section-title,
 .label {
   font-weight: 700;
 }
 
+/* Lista vertical de links del menú lateral. */
 .nav-list {
   display: flex;
   flex-direction: column;
@@ -150,6 +237,7 @@ aside {
   margin-top: 14px;
 }
 
+/* Links internos de sección dentro del sidebar. */
 .nav-list a {
   text-decoration: none;
   color: var(--muted);
@@ -158,21 +246,26 @@ aside {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+/* Realce al pasar el mouse por una entrada del menú lateral. */
 .nav-list a:hover {
-  background: #f1f5f9;
+  background: var(--accent-soft);
   color: var(--text);
 }
 
+/* Columna que apila las secciones de contenido una debajo de otra. */
 .sections {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
+/* Evita que el título de una sección quede oculto detrás del header sticky
+   cuando llegas a ella mediante un anchor (#id). */
 .section-card {
   scroll-margin-top: 110px;
 }
 
+/* Contenedor vertical para los items de una sección. */
 .items {
   display: flex;
   flex-direction: column;
@@ -180,6 +273,7 @@ aside {
   margin-top: 18px;
 }
 
+/* Tarjeta individual para cada comando o entrada del JSON. */
 .item {
   border: 1px solid var(--border);
   background: #f8fafc;
@@ -187,6 +281,7 @@ aside {
   padding: 18px;
 }
 
+/* Etiquetas pequeñas tipo "Comando", "Descripción", "Notas", etc. */
 .label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -195,6 +290,8 @@ aside {
   margin-bottom: 8px;
 }
 
+/* Bloque visual para comandos:
+   Usa fondo oscuro para separar claramente código de texto descriptivo. */
 pre {
   margin: 0;
   overflow-x: auto;
@@ -207,11 +304,16 @@ pre {
   white-space: pre-wrap;
 }
 
+/* Estilo base de párrafos en tarjetas y bloques informativos. */
 p {
   margin: 0;
   color: var(--muted);
 }
 
+/* Estas tres rejillas se reutilizan dentro de cada item:
+   item-grid para contenido principal,
+   meta-grid para nivel/confianza/fecha,
+   extra-grid para notas/tags. */
 .item-grid,
 .meta-grid,
 .extra-grid {
@@ -220,18 +322,22 @@ p {
   margin-top: 14px;
 }
 
+/* Dos columnas para descripción/caso de uso y problema/ejemplo. */
 .item-grid {
   grid-template-columns: 1fr 1fr;
 }
 
+/* Tres columnas para metadatos compactos. */
 .meta-grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* Dos columnas para bloques complementarios. */
 .extra-grid {
   grid-template-columns: 1fr 1fr;
 }
 
+/* Cajas internas secundarias dentro de cada item. */
 .meta-box,
 .extra-box,
 .related-box {
@@ -242,12 +348,14 @@ p {
   margin-top: 14px;
 }
 
+/* Contenedor flexible para mostrar múltiples tags. */
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
+/* Pastilla visual para cada tag. */
 .tag {
   display: inline-block;
   background: var(--tag-bg);
@@ -258,16 +366,20 @@ p {
   font-weight: 600;
 }
 
+/* Lista de comandos o conceptos relacionados. */
 .related-list {
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
 }
 
+/* Utilidad para texto atenuado. */
 .muted {
   color: var(--muted);
 }
 
+/* Primer bloque responsive:
+   Colapsa layouts complejos a una sola columna en pantallas medianas/pequeñas. */
 @media (max-width: 900px) {
   .intro-grid,
   .layout,
@@ -285,10 +397,14 @@ p {
     width: fit-content;
   }
 }
+
+/* Tarjeta que contiene buscador y filtro por tags. */
 .filters-card {
   margin-bottom: 24px;
 }
 
+/* Rejilla del área de filtros:
+   Campo de búsqueda ancho + select más compacto. */
 .filters-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -296,6 +412,7 @@ p {
   margin-top: 16px;
 }
 
+/* Apariencia común de inputs y selects. */
 .filters-grid input,
 .filters-grid select {
   width: 100%;
@@ -307,43 +424,85 @@ p {
   color: var(--text);
 }
 
+/* Estado enfocado:
+   Usa color del tema actual para que Linux/Git/Home se sientan coherentes. */
 .filters-grid input:focus,
 .filters-grid select:focus {
   outline: none;
-  border-color: #94a3b8;
-  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.2);
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-strong) 18%, white);
 }
 
+/* Texto que muestra cuántos resultados hay visibles. */
 .results-info {
   margin-top: 14px;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
+/* Hero principal de la portada.
+   Usa el gradiente del tema activo. */
 .home-hero {
   margin-bottom: 24px;
+  background: var(--hero-bg);
 }
 
+/* Divide el hero en dos columnas:
+   texto motivacional + imagen/ilustración. */
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Nota secundaria en el hero para reforzar el mensaje. */
+.hero-note {
+  margin-top: 14px;
+  max-width: 48ch;
+}
+
+/* Centra la ilustración dentro de su columna. */
+.hero-art-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+/* Imagen principal de la portada. */
+.hero-art {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid var(--accent-border);
+  box-shadow: 0 16px 34px rgba(21, 128, 61, 0.12);
+  background: white;
+}
+
+/* Texto pequeño decorativo usado en portada:
+   "eyebrow" arriba del hero y etiqueta de cada tarjeta. */
 .eyebrow,
 .home-card-label {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #0369a1;
+  color: var(--accent-strong);
   font-weight: 700;
 }
 
+/* Rejilla de acceso rápido a Linux y Git en la portada. */
 .home-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
+/* Tarjeta clicable de portada para entrar a cada guía. */
 .home-card {
   display: block;
   text-decoration: none;
   color: inherit;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: linear-gradient(180deg, var(--card) 0%, var(--accent-contrast) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -351,26 +510,35 @@ p {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
+/* Ligero levantamiento al pasar el mouse para que parezca interactiva. */
 .home-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-  border-color: #bae6fd;
+  border-color: var(--accent-border);
 }
 
+/* Espaciado del título dentro de cada tarjeta de portada. */
 .home-card h2 {
   margin: 10px 0 8px;
 }
 
+/* Color secundario del texto descriptivo en tarjetas de portada. */
 .home-card p {
   color: var(--muted);
 }
 
+/* Segundo bloque responsive:
+   Ajusta filtros y portada a una sola columna en móvil. */
 @media (max-width: 900px) {
   .filters-grid {
     grid-template-columns: 1fr;
   }
 
   .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-grid {
     grid-template-columns: 1fr;
   }
 }

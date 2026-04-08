@@ -16,6 +16,7 @@ PAGES = [
         "input": BASE_DIR / "contenido_linux.json",
         "output": OUTPUT_DIR / "linux.html",
         "description": "Comandos de sistema, red, SSH, automatizacion, Python y servidor web.",
+        "body_class": "theme-linux",
     },
     {
         "key": "git",
@@ -23,6 +24,7 @@ PAGES = [
         "input": BASE_DIR / "contenido_git.json",
         "output": OUTPUT_DIR / "git.html",
         "description": "Comandos para versionado, ramas, remotos, historial y flujo de trabajo.",
+        "body_class": "theme-git",
     },
 ]
 
@@ -232,8 +234,10 @@ def generate_html(data: dict, template: str, current_page_key: str) -> str:
     how_to_use = escape(intro.get("how_to_use", ""))
     scalability = escape(intro.get("scalability", ""))
     sections = data.get("sections", [])
+    page_config = next(page for page in PAGES if page["key"] == current_page_key)
 
     html = template
+    html = html.replace("{{BODY_CLASS}}", escape(page_config.get("body_class", "")))
     html = html.replace("{{TITLE}}", title)
     html = html.replace("{{SUBTITLE}}", subtitle)
     html = html.replace("{{INTRO_HOW_TO_USE}}", how_to_use)
@@ -268,7 +272,7 @@ def generate_index_html() -> str:
   <title>Knowledge Base</title>
   <link rel="stylesheet" href="../static/styles.css" />
 </head>
-<body>
+<body class="theme-home">
   <header>
     <div class="container header-inner">
       <div>
@@ -284,10 +288,16 @@ def generate_index_html() -> str:
   <main>
     <div class="container">
       <section class="home-hero card">
-        <div>
-          <div class="eyebrow">Base separada por tema</div>
-          <h2 class="section-title">Elige la guía que quieres consultar</h2>
-          <p>Linux conserva comandos de sistema, red, SSH, automatización, Python y Nginx. Git queda aislado para flujo de versionado, ramas, remotos e historial.</p>
+        <div class="home-hero-grid">
+          <div>
+            <div class="eyebrow">Base separada por tema</div>
+            <h2 class="section-title">Estudia con una base clara y enfocada</h2>
+            <p>Linux conserva comandos de sistema, red, SSH, automatización, Python y Nginx. Git queda aislado para flujo de versionado, ramas, remotos e historial.</p>
+            <p class="hero-note">La idea es reducir fricción: menos búsqueda, más práctica, más constancia.</p>
+          </div>
+          <div class="hero-art-wrap">
+            <img class="hero-art" src="../static/hero-study.svg" alt="Ilustración de estudio y programación con computadora, gráficos e inteligencia artificial" />
+          </div>
         </div>
       </section>
 

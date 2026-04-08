@@ -1,0 +1,37 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="972" cy="144" r="82" fill="#DCFCE7"/>
+  <circle cx="1036" cy="202" r="24" fill="#86EFAC"/>
+  <circle cx="184" cy="170" r="58" fill="#ECFDF5"/>
+  <rect x="92" y="668" width="1016" height="124" rx="28" fill="#CDEFD8"/>
+  <rect x="166" y="298" width="870" height="312" rx="30" fill="#1F2937"/>
+  <rect x="198" y="330" width="806" height="248" rx="18" fill="#0F172A"/>
+  <rect x="228" y="362" width="332" height="16" rx="8" fill="#34D399"/>
+  <rect x="228" y="398" width="238" height="12" rx="6" fill="#5EEAD4" fill-opacity="0.9"/>
+  <rect x="228" y="426" width="282" height="12" rx="6" fill="#5EEAD4" fill-opacity="0.7"/>
+  <rect x="228" y="454" width="190" height="12" rx="6" fill="#5EEAD4" fill-opacity="0.65"/>
+  <rect x="602" y="362" width="150" height="150" rx="20" fill="#111827"/>
+  <path d="M646 447L682 405L706 431L747 386" stroke="#4ADE80" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="646" cy="447" r="10" fill="#4ADE80"/>
+  <circle cx="682" cy="405" r="10" fill="#4ADE80"/>
+  <circle cx="706" cy="431" r="10" fill="#4ADE80"/>
+  <circle cx="747" cy="386" r="10" fill="#4ADE80"/>
+  <rect x="778" y="362" width="182" height="150" rx="20" fill="#111827"/>
+  <path d="M829 439C829 406.967 854.967 381 887 381C919.033 381 945 406.967 945 439" stroke="#86EFAC" stroke-width="18" stroke-linecap="round"/>
+  <path d="M865 477L886 409L908 477" stroke="#A7F3D0" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M854 456H919" stroke="#A7F3D0" stroke-width="16" stroke-linecap="round"/>
+  <rect x="330" y="610" width="536" height="34" rx="17" fill="#374151"/>
+  <rect x="410" y="646" width="374" height="18" rx="9" fill="#4B5563"/>
+  <path d="M248 708C309.333 641.333 383.333 608 470 608" stroke="#86EFAC" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 24"/>
+  <path d="M951 707C894.333 643 822 610 734 608" stroke="#6EE7B7" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 24"/>
+  <rect x="102" y="132" width="228" height="92" rx="24" fill="#FFFFFF" fill-opacity="0.76"/>
+  <text x="138" y="190" fill="#166534" font-family="Arial, sans-serif" font-size="38" font-weight="700">Study / Build / Ship</text>
+  <rect x="856" y="560" width="214" height="86" rx="22" fill="#FFFFFF" fill-opacity="0.8"/>
+  <text x="892" y="614" fill="#15803D" font-family="Arial, sans-serif" font-size="34" font-weight="700">Code + IA</text>
+  <defs>
+    <linearGradient id="bg" x1="112" y1="48" x2="1070" y2="842" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0FDF4"/>
+      <stop offset="1" stop-color="#BBF7D0"/>
+    </linearGradient>
+  </defs>
+</svg>
