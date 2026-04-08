@@ -5,12 +5,30 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).parent
-INPUT_JSON = BASE_DIR / "contenido.json"
 TEMPLATE_HTML = BASE_DIR / "templates" / "base.html"
-OUTPUT_HTML = BASE_DIR / "output" / "index.html"
+OUTPUT_DIR = BASE_DIR / "output"
+
+# Cada entrada describe una página independiente a generar a partir de su JSON.
+PAGES = [
+    {
+        "key": "linux",
+        "label": "Linux",
+        "input": BASE_DIR / "contenido_linux.json",
+        "output": OUTPUT_DIR / "linux.html",
+        "description": "Comandos de sistema, red, SSH, automatizacion, Python y servidor web.",
+    },
+    {
+        "key": "git",
+        "label": "Git",
+        "input": BASE_DIR / "contenido_git.json",
+        "output": OUTPUT_DIR / "git.html",
+        "description": "Comandos para versionado, ramas, remotos, historial y flujo de trabajo.",
+    },
+]
 
 
 def slugify(text: str) -> str:
+    # Convierte títulos como "Red y conectividad" en ids/anchors tipo "red-y-conectividad".
     replacements = {
         "á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u", "ñ": "n",
         "Á": "a", "É": "e", "Í": "i", "Ó": "o", "Ú": "u", "Ñ": "n",
@@ -24,7 +42,19 @@ def slugify(text: str) -> str:
     return text
 
 
+def render_page_links(current_key: str | None = None) -> str:
+    # Construye la navegación superior compartida entre portada, Linux y Git.
+    links = ['<a href="index.html">Inicio</a>']
+    for page in PAGES:
+        class_name = ' class="active"' if page["key"] == current_key else ""
+        links.append(
+            f'<a href="{escape(page["output"].name)}"{class_name}>{escape(page["label"])}</a>'
+        )
+    return "\n".join(links)
+
+
 def render_nav(sections: list[dict]) -> str:
+    # Genera el menú lateral interno de una página usando sus secciones.
     links = []
     for section in sections:
         section_id = section.get("id") or slugify(section["title"])
@@ -35,13 +65,12 @@ def render_nav(sections: list[dict]) -> str:
 
 
 def collect_all_tags(sections: list[dict]) -> list[str]:
+    # Reúne todos los tags únicos para poblar el select de filtros.
     tags = set()
-
     for section in sections:
         for item in section.get("items", []):
             for tag in item.get("tags", []):
                 tags.add(tag)
-
     return sorted(tags)
 
 
@@ -56,23 +85,19 @@ def render_tags(tags: list[str]) -> str:
     if not tags:
         return '<span class="muted">Sin tags</span>'
 
-    return "".join(
-        f'<span class="tag">{escape(tag)}</span>'
-        for tag in tags
-    )
+    return "".join(f'<span class="tag">{escape(tag)}</span>' for tag in tags)
 
 
 def render_related(related: list[str]) -> str:
     if not related:
         return '<span class="muted">Sin relaciones</span>'
 
-    return "".join(
-        f'<li>{escape(item)}</li>'
-        for item in related
-    )
+    return "".join(f"<li>{escape(item)}</li>" for item in related)
 
 
 def build_search_text(item: dict, section_title: str) -> str:
+    # Concatena campos relevantes en un solo texto para que el filtro de búsqueda en JS
+    # pueda hacer coincidencias simples con includes().
     parts = [
         item.get("command", ""),
         item.get("description", ""),
@@ -90,6 +115,7 @@ def build_search_text(item: dict, section_title: str) -> str:
 
 
 def render_items(items: list[dict], section_title: str) -> str:
+    # Convierte cada comando del JSON en una tarjeta HTML completa.
     html_parts = []
 
     for item in items:
@@ -177,8 +203,8 @@ def render_items(items: list[dict], section_title: str) -> str:
 
 
 def render_sections(sections: list[dict]) -> str:
+    # Agrupa las tarjetas por sección y les asigna un id navegable.
     html_parts = []
-
     for section in sections:
         section_id = section.get("id") or slugify(section["title"])
         title = escape(section["title"])
@@ -198,7 +224,8 @@ def render_sections(sections: list[dict]) -> str:
     return "\n".join(html_parts)
 
 
-def generate_html(data: dict, template: str) -> str:
+def generate_html(data: dict, template: str, current_page_key: str) -> str:
+    # Toma el JSON de una página y reemplaza los placeholders de la plantilla base.
     title = escape(data.get("title", "Knowledge Base"))
     subtitle = escape(data.get("subtitle", ""))
     intro = data.get("intro", {})
@@ -206,39 +233,93 @@ def generate_html(data: dict, template: str) -> str:
     scalability = escape(intro.get("scalability", ""))
     sections = data.get("sections", [])
 
-    nav_html = render_nav(sections)
-    sections_html = render_sections(sections)
-    all_tags = collect_all_tags(sections)
-    tag_options_html = render_tag_options(all_tags)
-
     html = template
     html = html.replace("{{TITLE}}", title)
     html = html.replace("{{SUBTITLE}}", subtitle)
     html = html.replace("{{INTRO_HOW_TO_USE}}", how_to_use)
     html = html.replace("{{INTRO_SCALABILITY}}", scalability)
-    html = html.replace("{{NAV}}", nav_html)
-    html = html.replace("{{SECTIONS}}", sections_html)
-    html = html.replace("{{TAG_OPTIONS}}", tag_options_html)
-
+    html = html.replace("{{PAGE_LINKS}}", render_page_links(current_page_key))
+    html = html.replace("{{NAV}}", render_nav(sections))
+    html = html.replace("{{SECTIONS}}", render_sections(sections))
+    html = html.replace("{{TAG_OPTIONS}}", render_tag_options(collect_all_tags(sections)))
     return html
 
 
-def main() -> None:
-    if not INPUT_JSON.exists():
-        raise FileNotFoundError(f"No existe el archivo JSON: {INPUT_JSON}")
+def generate_index_html() -> str:
+    # La portada no usa secciones; solo ofrece accesos rápidos a cada base temática.
+    cards = []
+    for page in PAGES:
+        cards.append(
+            f"""
+            <a class="home-card" href="{escape(page["output"].name)}">
+              <div class="home-card-label">Explorar</div>
+              <h2>{escape(page["label"])}</h2>
+              <p>{escape(page["description"])}</p>
+            </a>
+            """
+        )
 
+    page_links = render_page_links()
+    return f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Base</title>
+  <link rel="stylesheet" href="../static/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div>
+        <h1>Knowledge Base</h1>
+        <p class="subtitle">Acceso separado a comandos de Linux y Git.</p>
+      </div>
+      <nav class="page-links">
+        {page_links}
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="home-hero card">
+        <div>
+          <div class="eyebrow">Base separada por tema</div>
+          <h2 class="section-title">Elige la guía que quieres consultar</h2>
+          <p>Linux conserva comandos de sistema, red, SSH, automatización, Python y Nginx. Git queda aislado para flujo de versionado, ramas, remotos e historial.</p>
+        </div>
+      </section>
+
+      <section class="home-grid">
+        {"".join(cards)}
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+"""
+
+
+def main() -> None:
     if not TEMPLATE_HTML.exists():
         raise FileNotFoundError(f"No existe la plantilla HTML: {TEMPLATE_HTML}")
 
-    data = json.loads(INPUT_JSON.read_text(encoding="utf-8"))
     template = TEMPLATE_HTML.read_text(encoding="utf-8")
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    output_html = generate_html(data, template)
+    # Recorre la configuración declarativa de PAGES para evitar duplicar lógica.
+    for page in PAGES:
+        if not page["input"].exists():
+            raise FileNotFoundError(f"No existe el archivo JSON: {page['input']}")
 
-    OUTPUT_HTML.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_HTML.write_text(output_html, encoding="utf-8")
+        data = json.loads(page["input"].read_text(encoding="utf-8"))
+        output_html = generate_html(data, template, page["key"])
+        page["output"].write_text(output_html, encoding="utf-8")
 
-    print(f"Página generada correctamente en: {OUTPUT_HTML}")
+    # Además de las páginas de contenido, se genera una portada simple.
+    (OUTPUT_DIR / "index.html").write_text(generate_index_html(), encoding="utf-8")
+    print(f"Paginas generadas correctamente en: {OUTPUT_DIR}")
 
 
 if __name__ == "__main__":

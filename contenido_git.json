@@ -1,0 +1,338 @@
+{
+  "title": "Git Knowledge Base",
+  "subtitle": "Base de conocimiento personal de Git, flujo de trabajo, remotos, ramas e historial.",
+  "intro": {
+    "how_to_use": "Esta guía reúne comandos de Git organizados para consultar flujo básico, sincronización con remotos, ramas y diagnóstico.",
+    "scalability": "Puedes seguir agregando comandos de Git sin mezclar conceptos con Linux y mantener la navegación más clara."
+  },
+  "sections": [
+    {
+      "id": "git",
+      "title": "Git",
+      "items": [
+        {
+          "command": "git init",
+          "description": "Inicializa un repositorio Git local en la carpeta actual.",
+          "use_case": "Empezar a versionar un proyecto desde cero.",
+          "problem_solved": "Necesitaba guardar historial de cambios de mi proyecto.",
+          "example": "git init",
+          "tags": [
+            "git",
+            "version-control"
+          ],
+          "level": "basic",
+          "notes": "Solo se hace una vez al inicio del proyecto.",
+          "related": [
+            "git status",
+            "git add .",
+            "git commit -m \"mensaje\""
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git status",
+          "description": "Muestra el estado actual del repositorio.",
+          "use_case": "Ver qué archivos cambiaron, cuáles están staged y cuáles no.",
+          "problem_solved": "No sabía qué cambios había pendientes.",
+          "example": "git status",
+          "tags": [
+            "git",
+            "workflow"
+          ],
+          "level": "basic",
+          "notes": "Es uno de los comandos más usados de Git.",
+          "related": [
+            "git add .",
+            "git commit -m \"mensaje\""
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git add .",
+          "description": "Agrega cambios al área de preparación (staging).",
+          "use_case": "Preparar archivos para el siguiente commit.",
+          "problem_solved": "Necesitaba indicar qué cambios quería guardar.",
+          "example": "git add .",
+          "tags": [
+            "git",
+            "staging"
+          ],
+          "level": "basic",
+          "notes": "Respeta lo definido en .gitignore.",
+          "related": [
+            "git status",
+            "git commit -m \"mensaje\""
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git commit -m \"mensaje\"",
+          "description": "Guarda una versión del proyecto con un mensaje descriptivo.",
+          "use_case": "Registrar un bloque de cambios estable.",
+          "problem_solved": "Necesitaba guardar el progreso del proyecto de forma ordenada.",
+          "example": "git commit -m \"Versión inicial del scraper Liga MX\"",
+          "tags": [
+            "git",
+            "commit",
+            "workflow"
+          ],
+          "level": "basic",
+          "notes": "Es buena práctica que el mensaje describa el cambio real.",
+          "related": [
+            "git add .",
+            "git log"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git push",
+          "description": "Sube commits locales al repositorio remoto.",
+          "use_case": "Sincronizar tus cambios con GitHub.",
+          "problem_solved": "Necesitaba respaldar y compartir mi código.",
+          "example": "git push",
+          "tags": [
+            "git",
+            "github",
+            "remote"
+          ],
+          "level": "basic",
+          "notes": "Funciona sin parámetros cuando ya existe tracking con la rama remota.",
+          "related": [
+            "git push -u origin master",
+            "git pull",
+            "git branch -vv"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git remote add origin https://linkderepositorio",
+          "description": "Para agregar una conexión de mi repositorio local hacia un repositorio remoto",
+          "use_case": "Conectar tu repositorio local con uno remoto",
+          "problem_solved": "Necesitaba conectar mi repositorio local a github",
+          "example": "git remote add origin https://github.com/seraph8712/Base_Conocimiento_Linux",
+          "tags": [
+            "git",
+            "github",
+            "remote"
+          ],
+          "level": "basic",
+          "notes": "Tuve que colocar mi usuario y un token asignado en github para hacer la conexión",
+          "related": [
+            "git push -u origin master",
+            "git pull",
+            "git branch -vv"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git pull",
+          "description": "Descarga cambios del remoto y los integra a tu rama local.",
+          "use_case": "Actualizar el proyecto en la laptop de producción.",
+          "problem_solved": "Necesitaba traer la última versión de GitHub al servidor.",
+          "example": "git pull",
+          "tags": [
+            "git",
+            "github",
+            "remote"
+          ],
+          "level": "basic",
+          "notes": "Equivale conceptualmente a fetch + merge.",
+          "related": [
+            "git fetch",
+            "git push"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git fetch",
+          "description": "Descarga información del remoto sin mezclarla automáticamente con tu rama local.",
+          "use_case": "Revisar cambios remotos antes de integrarlos.",
+          "problem_solved": "Quería tener más control antes de actualizar el código local.",
+          "example": "git fetch",
+          "tags": [
+            "git",
+            "remote",
+            "sync"
+          ],
+          "level": "intermediate",
+          "notes": "Es más seguro que pull cuando quieres revisar qué cambió.",
+          "related": [
+            "git pull",
+            "git log",
+            "git branch -vv"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git branch -vv",
+          "description": "Muestra ramas locales y qué rama remota siguen.",
+          "use_case": "Entender el tracking entre tu rama local y el remoto.",
+          "problem_solved": "Quería entender qué rama local seguía a origin/master.",
+          "example": "git branch -vv",
+          "tags": [
+            "git",
+            "branches",
+            "tracking"
+          ],
+          "level": "intermediate",
+          "notes": "Muy útil para entender ahead/behind.",
+          "related": [
+            "git push -u origin master",
+            "git show-ref"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git log",
+          "description": "Muestra el historial de commits.",
+          "use_case": "Revisar versiones anteriores y entender el historial.",
+          "problem_solved": "Necesitaba ver qué cambios había guardado en el repositorio.",
+          "example": "git log",
+          "tags": [
+            "git",
+            "history"
+          ],
+          "level": "basic",
+          "notes": "También puedes usar git log --oneline para una vista compacta.",
+          "related": [
+            "git show-ref",
+            "git branch -vv"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git show-ref",
+          "description": "Muestra referencias internas como ramas locales y remotas.",
+          "use_case": "Diagnosticar por qué Git mostraba ramas duplicadas como origin/master.",
+          "problem_solved": "Encontré una rama local incorrecta llamada origin/master.",
+          "example": "git show-ref",
+          "tags": [
+            "git",
+            "refs",
+            "debugging"
+          ],
+          "level": "intermediate",
+          "notes": "Útil para detectar referencias raras o duplicadas.",
+          "related": [
+            "git branch -D origin/master",
+            "git branch -vv"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git branch -D origin/master",
+          "description": "Elimina una rama local incluso si tiene el mismo nombre que una referencia remota.",
+          "use_case": "Eliminar una rama local creada por error con nombre origin/master.",
+          "problem_solved": "Git mostraba origin/master duplicado porque existía una rama local mal creada.",
+          "example": "git branch -D origin/master",
+          "tags": [
+            "git",
+            "branches",
+            "cleanup"
+          ],
+          "level": "intermediate",
+          "notes": "Asegúrate primero de no estar parado sobre esa rama.",
+          "related": [
+            "git show-ref",
+            "git checkout master"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git remote -v",
+          "description": "Muestra las URLs asociadas a los remotos configurados.",
+          "use_case": "Verificar a qué repositorio GitHub está conectado el proyecto.",
+          "problem_solved": "Necesitaba confirmar si origin apuntaba al repo correcto.",
+          "example": "git remote -v",
+          "tags": [
+            "git",
+            "remote",
+            "github"
+          ],
+          "level": "basic",
+          "notes": "Muestra URLs para fetch y push.",
+          "related": [
+            "git remote add origin URL",
+            "git push"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git remote add origin https://github.com/usuario/repo.git",
+          "description": "Conecta el repositorio local con un repositorio remoto llamado origin.",
+          "use_case": "Subir por primera vez un proyecto local a GitHub.",
+          "problem_solved": "Necesitaba enlazar mi proyecto local con GitHub.",
+          "example": "git remote add origin https://github.com/seraph8712/ligamx_tv_scraper.git",
+          "tags": [
+            "git",
+            "github",
+            "remote"
+          ],
+          "level": "basic",
+          "notes": "Solo se hace una vez por proyecto.",
+          "related": [
+            "git remote -v",
+            "git push -u origin master"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git push -u origin master",
+          "description": "Sube la rama local al remoto y crea la relación de tracking.",
+          "use_case": "Primer push de una rama hacia GitHub.",
+          "problem_solved": "Quería que después git push funcionara sin parámetros.",
+          "example": "git push -u origin master",
+          "tags": [
+            "git",
+            "github",
+            "tracking"
+          ],
+          "level": "intermediate",
+          "notes": "El parámetro -u conecta tu rama local con la remota.",
+          "related": [
+            "git branch -vv",
+            "git push",
+            "git pull"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        },
+        {
+          "command": "git clone https://github.com/usuario/repo.git",
+          "description": "Descarga un repositorio remoto completo a tu máquina.",
+          "use_case": "Llevar el proyecto a la laptop de producción o a otra máquina.",
+          "problem_solved": "Necesitaba instalar el proyecto en la laptop viejita desde GitHub.",
+          "example": "git clone https://github.com/seraph8712/ligamx_tv_scraper.git",
+          "tags": [
+            "git",
+            "github",
+            "clone",
+            "deployment"
+          ],
+          "level": "basic",
+          "notes": "Después del clone no necesitas hacer git init.",
+          "related": [
+            "git pull",
+            "python3 -m venv .venv"
+          ],
+          "date_learned": "2026-04-02",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}
