@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Metadatos base y recursos compartidos por todas las páginas generadas desde esta plantilla -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- {{TITLE}} se reemplaza con el título específico de cada página -->
   <title>{{TITLE}}</title>
   <link rel="stylesheet" href="../static/styles.css" />
 </head>
 <body class="{{BODY_CLASS}}">
+  <!-- Encabezado principal con identidad de la página y enlaces de navegación -->
   <header>
     <div class="container header-inner">
       <div>
@@ -16,6 +19,7 @@
       <div class="header-actions">
         <div class="badge">Base de conocimiento generada con Python</div>
         <nav class="page-links">
+          <!-- {{PAGE_LINKS}} inserta enlaces como Inicio, Linux o Git -->
           {{PAGE_LINKS}}
         </nav>
       </div>
@@ -24,6 +28,7 @@
 
   <main>
     <div class="container">
+      <!-- Introducción rápida: explica uso de la base y su enfoque de crecimiento -->
       <section class="intro-grid">
         <div class="card">
           <h2 class="section-title">Cómo usar esta base</h2>
@@ -35,6 +40,7 @@
         </div>
       </section>
 
+      <!-- Filtros del lado del cliente: permiten buscar texto y filtrar por tag sin recargar la página -->
       <section class="card filters-card">
         <h2 class="section-title">Buscar y filtrar</h2>
         <div class="filters-grid">
@@ -53,6 +59,7 @@
       </section>
 
       <div class="layout">
+        <!-- Navegación lateral generada dinámicamente con las secciones disponibles -->
         <aside class="card">
           <div class="nav-title">Secciones</div>
           <nav class="nav-list">
@@ -61,6 +68,7 @@
         </aside>
 
         <div class="sections">
+          <!-- {{SECTIONS}} inserta el contenido completo de cada bloque temático -->
           {{SECTIONS}}
         </div>
       </div>
@@ -68,11 +76,13 @@
   </main>
 
   <script>
+    // Referencias a los controles de filtro y a todos los elementos que se pueden buscar.
     const searchInput = document.getElementById("searchInput");
     const tagFilter = document.getElementById("tagFilter");
     const resultsInfo = document.getElementById("resultsInfo");
     const items = Array.from(document.querySelectorAll(".searchable-item"));
 
+    // Aplica ambos filtros: texto libre y tag.
     function updateFilters() {
       const searchText = searchInput.value.trim().toLowerCase();
       const selectedTag = tagFilter.value.trim().toLowerCase();
@@ -80,6 +90,7 @@
       let visibleCount = 0;
 
       items.forEach((item) => {
+        // Cada entrada expone texto e tags en data-* para evitar lógica compleja en el DOM.
         const itemSearch = item.dataset.search || "";
         const itemTags = item.dataset.tags || "";
 
@@ -95,6 +106,7 @@
         }
       });
 
+      // Actualiza el mensaje inferior para indicar cuántos resultados siguen visibles.
       if (!searchText && !selectedTag) {
         resultsInfo.textContent = `Mostrando todas las entradas (${visibleCount}).`;
       } else {
@@ -102,9 +114,11 @@
       }
     }
 
+    // Escucha cambios en los controles para refrescar el listado en tiempo real.
     searchInput.addEventListener("input", updateFilters);
     tagFilter.addEventListener("change", updateFilters);
 
+    // Ejecuta el filtro al cargar para inicializar el contador correctamente.
     updateFilters();
   </script>
 </body>
