@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Metadatos base y recursos compartidos por todas las páginas generadas desde esta plantilla -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Linux Knowledge Base se reemplaza con el título específico de cada página -->
   <title>Linux Knowledge Base</title>
   <link rel="stylesheet" href="../static/styles.css" />
 </head>
 <body class="theme-linux">
+  <!-- Encabezado principal con identidad de la página y enlaces de navegación -->
   <header>
     <div class="container header-inner">
       <div>
@@ -16,6 +19,9 @@
       <div class="header-actions">
         <div class="badge">Base de conocimiento generada con Python</div>
         <nav class="page-links">
+          <!-- <a href="index.html">Inicio</a>
+<a href="linux.html" class="active">Linux</a>
+<a href="git.html">Git</a> inserta enlaces como Inicio, Linux o Git -->
           <a href="index.html">Inicio</a>
 <a href="linux.html" class="active">Linux</a>
 <a href="git.html">Git</a>
@@ -26,6 +32,7 @@
 
   <main>
     <div class="container">
+      <!-- Introducción rápida: explica uso de la base y su enfoque de crecimiento -->
       <section class="intro-grid">
         <div class="card">
           <h2 class="section-title">Cómo usar esta base</h2>
@@ -37,6 +44,7 @@
         </div>
       </section>
 
+      <!-- Filtros del lado del cliente: permiten buscar texto y filtrar por tag sin recargar la página -->
       <section class="card filters-card">
         <h2 class="section-title">Buscar y filtrar</h2>
         <div class="filters-grid">
@@ -48,9 +56,12 @@
             <label class="label" for="tagFilter">Filtrar por tag</label>
             <select id="tagFilter">
               <option value="">Todos los tags</option>
+<option value="alias">alias</option>
 <option value="arp">arp</option>
 <option value="automation">automation</option>
+<option value="ayuda">ayuda</option>
 <option value="bash">bash</option>
+<option value="comandos">comandos</option>
 <option value="config">config</option>
 <option value="cron">cron</option>
 <option value="debugging">debugging</option>
@@ -106,10 +117,12 @@
       </section>
 
       <div class="layout">
+        <!-- Navegación lateral generada dinámicamente con las secciones disponibles -->
         <aside class="card">
           <div class="nav-title">Secciones</div>
           <nav class="nav-list">
-            <a href="#navegacion-basica">Navegación básica</a>
+            <a href="#Obtener información de comandos">Información de comandos</a>
+<a href="#navegacion-basica">Navegación básica</a>
 <a href="#archivos-y-carpetas">Archivos y carpetas</a>
 <a href="#permisos-y-scripts">Permisos y scripts</a>
 <a href="#red-y-conectividad">Red y conectividad</a>
@@ -125,7 +138,4297 @@
         </aside>
 
         <div class="sections">
+          <!-- 
+            <section id="Obtener información de comandos" class="card section-card">
+              <h2 class="section-title">Información de comandos</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="linux comandos alias" data-search="type &quot;comando&quot; type te dice el tipo de comando que se le pasa como argumento. te dice si es un alias, un comando interno obtener informacion sobre el tipo de comando que quieres ejecutar, para entender su comportamiento no recordaba que ls es un alias de ls --color=auto :o type ls cuando quieras saber informacion adicional de un comando en linux información de comandos linux comandos alias help man basic high">
+              <div class="label">Comando</div>
+              <pre><code>type &quot;comando&quot;</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Type te dice el tipo de comando que se le pasa como argumento. Te dice si es un alias, un comando interno</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Obtener informacion sobre el tipo de comando que quieres ejecutar, para entender su comportamiento</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No recordaba que ls es un alias de ls --color=auto :O</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>type ls</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-14</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Cuando quieras saber informacion adicional de un comando en linux</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">alias</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>help</li><li>man</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux comandos ayuda" data-search="argumento --help el argumento help puede servir en varios comandos para proporcionar información rápida sobre su uso y opciones disponibles obtener información rápida sobre cómo usar un comando específico sin salir de la terminal. necesitaba recordar las opciones disponibles para el comando ls sin recurrir a la documentación completa ls --help útil para obtener una visión general de las opciones de un comando específico información de comandos linux comandos ayuda type man basic high">
+              <div class="label">Comando</div>
+              <pre><code>Argumento --help</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El argumento help puede servir en varios comandos para proporcionar información rápida sobre su uso y opciones disponibles</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Obtener información rápida sobre cómo usar un comando específico sin salir de la terminal.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba recordar las opciones disponibles para el comando ls sin recurrir a la documentación completa</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ls --help</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-14</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil para obtener una visión general de las opciones de un comando específico</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">ayuda</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>type</li><li>man</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux comandos ayuda" data-search="man el comando man muestra el manual completo de un comando, incluyendo su descripción detallada, opciones, ejemplos y más información técnica. la información del comando se visualiza con la herramienta less, lo que permite navegar por el contenido de manera paginada. consultar la documentación completa de un comando para entender todas sus opciones y detalles de uso necesitaba información detallada sobre el comando ls, incluyendo opciones avanzadas y ejemplos de uso, que no se proporcionan con --help man ls útil para obtener información detallada sobre un comando específico, incluyendo opciones avanzadas y ejemplos de uso información de comandos linux comandos ayuda help type basic high">
+              <div class="label">Comando</div>
+              <pre><code>man</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El comando man muestra el manual completo de un comando, incluyendo su descripción detallada, opciones, ejemplos y más información técnica. La información del comando se visualiza con la herramienta less, lo que permite navegar por el contenido de manera paginada.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Consultar la documentación completa de un comando para entender todas sus opciones y detalles de uso</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba información detallada sobre el comando ls, incluyendo opciones avanzadas y ejemplos de uso, que no se proporcionan con --help</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>man ls</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-14</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil para obtener información detallada sobre un comando específico, incluyendo opciones avanzadas y ejemplos de uso</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">ayuda</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>help</li><li>type</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="navegacion-basica" class="card section-card">
+              <h2 class="section-title">Navegación básica</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="linux files navigation" data-search="ls -la lista archivos y carpetas. la opción -la muestra detalles y archivos ocultos. cuando quieres revisar qué hay dentro de una carpeta en linux. no sabía qué archivos existían ni cuáles estaban ocultos. ls -la /var/www muy útil para revisar permisos, propietario y tamaño. navegación básica linux files navigation pwd cd carpeta mkdir nombre basic high">
+              <div class="label">Comando</div>
+              <pre><code>ls -la</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Lista archivos y carpetas. La opción -la muestra detalles y archivos ocultos.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando quieres revisar qué hay dentro de una carpeta en Linux.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No sabía qué archivos existían ni cuáles estaban ocultos.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ls -la /var/www</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy útil para revisar permisos, propietario y tamaño.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">files</span><span class="tag">navigation</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>pwd</li><li>cd carpeta</li><li>mkdir nombre</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux files navigation" data-search="ls -ltr lista archivos y carpetas. la opción -ltr muestra detalles y los archivos están en orden cronológico(parámetro t), el parámetro r invierte el orden y muestra los archivos más nuevos hasta el final de la lista. cuando quieres revisar qué hay dentro de una carpeta en linux. no sabía qué archivos existían ni cuáles estaban ocultos. ls -ltr /documents/proyectos_sam muy útil para revisar permisos, propietario y tamaño y los archivos más nuevos al final de la lista. navegación básica linux files navigation pwd cd carpeta mkdir nombre basic high">
+              <div class="label">Comando</div>
+              <pre><code>ls -ltr</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Lista archivos y carpetas. La opción -ltr muestra detalles y los archivos están en orden cronológico(parámetro T), el parámetro r invierte el orden y muestra los archivos más nuevos hasta el final de la lista.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando quieres revisar qué hay dentro de una carpeta en Linux.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No sabía qué archivos existían ni cuáles estaban ocultos.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ls -ltr /Documents/Proyectos_SAM</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-03</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy útil para revisar permisos, propietario y tamaño y los archivos más nuevos al final de la lista.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">files</span><span class="tag">navigation</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>pwd</li><li>cd carpeta</li><li>mkdir nombre</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux navigation" data-search="pwd muestra la ruta completa de la carpeta actual. cuando quieres confirmar en qué directorio estás antes de ejecutar comandos importantes. no estaba seguro de mi ubicación actual en el sistema. pwd especialmente útil antes de usar rm, cp, mv o git. navegación básica linux navigation ls cd carpeta basic high">
+              <div class="label">Comando</div>
+              <pre><code>pwd</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra la ruta completa de la carpeta actual.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando quieres confirmar en qué directorio estás antes de ejecutar comandos importantes.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No estaba seguro de mi ubicación actual en el sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>pwd</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Especialmente útil antes de usar rm, cp, mv o git.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">navigation</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ls</li><li>cd carpeta</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux navigation" data-search="cd carpeta
+cd ..
+cd /ruta/completa cambia de directorio. &#x27;..&#x27; sube un nivel. moverte entre carpetas mientras administras tu servidor o tu proyecto. necesitaba navegar por el sistema de archivos desde terminal. cd ~/proyectos/ligamx_tv_scraper usa rutas absolutas cuando quieras evitar confusiones. navegación básica linux navigation pwd ls basic high">
+              <div class="label">Comando</div>
+              <pre><code>cd carpeta
+cd ..
+cd /ruta/completa</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Cambia de directorio. &#x27;..&#x27; sube un nivel.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Moverte entre carpetas mientras administras tu servidor o tu proyecto.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba navegar por el sistema de archivos desde terminal.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>cd ~/proyectos/ligamx_tv_scraper</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Usa rutas absolutas cuando quieras evitar confusiones.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">navigation</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>pwd</li><li>ls</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="archivos-y-carpetas" class="card section-card">
+              <h2 class="section-title">Archivos y carpetas</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="linux filesystem setup" data-search="mkdir nombre
+mkdir -p ruta/completa crea carpetas. la opción -p permite crear rutas completas con carpetas intermedias. preparar la estructura de un proyecto o una ruta de despliegue. necesitaba crear varias carpetas de una sola vez. mkdir -p ~/proyectos/linux_cheatsheet/output muy útil al crear estructuras de proyecto. archivos y carpetas linux filesystem setup touch archivo.txt ls -la basic high">
+              <div class="label">Comando</div>
+              <pre><code>mkdir nombre
+mkdir -p ruta/completa</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Crea carpetas. La opción -p permite crear rutas completas con carpetas intermedias.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar la estructura de un proyecto o una ruta de despliegue.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba crear varias carpetas de una sola vez.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>mkdir -p ~/proyectos/linux_cheatsheet/output</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy útil al crear estructuras de proyecto.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">filesystem</span><span class="tag">setup</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>touch archivo.txt</li><li>ls -la</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux files" data-search="touch archivo.txt crea un archivo vacío si no existe. preparar archivos de log, configuración o prueba. necesitaba crear rápidamente un archivo desde terminal. touch scraper.log también actualiza la fecha de modificación si el archivo ya existe. archivos y carpetas linux files cat archivo.txt nano archivo.txt basic high">
+              <div class="label">Comando</div>
+              <pre><code>touch archivo.txt</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Crea un archivo vacío si no existe.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar archivos de log, configuración o prueba.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba crear rápidamente un archivo desde terminal.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>touch scraper.log</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>También actualiza la fecha de modificación si el archivo ya existe.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">files</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>cat archivo.txt</li><li>nano archivo.txt</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux files debugging" data-search="cat archivo.txt muestra el contenido completo de un archivo en terminal. ver rápidamente el contenido de un archivo pequeño. necesitaba leer un archivo sin abrir un editor. cat scraper.log para archivos grandes suele ser mejor usar less. archivos y carpetas linux files debugging less archivo.txt tail -n 50 scraper.log basic high">
+              <div class="label">Comando</div>
+              <pre><code>cat archivo.txt</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra el contenido completo de un archivo en terminal.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Ver rápidamente el contenido de un archivo pequeño.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba leer un archivo sin abrir un editor.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>cat scraper.log</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Para archivos grandes suele ser mejor usar less.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">files</span><span class="tag">debugging</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>less archivo.txt</li><li>tail -n 50 scraper.log</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux files logs" data-search="less archivo.txt abre un visor paginado para leer archivos largos. inspeccionar logs o archivos extensos sin imprimir todo de golpe. cat era incómodo para archivos grandes. less /var/log/syslog puedes salir con la tecla q. archivos y carpetas linux files logs cat archivo.txt tail -f scraper.log basic high">
+              <div class="label">Comando</div>
+              <pre><code>less archivo.txt</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Abre un visor paginado para leer archivos largos.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Inspeccionar logs o archivos extensos sin imprimir todo de golpe.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>cat era incómodo para archivos grandes.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>less /var/log/syslog</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Puedes salir con la tecla q.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">files</span><span class="tag">logs</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>cat archivo.txt</li><li>tail -f scraper.log</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux editor config" data-search="nano archivo.txt abre un editor de texto simple en terminal. editar archivos de configuración o scripts rápidamente. necesitaba editar archivos sin entorno gráfico. sudo nano /etc/ssh/sshd_config ctrl+o guarda, enter confirma y ctrl+x sale. archivos y carpetas linux editor config cat archivo.txt sudo nano /etc/systemd/logind.conf basic high">
+              <div class="label">Comando</div>
+              <pre><code>nano archivo.txt</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Abre un editor de texto simple en terminal.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Editar archivos de configuración o scripts rápidamente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba editar archivos sin entorno gráfico.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo nano /etc/ssh/sshd_config</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Ctrl+O guarda, Enter confirma y Ctrl+X sale.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">editor</span><span class="tag">config</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>cat archivo.txt</li><li>sudo nano /etc/systemd/logind.conf</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="permisos-y-scripts" class="card section-card">
+              <h2 class="section-title">Permisos y scripts</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="linux permissions bash" data-search="chmod +x run_scraper.sh da permiso de ejecución a un archivo de script. poder ejecutar scripts .sh directamente. el sistema no me dejaba correr un script con ./script.sh. chmod +x scripts/run_scraper.sh muy común cuando trabajas con scripts de despliegue o automatización. permisos y scripts linux permissions bash ./run_scraper.sh bash run_scraper.sh basic high">
+              <div class="label">Comando</div>
+              <pre><code>chmod +x run_scraper.sh</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Da permiso de ejecución a un archivo de script.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Poder ejecutar scripts .sh directamente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>El sistema no me dejaba correr un script con ./script.sh.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>chmod +x scripts/run_scraper.sh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy común cuando trabajas con scripts de despliegue o automatización.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">permissions</span><span class="tag">bash</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>./run_scraper.sh</li><li>bash run_scraper.sh</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="bash automation linux" data-search="./run_scraper.sh
+bash run_scraper.sh ejecuta un script de shell. automatizar la ejecución de tu scraper o el despliegue de tu sitio. necesitaba encapsular varios comandos en una sola ejecución. ./scripts/run_scraper.sh usa ./script.sh cuando tenga permiso de ejecución; bash script.sh funciona aunque no lo tenga. permisos y scripts bash automation linux chmod +x run_scraper.sh crontab -e basic high">
+              <div class="label">Comando</div>
+              <pre><code>./run_scraper.sh
+bash run_scraper.sh</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Ejecuta un script de shell.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Automatizar la ejecución de tu scraper o el despliegue de tu sitio.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba encapsular varios comandos en una sola ejecución.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>./scripts/run_scraper.sh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Usa ./script.sh cuando tenga permiso de ejecución; bash script.sh funciona aunque no lo tenga.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">bash</span><span class="tag">automation</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>chmod +x run_scraper.sh</li><li>crontab -e</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="red-y-conectividad" class="card section-card">
+              <h2 class="section-title">Red y conectividad</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="network linux ip" data-search="ip a muestra interfaces de red e ips asignadas. conocer la ip de tu laptop servidora en la red local. no sabía qué ip tenía mi equipo en la red. ip a busca la línea que empiece con &#x27;inet&#x27;. red y conectividad network linux ip ip route ping 192.168.100.42 basic high">
+              <div class="label">Comando</div>
+              <pre><code>ip a</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra interfaces de red e IPs asignadas.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Conocer la IP de tu laptop servidora en la red local.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No sabía qué IP tenía mi equipo en la red.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ip a</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Busca la línea que empiece con &#x27;inet&#x27;.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">network</span><span class="tag">linux</span><span class="tag">ip</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ip route</li><li>ping 192.168.100.42</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="network routing linux" data-search="ip route muestra rutas de red y ayuda a identificar tu red local. saber el segmento de red correcto para escanear con nmap. tenía dudas sobre cómo identificar mi red a partir de la ip. ip route si ves 192.168.100.0/24, esa es tu red local. red y conectividad network routing linux ip a nmap -sn 192.168.100.0/24 basic high">
+              <div class="label">Comando</div>
+              <pre><code>ip route</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra rutas de red y ayuda a identificar tu red local.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Saber el segmento de red correcto para escanear con nmap.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Tenía dudas sobre cómo identificar mi red a partir de la IP.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ip route</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Si ves 192.168.100.0/24, esa es tu red local.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">network</span><span class="tag">routing</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ip a</li><li>nmap -sn 192.168.100.0/24</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="network latency troubleshooting" data-search="ping 192.168.100.42 mide la latencia hacia otro equipo. diagnosticar si una conexión ssh lenta se debe a la red. la sesión ssh se sentía lenta y se congelaba al escribir. ping 192.168.100.42 si hay picos altos, el problema suele ser la red o el wifi. red y conectividad network latency troubleshooting ssh -c usuario@192.168.100.42 nmap -sn 192.168.100.0/24 basic high">
+              <div class="label">Comando</div>
+              <pre><code>ping 192.168.100.42</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Mide la latencia hacia otro equipo.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Diagnosticar si una conexión SSH lenta se debe a la red.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>La sesión SSH se sentía lenta y se congelaba al escribir.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ping 192.168.100.42</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Si hay picos altos, el problema suele ser la red o el WiFi.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">network</span><span class="tag">latency</span><span class="tag">troubleshooting</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ssh -C usuario@192.168.100.42</li><li>nmap -sn 192.168.100.0/24</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="network discovery nmap" data-search="nmap -sn 192.168.100.0/24 escanea la red y muestra dispositivos activos sin revisar puertos. encontrar equipos conectados a la red local. necesitaba localizar mi laptop servidora en la red. nmap -sn 192.168.100.0/24 muy útil para descubrir ips activas en la lan. red y conectividad network discovery nmap ip route nmap -p 22 192.168.100.42 intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>nmap -sn 192.168.100.0/24</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Escanea la red y muestra dispositivos activos sin revisar puertos.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Encontrar equipos conectados a la red local.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba localizar mi laptop servidora en la red.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>nmap -sn 192.168.100.0/24</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy útil para descubrir IPs activas en la LAN.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">network</span><span class="tag">discovery</span><span class="tag">nmap</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ip route</li><li>nmap -p 22 192.168.100.42</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="network ssh nmap ports" data-search="nmap -p 22 192.168.100.42 verifica si el puerto 22 está abierto en un host. saber si un dispositivo tiene servidor ssh activo. quería identificar qué dispositivo de la red aceptaba conexiones ssh. nmap -p 22 192.168.100.42 si sale open ssh, puedes intentar conectarte con ssh. red y conectividad network ssh nmap ports ssh usuario@192.168.100.42 sudo systemctl status ssh intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>nmap -p 22 192.168.100.42</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Verifica si el puerto 22 está abierto en un host.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Saber si un dispositivo tiene servidor SSH activo.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería identificar qué dispositivo de la red aceptaba conexiones SSH.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>nmap -p 22 192.168.100.42</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Si sale open ssh, puedes intentar conectarte con ssh.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">network</span><span class="tag">ssh</span><span class="tag">nmap</span><span class="tag">ports</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ssh usuario@192.168.100.42</li><li>sudo systemctl status ssh</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="network arp diagnostics" data-search="arp -a muestra dispositivos que tu máquina ya conoce en la red mediante arp. obtener una lista rápida de equipos vistos recientemente. necesitaba identificar otros dispositivos en la red local. arp -a no es un escaneo completo, solo muestra equipos conocidos. red y conectividad network arp diagnostics ip neigh nmap -sn 192.168.100.0/24 intermediate medium">
+              <div class="label">Comando</div>
+              <pre><code>arp -a</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra dispositivos que tu máquina ya conoce en la red mediante ARP.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Obtener una lista rápida de equipos vistos recientemente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba identificar otros dispositivos en la red local.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>arp -a</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>medium</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>No es un escaneo completo, solo muestra equipos conocidos.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">network</span><span class="tag">arp</span><span class="tag">diagnostics</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ip neigh</li><li>nmap -sn 192.168.100.0/24</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="network arp linux" data-search="ip neigh muestra vecinos de red conocidos por el sistema. revisar qué dispositivos han sido detectados recientemente. quería una alternativa moderna a arp -a. ip neigh es similar a arp, pero más moderno. red y conectividad network arp linux arp -a nmap -sn 192.168.100.0/24 intermediate medium">
+              <div class="label">Comando</div>
+              <pre><code>ip neigh</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra vecinos de red conocidos por el sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Revisar qué dispositivos han sido detectados recientemente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería una alternativa moderna a arp -a.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ip neigh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>medium</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Es similar a arp, pero más moderno.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">network</span><span class="tag">arp</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>arp -a</li><li>nmap -sn 192.168.100.0/24</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="ssh" class="card section-card">
+              <h2 class="section-title">SSH</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="ssh server remote-access" data-search="ssh usuario@192.168.100.42 abre una sesión remota por terminal hacia otra máquina. administrar tu laptop servidora sin entorno gráfico. necesitaba controlar remotamente la laptop de producción. ssh sergio@192.168.100.42 requiere que el servicio ssh esté activo en la máquina remota. ssh ssh server remote-access sudo systemctl status ssh nmap -p 22 192.168.100.42 basic high">
+              <div class="label">Comando</div>
+              <pre><code>ssh usuario@192.168.100.42</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Abre una sesión remota por terminal hacia otra máquina.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Administrar tu laptop servidora sin entorno gráfico.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba controlar remotamente la laptop de producción.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ssh sergio@192.168.100.42</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Requiere que el servicio ssh esté activo en la máquina remota.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">ssh</span><span class="tag">server</span><span class="tag">remote-access</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl status ssh</li><li>nmap -p 22 192.168.100.42</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="ssh performance network" data-search="ssh -c usuario@192.168.100.42 abre una sesión ssh usando compresión. cuando la conexión remota se siente lenta o con lag. había retraso al escribir en la terminal remota. ssh -c sergio@192.168.100.42 puede ayudar si la red es lenta o inestable. ssh ssh performance network ping 192.168.100.42 sudo nano /etc/ssh/sshd_config intermediate medium">
+              <div class="label">Comando</div>
+              <pre><code>ssh -C usuario@192.168.100.42</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Abre una sesión SSH usando compresión.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando la conexión remota se siente lenta o con lag.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Había retraso al escribir en la terminal remota.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ssh -C sergio@192.168.100.42</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>medium</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Puede ayudar si la red es lenta o inestable.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">ssh</span><span class="tag">performance</span><span class="tag">network</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ping 192.168.100.42</li><li>sudo nano /etc/ssh/sshd_config</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="ssh systemd server" data-search="sudo systemctl status ssh muestra si el servidor ssh está activo. verificar si una máquina acepta conexiones ssh. no sabía si el servicio ssh ya estaba habilitado. sudo systemctl status ssh debe mostrar active (running) si todo está bien. ssh ssh systemd server sudo systemctl start ssh sudo systemctl enable ssh basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl status ssh</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra si el servidor SSH está activo.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Verificar si una máquina acepta conexiones SSH.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No sabía si el servicio SSH ya estaba habilitado.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl status ssh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Debe mostrar active (running) si todo está bien.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">ssh</span><span class="tag">systemd</span><span class="tag">server</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl start ssh</li><li>sudo systemctl enable ssh</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="ssh systemd startup" data-search="sudo systemctl start ssh
+sudo systemctl enable ssh inicia el servicio ssh y lo deja configurado para arrancar automáticamente. preparar una laptop linux como servidor administrable por red. el servicio ssh no estaba disponible o no arrancaba al encender. sudo systemctl enable ssh muy importante para una laptop usada como servidor. ssh ssh systemd startup sudo systemctl status ssh ssh usuario@192.168.100.42 basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl start ssh
+sudo systemctl enable ssh</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Inicia el servicio SSH y lo deja configurado para arrancar automáticamente.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar una laptop Linux como servidor administrable por red.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>El servicio SSH no estaba disponible o no arrancaba al encender.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl enable ssh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy importante para una laptop usada como servidor.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">ssh</span><span class="tag">systemd</span><span class="tag">startup</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl status ssh</li><li>ssh usuario@192.168.100.42</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="ssh config server" data-search="sudo nano /etc/ssh/sshd_config abre el archivo de configuración del servidor ssh. modificar opciones como usedns o endurecer seguridad. necesitaba ajustar el comportamiento de ssh. sudo nano /etc/ssh/sshd_config después de cambiarlo, normalmente debes reiniciar ssh. ssh ssh config server usedns no sudo systemctl restart ssh intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>sudo nano /etc/ssh/sshd_config</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Abre el archivo de configuración del servidor SSH.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Modificar opciones como UseDNS o endurecer seguridad.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba ajustar el comportamiento de SSH.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo nano /etc/ssh/sshd_config</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Después de cambiarlo, normalmente debes reiniciar ssh.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">ssh</span><span class="tag">config</span><span class="tag">server</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>UseDNS no</li><li>sudo systemctl restart ssh</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="ssh performance dns" data-search="usedns no desactiva búsquedas dns inversas por parte del servidor ssh. mejorar la velocidad de conexión ssh cuando hay problemas de resolución de nombres. la sesión ssh se sentía lenta al conectar. agregar usedns no en /etc/ssh/sshd_config después debes reiniciar el servicio ssh. ssh ssh performance dns sudo nano /etc/ssh/sshd_config sudo systemctl restart ssh intermediate medium">
+              <div class="label">Comando</div>
+              <pre><code>UseDNS no</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Desactiva búsquedas DNS inversas por parte del servidor SSH.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Mejorar la velocidad de conexión SSH cuando hay problemas de resolución de nombres.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>La sesión SSH se sentía lenta al conectar.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>Agregar UseDNS no en /etc/ssh/sshd_config</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>medium</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Después debes reiniciar el servicio ssh.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">ssh</span><span class="tag">performance</span><span class="tag">dns</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo nano /etc/ssh/sshd_config</li><li>sudo systemctl restart ssh</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="ssh systemd config" data-search="sudo systemctl restart ssh reinicia el servicio ssh para aplicar cambios. aplicar modificaciones en sshd_config. los cambios en la configuración ssh no se reflejaban. sudo systemctl restart ssh úsalo después de editar /etc/ssh/sshd_config. ssh ssh systemd config sudo nano /etc/ssh/sshd_config sudo nginx -t basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl restart ssh</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Reinicia el servicio SSH para aplicar cambios.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Aplicar modificaciones en sshd_config.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Los cambios en la configuración SSH no se reflejaban.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl restart ssh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Úsalo después de editar /etc/ssh/sshd_config.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">ssh</span><span class="tag">systemd</span><span class="tag">config</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo nano /etc/ssh/sshd_config</li><li>sudo nginx -t</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="python-y-entorno-virtual" class="card section-card">
+              <h2 class="section-title">Python y entorno virtual</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="python venv environment" data-search="python3 -m venv .venv crea un entorno virtual aislado para el proyecto. instalar dependencias sin afectar el python global del sistema. no quería mezclar librerías de distintos proyectos. python3 -m venv .venv crea una carpeta .venv con python y pip aislados. python y entorno virtual python venv environment source .venv/bin/activate pip install -r requirements.txt basic high">
+              <div class="label">Comando</div>
+              <pre><code>python3 -m venv .venv</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Crea un entorno virtual aislado para el proyecto.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Instalar dependencias sin afectar el Python global del sistema.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No quería mezclar librerías de distintos proyectos.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>python3 -m venv .venv</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Crea una carpeta .venv con Python y pip aislados.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">python</span><span class="tag">venv</span><span class="tag">environment</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>source .venv/bin/activate</li><li>pip install -r requirements.txt</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="python venv" data-search="source .venv/bin/activate activa el entorno virtual actual. usar el python y pip del proyecto. necesitaba trabajar dentro del entorno virtual correcto. source .venv/bin/activate cuando se activa, suele aparecer (.venv) al inicio de la terminal. python y entorno virtual python venv python3 -m venv .venv pip install -r requirements.txt basic high">
+              <div class="label">Comando</div>
+              <pre><code>source .venv/bin/activate</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Activa el entorno virtual actual.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Usar el Python y pip del proyecto.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba trabajar dentro del entorno virtual correcto.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>source .venv/bin/activate</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Cuando se activa, suele aparecer (.venv) al inicio de la terminal.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">python</span><span class="tag">venv</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>python3 -m venv .venv</li><li>pip install -r requirements.txt</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="python pip dependencies" data-search="pip install -r requirements.txt instala las dependencias listadas en requirements.txt. preparar una máquina de desarrollo o producción para correr el proyecto. necesitaba instalar exactamente las librerías requeridas. pip install -r requirements.txt úsalo tanto en desarrollo como en producción. python y entorno virtual python pip dependencies pip freeze &gt; requirements.txt python main.py basic high">
+              <div class="label">Comando</div>
+              <pre><code>pip install -r requirements.txt</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Instala las dependencias listadas en requirements.txt.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar una máquina de desarrollo o producción para correr el proyecto.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba instalar exactamente las librerías requeridas.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>pip install -r requirements.txt</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Úsalo tanto en desarrollo como en producción.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">python</span><span class="tag">pip</span><span class="tag">dependencies</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>pip freeze &gt; requirements.txt</li><li>python main.py</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="python pip dependencies" data-search="pip freeze &gt; requirements.txt guarda las dependencias instaladas actualmente en requirements.txt. versionar las librerías necesarias del proyecto. quería replicar el mismo entorno en otra máquina. pip freeze &gt; requirements.txt ideal después de agregar nuevas librerías al proyecto. python y entorno virtual python pip dependencies pip install -r requirements.txt python3 -m venv .venv basic high">
+              <div class="label">Comando</div>
+              <pre><code>pip freeze &gt; requirements.txt</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Guarda las dependencias instaladas actualmente en requirements.txt.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Versionar las librerías necesarias del proyecto.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería replicar el mismo entorno en otra máquina.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>pip freeze &gt; requirements.txt</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Ideal después de agregar nuevas librerías al proyecto.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">python</span><span class="tag">pip</span><span class="tag">dependencies</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>pip install -r requirements.txt</li><li>python3 -m venv .venv</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="python execution" data-search="python main.py ejecuta el script principal del proyecto. probar manualmente el scraper antes de automatizarlo. necesitaba validar que todo funcionara antes de cron. python main.py hazlo primero manualmente antes de programarlo con cron. python y entorno virtual python execution crontab -e .venv/bin/python main.py &gt;&gt; scraper.log 2&gt;&amp;1 basic high">
+              <div class="label">Comando</div>
+              <pre><code>python main.py</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Ejecuta el script principal del proyecto.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Probar manualmente el scraper antes de automatizarlo.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba validar que todo funcionara antes de cron.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>python main.py</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Hazlo primero manualmente antes de programarlo con cron.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">python</span><span class="tag">execution</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>crontab -e</li><li>.venv/bin/python main.py &gt;&gt; scraper.log 2&gt;&amp;1</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="cron-y-automatizacion" class="card section-card">
+              <h2 class="section-title">Cron y automatización</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="cron automation linux" data-search="crontab -e abre el archivo de tareas programadas del usuario actual. programar scripts para que corran automáticamente. quería que el scraper se ejecutara todos los días a las 12 pm. crontab -e la primera vez puede pedirte elegir un editor, como nano. cron y automatización cron automation linux crontab -l 0 12 * * * /ruta/proyecto/scripts/run_scraper.sh basic high">
+              <div class="label">Comando</div>
+              <pre><code>crontab -e</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Abre el archivo de tareas programadas del usuario actual.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Programar scripts para que corran automáticamente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería que el scraper se ejecutara todos los días a las 12 PM.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>crontab -e</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>La primera vez puede pedirte elegir un editor, como nano.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">cron</span><span class="tag">automation</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>crontab -l</li><li>0 12 * * * /ruta/proyecto/scripts/run_scraper.sh</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="cron automation" data-search="crontab -l lista las tareas programadas actuales. verificar que la tarea se guardó correctamente. necesitaba confirmar la programación del scraper. crontab -l úsalo después de editar el cron. cron y automatización cron automation crontab -e basic high">
+              <div class="label">Comando</div>
+              <pre><code>crontab -l</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Lista las tareas programadas actuales.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Verificar que la tarea se guardó correctamente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba confirmar la programación del scraper.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>crontab -l</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Úsalo después de editar el cron.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">cron</span><span class="tag">automation</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>crontab -e</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="cron automation scheduler" data-search="0 12 * * * /ruta/proyecto/scripts/run_scraper.sh ejemplo de tarea cron que se ejecuta todos los días a las 12:00 pm. automatizar la ejecución diaria del scraper. no quería correr el scraper manualmente cada día. 0 12 * * * /home/sergio/proyectos/ligamx_tv_scraper/scripts/run_scraper.sh usa rutas absolutas para evitar problemas en cron. cron y automatización cron automation scheduler crontab -e ./scripts/run_scraper.sh intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>0 12 * * * /ruta/proyecto/scripts/run_scraper.sh</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Ejemplo de tarea cron que se ejecuta todos los días a las 12:00 PM.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Automatizar la ejecución diaria del scraper.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No quería correr el scraper manualmente cada día.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>0 12 * * * /home/sergio/proyectos/ligamx_tv_scraper/scripts/run_scraper.sh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Usa rutas absolutas para evitar problemas en cron.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">cron</span><span class="tag">automation</span><span class="tag">scheduler</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>crontab -e</li><li>./scripts/run_scraper.sh</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="bash cron python logging" data-search="#!/bin/bash
+
+cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
+
+.venv/bin/python main.py &gt;&gt; scraper.log 2&gt;&amp;1 script bash para ejecutar el scraper desde la raíz del proyecto y guardar salida y errores en un log. usarlo manualmente o desde cron. necesitaba una forma limpia y reutilizable de correr el scraper. scripts/run_scraper.sh usa el python del entorno virtual y hace el script portable. cron y automatización bash cron python logging chmod +x run_scraper.sh crontab -e tail -f scraper.log intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>#!/bin/bash
+
+cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
+
+.venv/bin/python main.py &gt;&gt; scraper.log 2&gt;&amp;1</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Script bash para ejecutar el scraper desde la raíz del proyecto y guardar salida y errores en un log.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Usarlo manualmente o desde cron.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba una forma limpia y reutilizable de correr el scraper.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>scripts/run_scraper.sh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Usa el Python del entorno virtual y hace el script portable.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">bash</span><span class="tag">cron</span><span class="tag">python</span><span class="tag">logging</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>chmod +x run_scraper.sh</li><li>crontab -e</li><li>tail -f scraper.log</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="logs-y-depuracion" class="card section-card">
+              <h2 class="section-title">Logs y depuración</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="logs debugging linux" data-search="cat scraper.log muestra el contenido completo del log. revisar una ejecución puntual del scraper. necesitaba ver qué produjo la última ejecución. cat scraper.log para logs largos, mejor usar tail o less. logs y depuración logs debugging linux tail -n 50 scraper.log tail -f scraper.log basic high">
+              <div class="label">Comando</div>
+              <pre><code>cat scraper.log</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra el contenido completo del log.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Revisar una ejecución puntual del scraper.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba ver qué produjo la última ejecución.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>cat scraper.log</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Para logs largos, mejor usar tail o less.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">logs</span><span class="tag">debugging</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>tail -n 50 scraper.log</li><li>tail -f scraper.log</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="logs debugging" data-search="tail -n 50 scraper.log muestra las últimas 50 líneas del log. ver errores recientes sin leer el archivo completo. el log era demasiado largo para verlo completo. tail -n 50 scraper.log puedes cambiar 50 por cualquier otro número. logs y depuración logs debugging cat scraper.log tail -f scraper.log basic high">
+              <div class="label">Comando</div>
+              <pre><code>tail -n 50 scraper.log</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra las últimas 50 líneas del log.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Ver errores recientes sin leer el archivo completo.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>El log era demasiado largo para verlo completo.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>tail -n 50 scraper.log</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Puedes cambiar 50 por cualquier otro número.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">logs</span><span class="tag">debugging</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>cat scraper.log</li><li>tail -f scraper.log</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="logs debugging realtime" data-search="tail -f scraper.log sigue el log en tiempo real. observar una ejecución mientras ocurre. quería ver en vivo qué estaba pasando con el scraper. tail -f scraper.log sal con ctrl+c. logs y depuración logs debugging realtime tail -n 50 scraper.log python main.py basic high">
+              <div class="label">Comando</div>
+              <pre><code>tail -f scraper.log</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Sigue el log en tiempo real.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Observar una ejecución mientras ocurre.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería ver en vivo qué estaba pasando con el scraper.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>tail -f scraper.log</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Sal con Ctrl+C.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">logs</span><span class="tag">debugging</span><span class="tag">realtime</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>tail -n 50 scraper.log</li><li>python main.py</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="servicios-y-sistema" class="card section-card">
+              <h2 class="section-title">Servicios y sistema</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="systemd services linux" data-search="sudo systemctl status servicio muestra el estado de un servicio del sistema. verificar si un servicio como ssh o nginx está activo. no sabía si el servicio estaba corriendo correctamente. sudo systemctl status nginx busca active (running) para confirmar que está funcionando. servicios y sistema systemd services linux sudo systemctl start servicio sudo systemctl restart servicio basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl status servicio</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra el estado de un servicio del sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Verificar si un servicio como ssh o nginx está activo.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No sabía si el servicio estaba corriendo correctamente.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl status nginx</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Busca active (running) para confirmar que está funcionando.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">systemd</span><span class="tag">services</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl start servicio</li><li>sudo systemctl restart servicio</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="systemd services" data-search="sudo systemctl start servicio inicia un servicio del sistema. arrancar un servicio que está detenido. un servicio necesario no estaba corriendo. sudo systemctl start nginx no garantiza que arranque automáticamente tras reinicio. servicios y sistema systemd services sudo systemctl enable servicio sudo systemctl status servicio basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl start servicio</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Inicia un servicio del sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Arrancar un servicio que está detenido.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Un servicio necesario no estaba corriendo.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl start nginx</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>No garantiza que arranque automáticamente tras reinicio.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">systemd</span><span class="tag">services</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl enable servicio</li><li>sudo systemctl status servicio</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="systemd services config" data-search="sudo systemctl restart servicio reinicia un servicio. aplicar cambios de configuración. cambios en la configuración no se reflejaban. sudo systemctl restart ssh útil después de cambiar archivos de configuración. servicios y sistema systemd services config sudo systemctl status servicio sudo nginx -t basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl restart servicio</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Reinicia un servicio.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Aplicar cambios de configuración.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Cambios en la configuración no se reflejaban.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl restart ssh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil después de cambiar archivos de configuración.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">systemd</span><span class="tag">services</span><span class="tag">config</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl status servicio</li><li>sudo nginx -t</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="systemd startup services" data-search="sudo systemctl enable servicio hace que el servicio arranque automáticamente al iniciar el sistema. preparar una máquina como servidor persistente. no quería iniciar manualmente servicios clave tras reiniciar. sudo systemctl enable ssh muy útil para ssh, nginx y otros servicios permanentes. servicios y sistema systemd startup services sudo systemctl start servicio sudo systemctl status servicio basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl enable servicio</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Hace que el servicio arranque automáticamente al iniciar el sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar una máquina como servidor persistente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No quería iniciar manualmente servicios clave tras reiniciar.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl enable ssh</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy útil para ssh, nginx y otros servicios permanentes.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">systemd</span><span class="tag">startup</span><span class="tag">services</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl start servicio</li><li>sudo systemctl status servicio</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="monitoring performance linux" data-search="top muestra procesos y uso de cpu/ram en tiempo real. ver si tu servidor está saturado. necesitaba diagnosticar lentitud del sistema. top es la herramienta clásica; htop suele ser más amigable. servicios y sistema monitoring performance linux htop basic high">
+              <div class="label">Comando</div>
+              <pre><code>top</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra procesos y uso de CPU/RAM en tiempo real.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Ver si tu servidor está saturado.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba diagnosticar lentitud del sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>top</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Es la herramienta clásica; htop suele ser más amigable.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">monitoring</span><span class="tag">performance</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>htop</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="monitoring performance linux" data-search="htop versión más visual y amigable de top. monitorear procesos con mejor legibilidad. top era más difícil de leer. htop puede requerir instalación previa con apt. servicios y sistema monitoring performance linux top sudo apt install -y htop basic high">
+              <div class="label">Comando</div>
+              <pre><code>htop</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Versión más visual y amigable de top.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Monitorear procesos con mejor legibilidad.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>top era más difícil de leer.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>htop</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Puede requerir instalación previa con apt.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">monitoring</span><span class="tag">performance</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>top</li><li>sudo apt install -y htop</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="montar-usb-sin-entorno-grafico" class="card section-card">
+              <h2 class="section-title">Montar USB sin entorno gráfico</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="usb storage linux" data-search="lsblk lista discos y particiones conectadas al sistema. identificar una memoria usb conectada sin entorno gráfico. necesitaba ver qué dispositivo correspondía a la usb. lsblk busca algo como /dev/sdb1. montar usb sin entorno gráfico usb storage linux sudo mount /dev/sdb1 /mnt/usb sudo umount /mnt/usb basic high">
+              <div class="label">Comando</div>
+              <pre><code>lsblk</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Lista discos y particiones conectadas al sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Identificar una memoria USB conectada sin entorno gráfico.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba ver qué dispositivo correspondía a la USB.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>lsblk</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Busca algo como /dev/sdb1.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">usb</span><span class="tag">storage</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo mount /dev/sdb1 /mnt/usb</li><li>sudo umount /mnt/usb</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="usb mount linux" data-search="sudo mkdir -p /mnt/usb crea un punto de montaje para la usb. preparar una ruta donde montar la memoria. necesitaba acceder a la usb desde terminal. sudo mkdir -p /mnt/usb normalmente solo hay que hacerlo una vez. montar usb sin entorno gráfico usb mount linux sudo mount /dev/sdb1 /mnt/usb basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo mkdir -p /mnt/usb</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Crea un punto de montaje para la USB.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar una ruta donde montar la memoria.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba acceder a la USB desde terminal.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo mkdir -p /mnt/usb</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Normalmente solo hay que hacerlo una vez.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">usb</span><span class="tag">mount</span><span class="tag">linux</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo mount /dev/sdb1 /mnt/usb</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="usb mount storage" data-search="sudo mount /dev/sdb1 /mnt/usb monta la usb en una carpeta del sistema. leer archivos de una memoria conectada a un servidor sin gui. quería pasar información al servidor usando una usb. sudo mount /dev/sdb1 /mnt/usb cambia sdb1 según el dispositivo que detectes con lsblk. montar usb sin entorno gráfico usb mount storage ls /mnt/usb sudo umount /mnt/usb basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo mount /dev/sdb1 /mnt/usb</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Monta la USB en una carpeta del sistema.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Leer archivos de una memoria conectada a un servidor sin GUI.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería pasar información al servidor usando una USB.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo mount /dev/sdb1 /mnt/usb</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Cambia sdb1 según el dispositivo que detectes con lsblk.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">usb</span><span class="tag">mount</span><span class="tag">storage</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>ls /mnt/usb</li><li>sudo umount /mnt/usb</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="usb files mount" data-search="ls /mnt/usb lista los archivos dentro de la usb ya montada. ver si la memoria se montó correctamente. necesitaba confirmar el contenido disponible. ls /mnt/usb úsalo después de mount. montar usb sin entorno gráfico usb files mount cat /mnt/usb/token.txt sudo mount /dev/sdb1 /mnt/usb basic high">
+              <div class="label">Comando</div>
+              <pre><code>ls /mnt/usb</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Lista los archivos dentro de la USB ya montada.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Ver si la memoria se montó correctamente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba confirmar el contenido disponible.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ls /mnt/usb</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Úsalo después de mount.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">usb</span><span class="tag">files</span><span class="tag">mount</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>cat /mnt/usb/token.txt</li><li>sudo mount /dev/sdb1 /mnt/usb</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="usb mount storage" data-search="sudo umount /mnt/usb desmonta la usb de forma segura. cerrar correctamente la memoria antes de desconectarla. quería evitar corrupción o pérdida de datos. sudo umount /mnt/usb hazlo antes de desconectar físicamente la usb. montar usb sin entorno gráfico usb mount storage sudo mount /dev/sdb1 /mnt/usb basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo umount /mnt/usb</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Desmonta la USB de forma segura.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cerrar correctamente la memoria antes de desconectarla.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería evitar corrupción o pérdida de datos.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo umount /mnt/usb</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Hazlo antes de desconectar físicamente la USB.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">usb</span><span class="tag">mount</span><span class="tag">storage</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo mount /dev/sdb1 /mnt/usb</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="energia-y-tapa" class="card section-card">
+              <h2 class="section-title">Energía y tapa</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="systemd power server laptop" data-search="sudo nano /etc/systemd/logind.conf abre el archivo de configuración del comportamiento de energía y tapa. cambiar lo que pasa cuando cierras la tapa de una laptop usada como servidor. la laptop se suspendía al cerrar la tapa. sudo nano /etc/systemd/logind.conf después de modificar este archivo debes reiniciar systemd-logind. energía y tapa systemd power server laptop sudo systemctl restart systemd-logind intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>sudo nano /etc/systemd/logind.conf</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Abre el archivo de configuración del comportamiento de energía y tapa.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cambiar lo que pasa cuando cierras la tapa de una laptop usada como servidor.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>La laptop se suspendía al cerrar la tapa.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo nano /etc/systemd/logind.conf</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Después de modificar este archivo debes reiniciar systemd-logind.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">systemd</span><span class="tag">power</span><span class="tag">server</span><span class="tag">laptop</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl restart systemd-logind</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="power server systemd" data-search="handlelidswitch=ignore
+handlelidswitchexternalpower=ignore
+handlelidswitchdocked=ignore indica que el sistema ignore el cierre de la tapa. mantener la laptop encendida aunque esté cerrada. la laptop no podía funcionar como servidor porque se suspendía al cerrar la tapa. agregar estas líneas en /etc/systemd/logind.conf ideal para una laptop conectada permanentemente a corriente. energía y tapa power server systemd sudo nano /etc/systemd/logind.conf sudo systemctl restart systemd-logind intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Indica que el sistema ignore el cierre de la tapa.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Mantener la laptop encendida aunque esté cerrada.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>La laptop no podía funcionar como servidor porque se suspendía al cerrar la tapa.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>Agregar estas líneas en /etc/systemd/logind.conf</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Ideal para una laptop conectada permanentemente a corriente.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">power</span><span class="tag">server</span><span class="tag">systemd</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo nano /etc/systemd/logind.conf</li><li>sudo systemctl restart systemd-logind</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="systemd power services" data-search="sudo systemctl restart systemd-logind reinicia el servicio que aplica la configuración de tapa y sesión. aplicar cambios en logind.conf. los cambios del archivo no se reflejaban. sudo systemctl restart systemd-logind la sesión ssh puede cerrarse y tendrás que reconectarte. energía y tapa systemd power services sudo nano /etc/systemd/logind.conf intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl restart systemd-logind</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Reinicia el servicio que aplica la configuración de tapa y sesión.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Aplicar cambios en logind.conf.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Los cambios del archivo no se reflejaban.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl restart systemd-logind</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>La sesión SSH puede cerrarse y tendrás que reconectarte.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">systemd</span><span class="tag">power</span><span class="tag">services</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo nano /etc/systemd/logind.conf</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="systemd power server" data-search="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target bloquea por completo varios modos de suspensión e hibernación. forzar que la laptop no se suspenda como servidor. quería evitar cualquier suspensión accidental. sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target útil si la configuración de tapa no fue suficiente. energía y tapa systemd power server handlelidswitch=ignore intermediate medium">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Bloquea por completo varios modos de suspensión e hibernación.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Forzar que la laptop no se suspenda como servidor.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería evitar cualquier suspensión accidental.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>medium</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil si la configuración de tapa no fue suficiente.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">systemd</span><span class="tag">power</span><span class="tag">server</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>HandleLidSwitch=ignore</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="nginx-y-servidor-web" class="card section-card">
+              <h2 class="section-title">Nginx y servidor web</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="nginx web server" data-search="sudo apt install -y nginx instala nginx, un servidor web ligero y rápido. convertir la laptop viejita en un servidor web para alojar páginas html. quería servir mi guía linux como sitio web dentro de la red. sudo apt install -y nginx muy buena opción para hardware limitado y sitios estáticos. nginx y servidor web nginx web server sudo systemctl status nginx sudo nginx -t basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo apt install -y nginx</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Instala Nginx, un servidor web ligero y rápido.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Convertir la laptop viejita en un servidor web para alojar páginas HTML.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería servir mi guía Linux como sitio web dentro de la red.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo apt install -y nginx</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy buena opción para hardware limitado y sitios estáticos.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">web</span><span class="tag">server</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl status nginx</li><li>sudo nginx -t</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx systemd web" data-search="sudo systemctl status nginx muestra si nginx está activo y corriendo. verificar si el servidor web ya está funcionando. no sabía si nginx estaba levantado. sudo systemctl status nginx debe mostrar active (running). nginx y servidor web nginx systemd web sudo systemctl start nginx sudo systemctl enable nginx basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl status nginx</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra si Nginx está activo y corriendo.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Verificar si el servidor web ya está funcionando.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No sabía si Nginx estaba levantado.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl status nginx</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Debe mostrar active (running).</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">systemd</span><span class="tag">web</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl start nginx</li><li>sudo systemctl enable nginx</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx systemd startup" data-search="sudo systemctl start nginx
+sudo systemctl enable nginx inicia nginx y lo configura para arrancar automáticamente. dejar el servidor web funcionando de manera persistente. necesitaba que el sitio estuviera disponible después de reinicios. sudo systemctl enable nginx muy importante para servidores permanentes. nginx y servidor web nginx systemd startup sudo systemctl status nginx basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl start nginx
+sudo systemctl enable nginx</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Inicia Nginx y lo configura para arrancar automáticamente.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Dejar el servidor web funcionando de manera persistente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba que el sitio estuviera disponible después de reinicios.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl enable nginx</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy importante para servidores permanentes.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">systemd</span><span class="tag">startup</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl status nginx</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx filesystem deployment" data-search="sudo mkdir -p /var/www/linux-cheatsheet crea una carpeta para alojar tu sitio web estático. preparar la ruta donde nginx servirá tus archivos html y css. necesitaba una ubicación ordenada para publicar el sitio. sudo mkdir -p /var/www/linux-cheatsheet luego puedes copiar ahí index.html y static/styles.css. nginx y servidor web nginx filesystem deployment cp output/index.html /var/www/linux-cheatsheet/index.html basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo mkdir -p /var/www/linux-cheatsheet</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Crea una carpeta para alojar tu sitio web estático.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar la ruta donde Nginx servirá tus archivos HTML y CSS.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba una ubicación ordenada para publicar el sitio.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo mkdir -p /var/www/linux-cheatsheet</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Luego puedes copiar ahí index.html y static/styles.css.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">filesystem</span><span class="tag">deployment</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>cp output/index.html /var/www/linux-cheatsheet/index.html</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx permissions deployment" data-search="sudo chown -r $user:$user /var/www/linux-cheatsheet cambia el propietario de la carpeta del sitio a tu usuario actual. poder copiar archivos sin usar sudo constantemente. quería simplificar la publicación del sitio. sudo chown -r $user:$user /var/www/linux-cheatsheet útil si tú serás quien publique nuevas versiones del sitio. nginx y servidor web nginx permissions deployment sudo mkdir -p /var/www/linux-cheatsheet intermediate medium">
+              <div class="label">Comando</div>
+              <pre><code>sudo chown -R $USER:$USER /var/www/linux-cheatsheet</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Cambia el propietario de la carpeta del sitio a tu usuario actual.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Poder copiar archivos sin usar sudo constantemente.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería simplificar la publicación del sitio.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo chown -R $USER:$USER /var/www/linux-cheatsheet</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>medium</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil si tú serás quien publique nuevas versiones del sitio.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">permissions</span><span class="tag">deployment</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo mkdir -p /var/www/linux-cheatsheet</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx config web" data-search="sudo nano /etc/nginx/sites-available/linux-cheatsheet crea o edita la configuración del sitio en nginx. configurar un server block para tu sitio web. necesitaba decirle a nginx dónde estaba mi sitio. sudo nano /etc/nginx/sites-available/linux-cheatsheet ahí defines listen, root e index. nginx y servidor web nginx config web sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/ intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>sudo nano /etc/nginx/sites-available/linux-cheatsheet</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Crea o edita la configuración del sitio en Nginx.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Configurar un server block para tu sitio web.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba decirle a Nginx dónde estaba mi sitio.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo nano /etc/nginx/sites-available/linux-cheatsheet</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Ahí defines listen, root e index.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">config</span><span class="tag">web</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx server-block web" data-search="server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+    root /var/www/linux-cheatsheet;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+} configuración básica de nginx para servir un sitio estático. publicar tu guía linux desde la laptop servidora. necesitaba una configuración mínima pero funcional para servir html. guardar este bloque en /etc/nginx/sites-available/linux-cheatsheet root indica dónde vive el sitio e index define el archivo principal. nginx y servidor web nginx server-block web sudo nano /etc/nginx/sites-available/linux-cheatsheet sudo nginx -t intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+    root /var/www/linux-cheatsheet;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Configuración básica de Nginx para servir un sitio estático.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Publicar tu guía Linux desde la laptop servidora.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba una configuración mínima pero funcional para servir HTML.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>Guardar este bloque en /etc/nginx/sites-available/linux-cheatsheet</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>root indica dónde vive el sitio e index define el archivo principal.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">server-block</span><span class="tag">web</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo nano /etc/nginx/sites-available/linux-cheatsheet</li><li>sudo nginx -t</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx deployment config" data-search="sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/ activa el sitio creando un enlace simbólico en sites-enabled. hacer que nginx cargue esa configuración de sitio. la configuración existía, pero nginx aún no la estaba usando. sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/ es el patrón típico de configuración en debian/ubuntu. nginx y servidor web nginx deployment config sudo nginx -t sudo systemctl reload nginx intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Activa el sitio creando un enlace simbólico en sites-enabled.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Hacer que Nginx cargue esa configuración de sitio.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>La configuración existía, pero Nginx aún no la estaba usando.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Es el patrón típico de configuración en Debian/Ubuntu.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">deployment</span><span class="tag">config</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo nginx -t</li><li>sudo systemctl reload nginx</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx validation config" data-search="sudo nginx -t valida la sintaxis de la configuración de nginx. comprobar que tu server block no tiene errores antes de recargar. quería evitar romper nginx por una mala configuración. sudo nginx -t siempre deberías correrlo antes de reload o restart. nginx y servidor web nginx validation config sudo systemctl reload nginx sudo nano /etc/nginx/sites-available/linux-cheatsheet basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo nginx -t</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Valida la sintaxis de la configuración de Nginx.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Comprobar que tu server block no tiene errores antes de recargar.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería evitar romper Nginx por una mala configuración.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo nginx -t</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Siempre deberías correrlo antes de reload o restart.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">validation</span><span class="tag">config</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo systemctl reload nginx</li><li>sudo nano /etc/nginx/sites-available/linux-cheatsheet</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="nginx systemd deployment" data-search="sudo systemctl reload nginx recarga nginx sin apagar el servicio. aplicar cambios de configuración de forma segura. necesitaba refrescar la configuración del sitio. sudo systemctl reload nginx es preferible a restart cuando solo cambias configuración. nginx y servidor web nginx systemd deployment sudo nginx -t sudo systemctl status nginx basic high">
+              <div class="label">Comando</div>
+              <pre><code>sudo systemctl reload nginx</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Recarga Nginx sin apagar el servicio.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Aplicar cambios de configuración de forma segura.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba refrescar la configuración del sitio.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>sudo systemctl reload nginx</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Es preferible a restart cuando solo cambias configuración.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">nginx</span><span class="tag">systemd</span><span class="tag">deployment</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>sudo nginx -t</li><li>sudo systemctl status nginx</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+             inserta el contenido completo de cada bloque temático -->
           
+            <section id="Obtener información de comandos" class="card section-card">
+              <h2 class="section-title">Información de comandos</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="linux comandos alias" data-search="type &quot;comando&quot; type te dice el tipo de comando que se le pasa como argumento. te dice si es un alias, un comando interno obtener informacion sobre el tipo de comando que quieres ejecutar, para entender su comportamiento no recordaba que ls es un alias de ls --color=auto :o type ls cuando quieras saber informacion adicional de un comando en linux información de comandos linux comandos alias help man basic high">
+              <div class="label">Comando</div>
+              <pre><code>type &quot;comando&quot;</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Type te dice el tipo de comando que se le pasa como argumento. Te dice si es un alias, un comando interno</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Obtener informacion sobre el tipo de comando que quieres ejecutar, para entender su comportamiento</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No recordaba que ls es un alias de ls --color=auto :O</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>type ls</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-14</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Cuando quieras saber informacion adicional de un comando en linux</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">alias</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>help</li><li>man</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux comandos ayuda" data-search="argumento --help el argumento help puede servir en varios comandos para proporcionar información rápida sobre su uso y opciones disponibles obtener información rápida sobre cómo usar un comando específico sin salir de la terminal. necesitaba recordar las opciones disponibles para el comando ls sin recurrir a la documentación completa ls --help útil para obtener una visión general de las opciones de un comando específico información de comandos linux comandos ayuda type man basic high">
+              <div class="label">Comando</div>
+              <pre><code>Argumento --help</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El argumento help puede servir en varios comandos para proporcionar información rápida sobre su uso y opciones disponibles</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Obtener información rápida sobre cómo usar un comando específico sin salir de la terminal.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba recordar las opciones disponibles para el comando ls sin recurrir a la documentación completa</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>ls --help</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-14</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil para obtener una visión general de las opciones de un comando específico</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">ayuda</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>type</li><li>man</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="linux comandos ayuda" data-search="man el comando man muestra el manual completo de un comando, incluyendo su descripción detallada, opciones, ejemplos y más información técnica. la información del comando se visualiza con la herramienta less, lo que permite navegar por el contenido de manera paginada. consultar la documentación completa de un comando para entender todas sus opciones y detalles de uso necesitaba información detallada sobre el comando ls, incluyendo opciones avanzadas y ejemplos de uso, que no se proporcionan con --help man ls útil para obtener información detallada sobre un comando específico, incluyendo opciones avanzadas y ejemplos de uso información de comandos linux comandos ayuda help type basic high">
+              <div class="label">Comando</div>
+              <pre><code>man</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El comando man muestra el manual completo de un comando, incluyendo su descripción detallada, opciones, ejemplos y más información técnica. La información del comando se visualiza con la herramienta less, lo que permite navegar por el contenido de manera paginada.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Consultar la documentación completa de un comando para entender todas sus opciones y detalles de uso</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba información detallada sobre el comando ls, incluyendo opciones avanzadas y ejemplos de uso, que no se proporcionan con --help</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>man ls</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-14</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil para obtener información detallada sobre un comando específico, incluyendo opciones avanzadas y ejemplos de uso</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">ayuda</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>help</li><li>type</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
             <section id="navegacion-basica" class="card section-card">
               <h2 class="section-title">Navegación básica</h2>
               <div class="items">
@@ -4041,11 +8344,13 @@ sudo systemctl enable nginx</code></pre>
   </main>
 
   <script>
+    // Referencias a los controles de filtro y a todos los elementos que se pueden buscar.
     const searchInput = document.getElementById("searchInput");
     const tagFilter = document.getElementById("tagFilter");
     const resultsInfo = document.getElementById("resultsInfo");
     const items = Array.from(document.querySelectorAll(".searchable-item"));
 
+    // Aplica ambos filtros: texto libre y tag.
     function updateFilters() {
       const searchText = searchInput.value.trim().toLowerCase();
       const selectedTag = tagFilter.value.trim().toLowerCase();
@@ -4053,6 +8358,7 @@ sudo systemctl enable nginx</code></pre>
       let visibleCount = 0;
 
       items.forEach((item) => {
+        // Cada entrada expone texto e tags en data-* para evitar lógica compleja en el DOM.
         const itemSearch = item.dataset.search || "";
         const itemTags = item.dataset.tags || "";
 
@@ -4068,6 +8374,7 @@ sudo systemctl enable nginx</code></pre>
         }
       });
 
+      // Actualiza el mensaje inferior para indicar cuántos resultados siguen visibles.
       if (!searchText && !selectedTag) {
         resultsInfo.textContent = `Mostrando todas las entradas (${visibleCount}).`;
       } else {
@@ -4075,9 +8382,11 @@ sudo systemctl enable nginx</code></pre>
       }
     }
 
+    // Escucha cambios en los controles para refrescar el listado en tiempo real.
     searchInput.addEventListener("input", updateFilters);
     tagFilter.addEventListener("change", updateFilters);
 
+    // Ejecuta el filtro al cargar para inicializar el contador correctamente.
     updateFilters();
   </script>
 </body>

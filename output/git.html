@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Metadatos base y recursos compartidos por todas las páginas generadas desde esta plantilla -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Git Knowledge Base se reemplaza con el título específico de cada página -->
   <title>Git Knowledge Base</title>
   <link rel="stylesheet" href="../static/styles.css" />
 </head>
 <body class="theme-git">
+  <!-- Encabezado principal con identidad de la página y enlaces de navegación -->
   <header>
     <div class="container header-inner">
       <div>
@@ -16,6 +19,9 @@
       <div class="header-actions">
         <div class="badge">Base de conocimiento generada con Python</div>
         <nav class="page-links">
+          <!-- <a href="index.html">Inicio</a>
+<a href="linux.html">Linux</a>
+<a href="git.html" class="active">Git</a> inserta enlaces como Inicio, Linux o Git -->
           <a href="index.html">Inicio</a>
 <a href="linux.html">Linux</a>
 <a href="git.html" class="active">Git</a>
@@ -26,6 +32,7 @@
 
   <main>
     <div class="container">
+      <!-- Introducción rápida: explica uso de la base y su enfoque de crecimiento -->
       <section class="intro-grid">
         <div class="card">
           <h2 class="section-title">Cómo usar esta base</h2>
@@ -37,6 +44,7 @@
         </div>
       </section>
 
+      <!-- Filtros del lado del cliente: permiten buscar texto y filtrar por tag sin recargar la página -->
       <section class="card filters-card">
         <h2 class="section-title">Buscar y filtrar</h2>
         <div class="filters-grid">
@@ -71,6 +79,7 @@
       </section>
 
       <div class="layout">
+        <!-- Navegación lateral generada dinámicamente con las secciones disponibles -->
         <aside class="card">
           <div class="nav-title">Secciones</div>
           <nav class="nav-list">
@@ -79,6 +88,989 @@
         </aside>
 
         <div class="sections">
+          <!-- 
+            <section id="git" class="card section-card">
+              <h2 class="section-title">Git</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="git version-control" data-search="git init inicializa un repositorio git local en la carpeta actual. empezar a versionar un proyecto desde cero. necesitaba guardar historial de cambios de mi proyecto. git init solo se hace una vez al inicio del proyecto. git git version-control git status git add . git commit -m &quot;mensaje&quot; basic high">
+              <div class="label">Comando</div>
+              <pre><code>git init</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Inicializa un repositorio Git local en la carpeta actual.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Empezar a versionar un proyecto desde cero.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba guardar historial de cambios de mi proyecto.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git init</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Solo se hace una vez al inicio del proyecto.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">version-control</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git status</li><li>git add .</li><li>git commit -m &quot;mensaje&quot;</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git workflow" data-search="git status muestra el estado actual del repositorio. ver qué archivos cambiaron, cuáles están staged y cuáles no. no sabía qué cambios había pendientes. git status es uno de los comandos más usados de git. git git workflow git add . git commit -m &quot;mensaje&quot; basic high">
+              <div class="label">Comando</div>
+              <pre><code>git status</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra el estado actual del repositorio.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Ver qué archivos cambiaron, cuáles están staged y cuáles no.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No sabía qué cambios había pendientes.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git status</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Es uno de los comandos más usados de Git.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">workflow</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git add .</li><li>git commit -m &quot;mensaje&quot;</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git staging" data-search="git add . agrega cambios al área de preparación (staging). preparar archivos para el siguiente commit. necesitaba indicar qué cambios quería guardar. git add . respeta lo definido en .gitignore. git git staging git status git commit -m &quot;mensaje&quot; basic high">
+              <div class="label">Comando</div>
+              <pre><code>git add .</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Agrega cambios al área de preparación (staging).</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Preparar archivos para el siguiente commit.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba indicar qué cambios quería guardar.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git add .</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Respeta lo definido en .gitignore.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">staging</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git status</li><li>git commit -m &quot;mensaje&quot;</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git commit workflow" data-search="git commit -m &quot;mensaje&quot; guarda una versión del proyecto con un mensaje descriptivo. registrar un bloque de cambios estable. necesitaba guardar el progreso del proyecto de forma ordenada. git commit -m &quot;versión inicial del scraper liga mx&quot; es buena práctica que el mensaje describa el cambio real. git git commit workflow git add . git log basic high">
+              <div class="label">Comando</div>
+              <pre><code>git commit -m &quot;mensaje&quot;</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Guarda una versión del proyecto con un mensaje descriptivo.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Registrar un bloque de cambios estable.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba guardar el progreso del proyecto de forma ordenada.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git commit -m &quot;Versión inicial del scraper Liga MX&quot;</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Es buena práctica que el mensaje describa el cambio real.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">commit</span><span class="tag">workflow</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git add .</li><li>git log</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git github remote" data-search="git push sube commits locales al repositorio remoto. sincronizar tus cambios con github. necesitaba respaldar y compartir mi código. git push funciona sin parámetros cuando ya existe tracking con la rama remota. git git github remote git push -u origin master git pull git branch -vv basic high">
+              <div class="label">Comando</div>
+              <pre><code>git push</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Sube commits locales al repositorio remoto.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Sincronizar tus cambios con GitHub.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba respaldar y compartir mi código.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git push</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Funciona sin parámetros cuando ya existe tracking con la rama remota.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">github</span><span class="tag">remote</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git push -u origin master</li><li>git pull</li><li>git branch -vv</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git github remote" data-search="git remote add origin https://linkderepositorio para agregar una conexión de mi repositorio local hacia un repositorio remoto conectar tu repositorio local con uno remoto necesitaba conectar mi repositorio local a github git remote add origin https://github.com/seraph8712/base_conocimiento_linux tuve que colocar mi usuario y un token asignado en github para hacer la conexión git git github remote git push -u origin master git pull git branch -vv basic high">
+              <div class="label">Comando</div>
+              <pre><code>git remote add origin https://linkderepositorio</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Para agregar una conexión de mi repositorio local hacia un repositorio remoto</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Conectar tu repositorio local con uno remoto</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba conectar mi repositorio local a github</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git remote add origin https://github.com/seraph8712/Base_Conocimiento_Linux</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Tuve que colocar mi usuario y un token asignado en github para hacer la conexión</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">github</span><span class="tag">remote</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git push -u origin master</li><li>git pull</li><li>git branch -vv</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git github remote" data-search="git pull descarga cambios del remoto y los integra a tu rama local. actualizar el proyecto en la laptop de producción. necesitaba traer la última versión de github al servidor. git pull equivale conceptualmente a fetch + merge. git git github remote git fetch git push basic high">
+              <div class="label">Comando</div>
+              <pre><code>git pull</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Descarga cambios del remoto y los integra a tu rama local.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Actualizar el proyecto en la laptop de producción.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba traer la última versión de GitHub al servidor.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git pull</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Equivale conceptualmente a fetch + merge.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">github</span><span class="tag">remote</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git fetch</li><li>git push</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git remote sync" data-search="git fetch descarga información del remoto sin mezclarla automáticamente con tu rama local. revisar cambios remotos antes de integrarlos. quería tener más control antes de actualizar el código local. git fetch es más seguro que pull cuando quieres revisar qué cambió. git git remote sync git pull git log git branch -vv intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>git fetch</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Descarga información del remoto sin mezclarla automáticamente con tu rama local.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Revisar cambios remotos antes de integrarlos.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería tener más control antes de actualizar el código local.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git fetch</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Es más seguro que pull cuando quieres revisar qué cambió.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">remote</span><span class="tag">sync</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git pull</li><li>git log</li><li>git branch -vv</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git branches tracking" data-search="git branch -vv muestra ramas locales y qué rama remota siguen. entender el tracking entre tu rama local y el remoto. quería entender qué rama local seguía a origin/master. git branch -vv muy útil para entender ahead/behind. git git branches tracking git push -u origin master git show-ref intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>git branch -vv</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra ramas locales y qué rama remota siguen.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Entender el tracking entre tu rama local y el remoto.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería entender qué rama local seguía a origin/master.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git branch -vv</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muy útil para entender ahead/behind.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">branches</span><span class="tag">tracking</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git push -u origin master</li><li>git show-ref</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git history" data-search="git log muestra el historial de commits. revisar versiones anteriores y entender el historial. necesitaba ver qué cambios había guardado en el repositorio. git log también puedes usar git log --oneline para una vista compacta. git git history git show-ref git branch -vv basic high">
+              <div class="label">Comando</div>
+              <pre><code>git log</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra el historial de commits.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Revisar versiones anteriores y entender el historial.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba ver qué cambios había guardado en el repositorio.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git log</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>También puedes usar git log --oneline para una vista compacta.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">history</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git show-ref</li><li>git branch -vv</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git refs debugging" data-search="git show-ref muestra referencias internas como ramas locales y remotas. diagnosticar por qué git mostraba ramas duplicadas como origin/master. encontré una rama local incorrecta llamada origin/master. git show-ref útil para detectar referencias raras o duplicadas. git git refs debugging git branch -d origin/master git branch -vv intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>git show-ref</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra referencias internas como ramas locales y remotas.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Diagnosticar por qué Git mostraba ramas duplicadas como origin/master.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Encontré una rama local incorrecta llamada origin/master.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git show-ref</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil para detectar referencias raras o duplicadas.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">refs</span><span class="tag">debugging</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git branch -D origin/master</li><li>git branch -vv</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git branches cleanup" data-search="git branch -d origin/master elimina una rama local incluso si tiene el mismo nombre que una referencia remota. eliminar una rama local creada por error con nombre origin/master. git mostraba origin/master duplicado porque existía una rama local mal creada. git branch -d origin/master asegúrate primero de no estar parado sobre esa rama. git git branches cleanup git show-ref git checkout master intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>git branch -D origin/master</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Elimina una rama local incluso si tiene el mismo nombre que una referencia remota.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Eliminar una rama local creada por error con nombre origin/master.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Git mostraba origin/master duplicado porque existía una rama local mal creada.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git branch -D origin/master</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Asegúrate primero de no estar parado sobre esa rama.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">branches</span><span class="tag">cleanup</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git show-ref</li><li>git checkout master</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git remote github" data-search="git remote -v muestra las urls asociadas a los remotos configurados. verificar a qué repositorio github está conectado el proyecto. necesitaba confirmar si origin apuntaba al repo correcto. git remote -v muestra urls para fetch y push. git git remote github git remote add origin url git push basic high">
+              <div class="label">Comando</div>
+              <pre><code>git remote -v</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Muestra las URLs asociadas a los remotos configurados.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Verificar a qué repositorio GitHub está conectado el proyecto.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba confirmar si origin apuntaba al repo correcto.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git remote -v</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Muestra URLs para fetch y push.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">remote</span><span class="tag">github</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git remote add origin URL</li><li>git push</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git github remote" data-search="git remote add origin https://github.com/usuario/repo.git conecta el repositorio local con un repositorio remoto llamado origin. subir por primera vez un proyecto local a github. necesitaba enlazar mi proyecto local con github. git remote add origin https://github.com/seraph8712/ligamx_tv_scraper.git solo se hace una vez por proyecto. git git github remote git remote -v git push -u origin master basic high">
+              <div class="label">Comando</div>
+              <pre><code>git remote add origin https://github.com/usuario/repo.git</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Conecta el repositorio local con un repositorio remoto llamado origin.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Subir por primera vez un proyecto local a GitHub.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba enlazar mi proyecto local con GitHub.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git remote add origin https://github.com/seraph8712/ligamx_tv_scraper.git</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Solo se hace una vez por proyecto.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">github</span><span class="tag">remote</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git remote -v</li><li>git push -u origin master</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git github tracking" data-search="git push -u origin master sube la rama local al remoto y crea la relación de tracking. primer push de una rama hacia github. quería que después git push funcionara sin parámetros. git push -u origin master el parámetro -u conecta tu rama local con la remota. git git github tracking git branch -vv git push git pull intermediate high">
+              <div class="label">Comando</div>
+              <pre><code>git push -u origin master</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Sube la rama local al remoto y crea la relación de tracking.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Primer push de una rama hacia GitHub.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Quería que después git push funcionara sin parámetros.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git push -u origin master</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>intermediate</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>El parámetro -u conecta tu rama local con la remota.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">github</span><span class="tag">tracking</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git branch -vv</li><li>git push</li><li>git pull</li>
+                </ul>
+              </div>
+            </article>
+            
+
+            <article class="item searchable-item" data-tags="git github clone deployment" data-search="git clone https://github.com/usuario/repo.git descarga un repositorio remoto completo a tu máquina. llevar el proyecto a la laptop de producción o a otra máquina. necesitaba instalar el proyecto en la laptop viejita desde github. git clone https://github.com/seraph8712/ligamx_tv_scraper.git después del clone no necesitas hacer git init. git git github clone deployment git pull python3 -m venv .venv basic high">
+              <div class="label">Comando</div>
+              <pre><code>git clone https://github.com/usuario/repo.git</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>Descarga un repositorio remoto completo a tu máquina.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Llevar el proyecto a la laptop de producción o a otra máquina.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Necesitaba instalar el proyecto en la laptop viejita desde GitHub.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p>git clone https://github.com/seraph8712/ligamx_tv_scraper.git</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-02</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Después del clone no necesitas hacer git init.</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">git</span><span class="tag">github</span><span class="tag">clone</span><span class="tag">deployment</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>git pull</li><li>python3 -m venv .venv</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+             inserta el contenido completo de cada bloque temático -->
           
             <section id="git" class="card section-card">
               <h2 class="section-title">Git</h2>
@@ -1068,11 +2060,13 @@
   </main>
 
   <script>
+    // Referencias a los controles de filtro y a todos los elementos que se pueden buscar.
     const searchInput = document.getElementById("searchInput");
     const tagFilter = document.getElementById("tagFilter");
     const resultsInfo = document.getElementById("resultsInfo");
     const items = Array.from(document.querySelectorAll(".searchable-item"));
 
+    // Aplica ambos filtros: texto libre y tag.
     function updateFilters() {
       const searchText = searchInput.value.trim().toLowerCase();
       const selectedTag = tagFilter.value.trim().toLowerCase();
@@ -1080,6 +2074,7 @@
       let visibleCount = 0;
 
       items.forEach((item) => {
+        // Cada entrada expone texto e tags en data-* para evitar lógica compleja en el DOM.
         const itemSearch = item.dataset.search || "";
         const itemTags = item.dataset.tags || "";
 
@@ -1095,6 +2090,7 @@
         }
       });
 
+      // Actualiza el mensaje inferior para indicar cuántos resultados siguen visibles.
       if (!searchText && !selectedTag) {
         resultsInfo.textContent = `Mostrando todas las entradas (${visibleCount}).`;
       } else {
@@ -1102,9 +2098,11 @@
       }
     }
 
+    // Escucha cambios en los controles para refrescar el listado en tiempo real.
     searchInput.addEventListener("input", updateFilters);
     tagFilter.addEventListener("change", updateFilters);
 
+    // Ejecuta el filtro al cargar para inicializar el contador correctamente.
     updateFilters();
   </script>
 </body>

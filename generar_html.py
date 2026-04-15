@@ -234,10 +234,12 @@ def generate_html(data: dict, template: str, current_page_key: str) -> str:
     how_to_use = escape(intro.get("how_to_use", ""))
     scalability = escape(intro.get("scalability", ""))
     sections = data.get("sections", [])
-    page_config = next(page for page in PAGES if page["key"] == current_page_key)
+    page_config = next(
+        page for page in PAGES if page["key"] == current_page_key)
 
     html = template
-    html = html.replace("{{BODY_CLASS}}", escape(page_config.get("body_class", "")))
+    html = html.replace("{{BODY_CLASS}}", escape(
+        page_config.get("body_class", "")))
     html = html.replace("{{TITLE}}", title)
     html = html.replace("{{SUBTITLE}}", subtitle)
     html = html.replace("{{INTRO_HOW_TO_USE}}", how_to_use)
@@ -245,7 +247,8 @@ def generate_html(data: dict, template: str, current_page_key: str) -> str:
     html = html.replace("{{PAGE_LINKS}}", render_page_links(current_page_key))
     html = html.replace("{{NAV}}", render_nav(sections))
     html = html.replace("{{SECTIONS}}", render_sections(sections))
-    html = html.replace("{{TAG_OPTIONS}}", render_tag_options(collect_all_tags(sections)))
+    html = html.replace("{{TAG_OPTIONS}}", render_tag_options(
+        collect_all_tags(sections)))
     return html
 
 
@@ -277,7 +280,7 @@ def generate_index_html() -> str:
     <div class="container header-inner">
       <div>
         <h1>Knowledge Base</h1>
-        <p class="subtitle">Acceso separado a comandos de Linux y Git.</p>
+        <p class="subtitle">Comandos de Linux y Git</p>
       </div>
       <nav class="page-links">
         {page_links}
@@ -290,10 +293,10 @@ def generate_index_html() -> str:
       <section class="home-hero card">
         <div class="home-hero-grid">
           <div>
-            <div class="eyebrow">Base separada por tema</div>
-            <h2 class="section-title">Estudia con una base clara y enfocada</h2>
-            <p>Linux conserva comandos de sistema, red, SSH, automatización, Python y Nginx. Git queda aislado para flujo de versionado, ramas, remotos e historial.</p>
-            <p class="hero-note">La idea es reducir fricción: menos búsqueda, más práctica, más constancia.</p>
+            <div class="eyebrow">Base de conocimientos para estudio personal creada con python</div>
+            <h2 class="section-title">Con Estudio, Esfuerzo y Trabajo llegaremos al Éxito Deseado</h2>
+            <p>La sección linux describe comandos de sistema, red, SSH, automatización, Python y Nginx. Git contiene comandos para flujo de versionado, ramas, remotos e historial.</p>
+            <p class="hero-note">Próximas secciones estarán disponibles próximamente.</p>
           </div>
           <div class="hero-art-wrap">
             <img class="hero-art" src="../static/hero-study.svg" alt="Ilustración de estudio y programación con computadora, gráficos e inteligencia artificial" />
@@ -313,7 +316,8 @@ def generate_index_html() -> str:
 
 def main() -> None:
     if not TEMPLATE_HTML.exists():
-        raise FileNotFoundError(f"No existe la plantilla HTML: {TEMPLATE_HTML}")
+        raise FileNotFoundError(
+            f"No existe la plantilla HTML: {TEMPLATE_HTML}")
 
     template = TEMPLATE_HTML.read_text(encoding="utf-8")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -321,7 +325,8 @@ def main() -> None:
     # Recorre la configuración declarativa de PAGES para evitar duplicar lógica.
     for page in PAGES:
         if not page["input"].exists():
-            raise FileNotFoundError(f"No existe el archivo JSON: {page['input']}")
+            raise FileNotFoundError(
+                f"No existe el archivo JSON: {page['input']}")
 
         data = json.loads(page["input"].read_text(encoding="utf-8"))
         output_html = generate_html(data, template, page["key"])

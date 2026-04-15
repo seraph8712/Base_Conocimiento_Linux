@@ -7,6 +7,72 @@
   },
   "sections": [
     {
+      "id": "Obtener información de comandos",
+      "title": "Información de comandos",
+      "items": [
+        {
+          "command": "type \"comando\"",
+          "description": "Type te dice el tipo de comando que se le pasa como argumento. Te dice si es un alias, un comando interno",
+          "use_case": "Obtener informacion sobre el tipo de comando que quieres ejecutar, para entender su comportamiento",
+          "problem_solved": "No recordaba que ls es un alias de ls --color=auto :O",
+          "example": "type ls",
+          "tags": [
+            "linux",
+            "comandos",
+            "alias"
+          ],
+          "level": "basic",
+          "notes": "Cuando quieras saber informacion adicional de un comando en linux",
+          "related": [
+            "help",
+            "man"
+          ],
+          "date_learned": "2026-04-14",
+          "confidence": "high"
+        },
+        {
+          "command": "Argumento --help",
+          "description": "El argumento help puede servir en varios comandos para proporcionar información rápida sobre su uso y opciones disponibles",
+          "use_case": "Obtener información rápida sobre cómo usar un comando específico sin salir de la terminal.",
+          "problem_solved": "Necesitaba recordar las opciones disponibles para el comando ls sin recurrir a la documentación completa",
+          "example": "ls --help",
+          "tags": [
+            "linux",
+            "comandos",
+            "ayuda"
+          ],
+          "level": "basic",
+          "notes": "Útil para obtener una visión general de las opciones de un comando específico",
+          "related": [
+            "type",
+            "man"
+          ],
+          "date_learned": "2026-04-14",
+          "confidence": "high"
+        },
+        {
+          "command": "man",
+          "description": "El comando man muestra el manual completo de un comando, incluyendo su descripción detallada, opciones, ejemplos y más información técnica. La información del comando se visualiza con la herramienta less, lo que permite navegar por el contenido de manera paginada.",
+          "use_case": "Consultar la documentación completa de un comando para entender todas sus opciones y detalles de uso",
+          "problem_solved": "Necesitaba información detallada sobre el comando ls, incluyendo opciones avanzadas y ejemplos de uso, que no se proporcionan con --help",
+          "example": "man ls",
+          "tags": [
+            "linux",
+            "comandos",
+            "ayuda"
+          ],
+          "level": "basic",
+          "notes": "Útil para obtener información detallada sobre un comando específico, incluyendo opciones avanzadas y ejemplos de uso",
+          "related": [
+            "help",
+            "type"
+          ],
+          "date_learned": "2026-04-14",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
       "id": "navegacion-basica",
       "title": "Navegación básica",
       "items": [
