@@ -58,9 +58,11 @@
               <option value="">Todos los tags</option>
 <option value="alias">alias</option>
 <option value="arp">arp</option>
+<option value="atajo">atajo</option>
 <option value="automation">automation</option>
 <option value="ayuda">ayuda</option>
 <option value="bash">bash</option>
+<option value="comando">comando</option>
 <option value="comandos">comandos</option>
 <option value="config">config</option>
 <option value="cron">cron</option>
@@ -68,6 +70,7 @@
 <option value="dependencies">dependencies</option>
 <option value="deployment">deployment</option>
 <option value="diagnostics">diagnostics</option>
+<option value="diagonal">diagonal</option>
 <option value="discovery">discovery</option>
 <option value="dns">dns</option>
 <option value="editor">editor</option>
@@ -122,6 +125,7 @@
           <div class="nav-title">Secciones</div>
           <nav class="nav-list">
             <a href="#Obtener información de comandos">Información de comandos</a>
+<a href="#Atajos comandos">Atajos y trucos para comandos</a>
 <a href="#navegacion-basica">Navegación básica</a>
 <a href="#archivos-y-carpetas">Archivos y carpetas</a>
 <a href="#permisos-y-scripts">Permisos y scripts</a>
@@ -165,7 +169,7 @@
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>type ls</p>
+                  <p class="multiline-text">type ls</p>
                 </div>
               </div>
 
@@ -226,7 +230,7 @@
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls --help</p>
+                  <p class="multiline-text">ls --help</p>
                 </div>
               </div>
 
@@ -287,7 +291,7 @@
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>man ls</p>
+                  <p class="multiline-text">man ls</p>
                 </div>
               </div>
 
@@ -325,6 +329,139 @@
               </div>
             </article>
             
+
+            <article class="item searchable-item" data-tags="linux comandos ayuda" data-search="apropos el comando apropos busca en las páginas del manual por palabras clave y muestra una lista de comandos relacionados con esas palabras. es útil para encontrar comandos cuando no recuerdas su nombre exacto pero sabes qué función cumplen. cuando no recuerdas el nombre de un comando específico , le puedes mandar palabras clave y te mostrará comandos relacionados. no recordaba el comando exacto para listar archivos ocultos, pero sabía que tenía que ver con &#x27;directory&#x27; o &#x27;files&#x27;. apropos directory usar cuando no recuerdas el nombre del comando exacto información de comandos linux comandos ayuda help type man basic high">
+              <div class="label">Comando</div>
+              <pre><code>apropos</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El comando apropos busca en las páginas del manual por palabras clave y muestra una lista de comandos relacionados con esas palabras. Es útil para encontrar comandos cuando no recuerdas su nombre exacto pero sabes qué función cumplen.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando no recuerdas el nombre de un comando específico , le puedes mandar palabras clave y te mostrará comandos relacionados.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No recordaba el comando exacto para listar archivos ocultos, pero sabía que tenía que ver con &#x27;directory&#x27; o &#x27;files&#x27;.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p class="multiline-text">apropos directory</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-15</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Usar cuando no recuerdas el nombre del comando exacto</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">ayuda</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>help</li><li>type</li><li>man</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="Atajos comandos" class="card section-card">
+              <h2 class="section-title">Atajos y trucos para comandos</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="comando atajo diagonal" data-search="uso de caracter \ el carácter de barra invertida (\) se utiliza para indicar que un comando continúa en la siguiente línea. esto es útil para mejorar la legibilidad de comandos largos o complejos, permitiendo dividirlos en varias líneas sin ejecutarlos hasta que se complete el comando. cuando quieras ejecutar un comando largo y quieras dividirlo en varias líneas para mejorar su legibilidad tenía un comando largo que era difícil de leer en una sola línea, y al usar \ pude dividirlo en varias líneas sin ejecutarlo hasta que estuviera completo. ls -la \
+  /home/sergio \
+  /home/sergio/documents útil para mejorar la legibilidad de comandos largos o complejos atajos y trucos para comandos comando atajo diagonal    basic high">
+              <div class="label">Comando</div>
+              <pre><code>Uso de caracter \</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El carácter de barra invertida (\) se utiliza para indicar que un comando continúa en la siguiente línea. Esto es útil para mejorar la legibilidad de comandos largos o complejos, permitiendo dividirlos en varias líneas sin ejecutarlos hasta que se complete el comando.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando quieras ejecutar un comando largo y quieras dividirlo en varias líneas para mejorar su legibilidad</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Tenía un comando largo que era difícil de leer en una sola línea, y al usar \ pude dividirlo en varias líneas sin ejecutarlo hasta que estuviera completo.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p class="multiline-text">ls -la \
+  /home/sergio \
+  /home/sergio/Documents</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-15</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil para mejorar la legibilidad de comandos largos o complejos</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">comando</span><span class="tag">atajo</span><span class="tag">diagonal</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li></li><li></li><li></li>
+                </ul>
+              </div>
+            </article>
+            
               </div>
             </section>
             
@@ -355,7 +492,7 @@
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls -la /var/www</p>
+                  <p class="multiline-text">ls -la /var/www</p>
                 </div>
               </div>
 
@@ -416,7 +553,7 @@
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls -ltr /Documents/Proyectos_SAM</p>
+                  <p class="multiline-text">ls -ltr /Documents/Proyectos_SAM</p>
                 </div>
               </div>
 
@@ -477,7 +614,7 @@
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>pwd</p>
+                  <p class="multiline-text">pwd</p>
                 </div>
               </div>
 
@@ -542,7 +679,7 @@ cd /ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>cd ~/proyectos/ligamx_tv_scraper</p>
+                  <p class="multiline-text">cd ~/proyectos/ligamx_tv_scraper</p>
                 </div>
               </div>
 
@@ -612,7 +749,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>mkdir -p ~/proyectos/linux_cheatsheet/output</p>
+                  <p class="multiline-text">mkdir -p ~/proyectos/linux_cheatsheet/output</p>
                 </div>
               </div>
 
@@ -673,7 +810,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>touch scraper.log</p>
+                  <p class="multiline-text">touch scraper.log</p>
                 </div>
               </div>
 
@@ -734,7 +871,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>cat scraper.log</p>
+                  <p class="multiline-text">cat scraper.log</p>
                 </div>
               </div>
 
@@ -795,7 +932,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>less /var/log/syslog</p>
+                  <p class="multiline-text">less /var/log/syslog</p>
                 </div>
               </div>
 
@@ -856,7 +993,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/ssh/sshd_config</p>
+                  <p class="multiline-text">sudo nano /etc/ssh/sshd_config</p>
                 </div>
               </div>
 
@@ -924,7 +1061,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>chmod +x scripts/run_scraper.sh</p>
+                  <p class="multiline-text">chmod +x scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -987,7 +1124,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>./scripts/run_scraper.sh</p>
+                  <p class="multiline-text">./scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -1055,7 +1192,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ip a</p>
+                  <p class="multiline-text">ip a</p>
                 </div>
               </div>
 
@@ -1116,7 +1253,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ip route</p>
+                  <p class="multiline-text">ip route</p>
                 </div>
               </div>
 
@@ -1177,7 +1314,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ping 192.168.100.42</p>
+                  <p class="multiline-text">ping 192.168.100.42</p>
                 </div>
               </div>
 
@@ -1238,7 +1375,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>nmap -sn 192.168.100.0/24</p>
+                  <p class="multiline-text">nmap -sn 192.168.100.0/24</p>
                 </div>
               </div>
 
@@ -1299,7 +1436,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>nmap -p 22 192.168.100.42</p>
+                  <p class="multiline-text">nmap -p 22 192.168.100.42</p>
                 </div>
               </div>
 
@@ -1360,7 +1497,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>arp -a</p>
+                  <p class="multiline-text">arp -a</p>
                 </div>
               </div>
 
@@ -1421,7 +1558,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ip neigh</p>
+                  <p class="multiline-text">ip neigh</p>
                 </div>
               </div>
 
@@ -1489,7 +1626,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ssh sergio@192.168.100.42</p>
+                  <p class="multiline-text">ssh sergio@192.168.100.42</p>
                 </div>
               </div>
 
@@ -1550,7 +1687,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ssh -C sergio@192.168.100.42</p>
+                  <p class="multiline-text">ssh -C sergio@192.168.100.42</p>
                 </div>
               </div>
 
@@ -1611,7 +1748,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl status ssh</p>
+                  <p class="multiline-text">sudo systemctl status ssh</p>
                 </div>
               </div>
 
@@ -1674,7 +1811,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl enable ssh</p>
+                  <p class="multiline-text">sudo systemctl enable ssh</p>
                 </div>
               </div>
 
@@ -1735,7 +1872,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/ssh/sshd_config</p>
+                  <p class="multiline-text">sudo nano /etc/ssh/sshd_config</p>
                 </div>
               </div>
 
@@ -1796,7 +1933,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>Agregar UseDNS no en /etc/ssh/sshd_config</p>
+                  <p class="multiline-text">Agregar UseDNS no en /etc/ssh/sshd_config</p>
                 </div>
               </div>
 
@@ -1857,7 +1994,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl restart ssh</p>
+                  <p class="multiline-text">sudo systemctl restart ssh</p>
                 </div>
               </div>
 
@@ -1925,7 +2062,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>python3 -m venv .venv</p>
+                  <p class="multiline-text">python3 -m venv .venv</p>
                 </div>
               </div>
 
@@ -1986,7 +2123,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>source .venv/bin/activate</p>
+                  <p class="multiline-text">source .venv/bin/activate</p>
                 </div>
               </div>
 
@@ -2047,7 +2184,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>pip install -r requirements.txt</p>
+                  <p class="multiline-text">pip install -r requirements.txt</p>
                 </div>
               </div>
 
@@ -2108,7 +2245,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>pip freeze &gt; requirements.txt</p>
+                  <p class="multiline-text">pip freeze &gt; requirements.txt</p>
                 </div>
               </div>
 
@@ -2169,7 +2306,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>python main.py</p>
+                  <p class="multiline-text">python main.py</p>
                 </div>
               </div>
 
@@ -2237,7 +2374,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>crontab -e</p>
+                  <p class="multiline-text">crontab -e</p>
                 </div>
               </div>
 
@@ -2298,7 +2435,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>crontab -l</p>
+                  <p class="multiline-text">crontab -l</p>
                 </div>
               </div>
 
@@ -2359,7 +2496,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>0 12 * * * /home/sergio/proyectos/ligamx_tv_scraper/scripts/run_scraper.sh</p>
+                  <p class="multiline-text">0 12 * * * /home/sergio/proyectos/ligamx_tv_scraper/scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -2428,7 +2565,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>scripts/run_scraper.sh</p>
+                  <p class="multiline-text">scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -2496,7 +2633,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>cat scraper.log</p>
+                  <p class="multiline-text">cat scraper.log</p>
                 </div>
               </div>
 
@@ -2557,7 +2694,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>tail -n 50 scraper.log</p>
+                  <p class="multiline-text">tail -n 50 scraper.log</p>
                 </div>
               </div>
 
@@ -2618,7 +2755,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>tail -f scraper.log</p>
+                  <p class="multiline-text">tail -f scraper.log</p>
                 </div>
               </div>
 
@@ -2686,7 +2823,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl status nginx</p>
+                  <p class="multiline-text">sudo systemctl status nginx</p>
                 </div>
               </div>
 
@@ -2747,7 +2884,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl start nginx</p>
+                  <p class="multiline-text">sudo systemctl start nginx</p>
                 </div>
               </div>
 
@@ -2808,7 +2945,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl restart ssh</p>
+                  <p class="multiline-text">sudo systemctl restart ssh</p>
                 </div>
               </div>
 
@@ -2869,7 +3006,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl enable ssh</p>
+                  <p class="multiline-text">sudo systemctl enable ssh</p>
                 </div>
               </div>
 
@@ -2930,7 +3067,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>top</p>
+                  <p class="multiline-text">top</p>
                 </div>
               </div>
 
@@ -2991,7 +3128,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>htop</p>
+                  <p class="multiline-text">htop</p>
                 </div>
               </div>
 
@@ -3059,7 +3196,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>lsblk</p>
+                  <p class="multiline-text">lsblk</p>
                 </div>
               </div>
 
@@ -3120,7 +3257,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo mkdir -p /mnt/usb</p>
+                  <p class="multiline-text">sudo mkdir -p /mnt/usb</p>
                 </div>
               </div>
 
@@ -3181,7 +3318,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo mount /dev/sdb1 /mnt/usb</p>
+                  <p class="multiline-text">sudo mount /dev/sdb1 /mnt/usb</p>
                 </div>
               </div>
 
@@ -3242,7 +3379,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls /mnt/usb</p>
+                  <p class="multiline-text">ls /mnt/usb</p>
                 </div>
               </div>
 
@@ -3303,7 +3440,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo umount /mnt/usb</p>
+                  <p class="multiline-text">sudo umount /mnt/usb</p>
                 </div>
               </div>
 
@@ -3371,7 +3508,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/systemd/logind.conf</p>
+                  <p class="multiline-text">sudo nano /etc/systemd/logind.conf</p>
                 </div>
               </div>
 
@@ -3436,7 +3573,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>Agregar estas líneas en /etc/systemd/logind.conf</p>
+                  <p class="multiline-text">Agregar estas líneas en /etc/systemd/logind.conf</p>
                 </div>
               </div>
 
@@ -3497,7 +3634,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl restart systemd-logind</p>
+                  <p class="multiline-text">sudo systemctl restart systemd-logind</p>
                 </div>
               </div>
 
@@ -3558,7 +3695,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</p>
+                  <p class="multiline-text">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</p>
                 </div>
               </div>
 
@@ -3626,7 +3763,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo apt install -y nginx</p>
+                  <p class="multiline-text">sudo apt install -y nginx</p>
                 </div>
               </div>
 
@@ -3687,7 +3824,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl status nginx</p>
+                  <p class="multiline-text">sudo systemctl status nginx</p>
                 </div>
               </div>
 
@@ -3750,7 +3887,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl enable nginx</p>
+                  <p class="multiline-text">sudo systemctl enable nginx</p>
                 </div>
               </div>
 
@@ -3811,7 +3948,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo mkdir -p /var/www/linux-cheatsheet</p>
+                  <p class="multiline-text">sudo mkdir -p /var/www/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -3872,7 +4009,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo chown -R $USER:$USER /var/www/linux-cheatsheet</p>
+                  <p class="multiline-text">sudo chown -R $USER:$USER /var/www/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -3933,7 +4070,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/nginx/sites-available/linux-cheatsheet</p>
+                  <p class="multiline-text">sudo nano /etc/nginx/sites-available/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -4014,7 +4151,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>Guardar este bloque en /etc/nginx/sites-available/linux-cheatsheet</p>
+                  <p class="multiline-text">Guardar este bloque en /etc/nginx/sites-available/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -4075,7 +4212,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</p>
+                  <p class="multiline-text">sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</p>
                 </div>
               </div>
 
@@ -4136,7 +4273,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nginx -t</p>
+                  <p class="multiline-text">sudo nginx -t</p>
                 </div>
               </div>
 
@@ -4197,7 +4334,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl reload nginx</p>
+                  <p class="multiline-text">sudo systemctl reload nginx</p>
                 </div>
               </div>
 
@@ -4265,7 +4402,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>type ls</p>
+                  <p class="multiline-text">type ls</p>
                 </div>
               </div>
 
@@ -4326,7 +4463,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls --help</p>
+                  <p class="multiline-text">ls --help</p>
                 </div>
               </div>
 
@@ -4387,7 +4524,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>man ls</p>
+                  <p class="multiline-text">man ls</p>
                 </div>
               </div>
 
@@ -4425,6 +4562,139 @@ sudo systemctl enable nginx</code></pre>
               </div>
             </article>
             
+
+            <article class="item searchable-item" data-tags="linux comandos ayuda" data-search="apropos el comando apropos busca en las páginas del manual por palabras clave y muestra una lista de comandos relacionados con esas palabras. es útil para encontrar comandos cuando no recuerdas su nombre exacto pero sabes qué función cumplen. cuando no recuerdas el nombre de un comando específico , le puedes mandar palabras clave y te mostrará comandos relacionados. no recordaba el comando exacto para listar archivos ocultos, pero sabía que tenía que ver con &#x27;directory&#x27; o &#x27;files&#x27;. apropos directory usar cuando no recuerdas el nombre del comando exacto información de comandos linux comandos ayuda help type man basic high">
+              <div class="label">Comando</div>
+              <pre><code>apropos</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El comando apropos busca en las páginas del manual por palabras clave y muestra una lista de comandos relacionados con esas palabras. Es útil para encontrar comandos cuando no recuerdas su nombre exacto pero sabes qué función cumplen.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando no recuerdas el nombre de un comando específico , le puedes mandar palabras clave y te mostrará comandos relacionados.</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>No recordaba el comando exacto para listar archivos ocultos, pero sabía que tenía que ver con &#x27;directory&#x27; o &#x27;files&#x27;.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p class="multiline-text">apropos directory</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-15</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Usar cuando no recuerdas el nombre del comando exacto</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">linux</span><span class="tag">comandos</span><span class="tag">ayuda</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li>help</li><li>type</li><li>man</li>
+                </ul>
+              </div>
+            </article>
+            
+              </div>
+            </section>
+            
+
+            <section id="Atajos comandos" class="card section-card">
+              <h2 class="section-title">Atajos y trucos para comandos</h2>
+              <div class="items">
+                
+            <article class="item searchable-item" data-tags="comando atajo diagonal" data-search="uso de caracter \ el carácter de barra invertida (\) se utiliza para indicar que un comando continúa en la siguiente línea. esto es útil para mejorar la legibilidad de comandos largos o complejos, permitiendo dividirlos en varias líneas sin ejecutarlos hasta que se complete el comando. cuando quieras ejecutar un comando largo y quieras dividirlo en varias líneas para mejorar su legibilidad tenía un comando largo que era difícil de leer en una sola línea, y al usar \ pude dividirlo en varias líneas sin ejecutarlo hasta que estuviera completo. ls -la \
+  /home/sergio \
+  /home/sergio/documents útil para mejorar la legibilidad de comandos largos o complejos atajos y trucos para comandos comando atajo diagonal    basic high">
+              <div class="label">Comando</div>
+              <pre><code>Uso de caracter \</code></pre>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Descripción</div>
+                  <p>El carácter de barra invertida (\) se utiliza para indicar que un comando continúa en la siguiente línea. Esto es útil para mejorar la legibilidad de comandos largos o complejos, permitiendo dividirlos en varias líneas sin ejecutarlos hasta que se complete el comando.</p>
+                </div>
+                <div>
+                  <div class="label">Caso de uso</div>
+                  <p>Cuando quieras ejecutar un comando largo y quieras dividirlo en varias líneas para mejorar su legibilidad</p>
+                </div>
+              </div>
+
+              <div class="item-grid">
+                <div>
+                  <div class="label">Problema que resuelve</div>
+                  <p>Tenía un comando largo que era difícil de leer en una sola línea, y al usar \ pude dividirlo en varias líneas sin ejecutarlo hasta que estuviera completo.</p>
+                </div>
+                <div>
+                  <div class="label">Ejemplo</div>
+                  <p class="multiline-text">ls -la \
+  /home/sergio \
+  /home/sergio/Documents</p>
+                </div>
+              </div>
+
+              <div class="meta-grid">
+                <div class="meta-box">
+                  <div class="label">Nivel</div>
+                  <p>basic</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Confianza</div>
+                  <p>high</p>
+                </div>
+                <div class="meta-box">
+                  <div class="label">Fecha de aprendizaje</div>
+                  <p>2026-04-15</p>
+                </div>
+              </div>
+
+              <div class="extra-grid">
+                <div class="extra-box">
+                  <div class="label">Notas</div>
+                  <p>Útil para mejorar la legibilidad de comandos largos o complejos</p>
+                </div>
+                <div class="extra-box">
+                  <div class="label">Tags</div>
+                  <div class="tags"><span class="tag">comando</span><span class="tag">atajo</span><span class="tag">diagonal</span></div>
+                </div>
+              </div>
+
+              <div class="related-box">
+                <div class="label">Relacionados</div>
+                <ul class="related-list">
+                  <li></li><li></li><li></li>
+                </ul>
+              </div>
+            </article>
+            
               </div>
             </section>
             
@@ -4455,7 +4725,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls -la /var/www</p>
+                  <p class="multiline-text">ls -la /var/www</p>
                 </div>
               </div>
 
@@ -4516,7 +4786,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls -ltr /Documents/Proyectos_SAM</p>
+                  <p class="multiline-text">ls -ltr /Documents/Proyectos_SAM</p>
                 </div>
               </div>
 
@@ -4577,7 +4847,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>pwd</p>
+                  <p class="multiline-text">pwd</p>
                 </div>
               </div>
 
@@ -4642,7 +4912,7 @@ cd /ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>cd ~/proyectos/ligamx_tv_scraper</p>
+                  <p class="multiline-text">cd ~/proyectos/ligamx_tv_scraper</p>
                 </div>
               </div>
 
@@ -4712,7 +4982,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>mkdir -p ~/proyectos/linux_cheatsheet/output</p>
+                  <p class="multiline-text">mkdir -p ~/proyectos/linux_cheatsheet/output</p>
                 </div>
               </div>
 
@@ -4773,7 +5043,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>touch scraper.log</p>
+                  <p class="multiline-text">touch scraper.log</p>
                 </div>
               </div>
 
@@ -4834,7 +5104,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>cat scraper.log</p>
+                  <p class="multiline-text">cat scraper.log</p>
                 </div>
               </div>
 
@@ -4895,7 +5165,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>less /var/log/syslog</p>
+                  <p class="multiline-text">less /var/log/syslog</p>
                 </div>
               </div>
 
@@ -4956,7 +5226,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/ssh/sshd_config</p>
+                  <p class="multiline-text">sudo nano /etc/ssh/sshd_config</p>
                 </div>
               </div>
 
@@ -5024,7 +5294,7 @@ mkdir -p ruta/completa</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>chmod +x scripts/run_scraper.sh</p>
+                  <p class="multiline-text">chmod +x scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -5087,7 +5357,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>./scripts/run_scraper.sh</p>
+                  <p class="multiline-text">./scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -5155,7 +5425,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ip a</p>
+                  <p class="multiline-text">ip a</p>
                 </div>
               </div>
 
@@ -5216,7 +5486,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ip route</p>
+                  <p class="multiline-text">ip route</p>
                 </div>
               </div>
 
@@ -5277,7 +5547,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ping 192.168.100.42</p>
+                  <p class="multiline-text">ping 192.168.100.42</p>
                 </div>
               </div>
 
@@ -5338,7 +5608,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>nmap -sn 192.168.100.0/24</p>
+                  <p class="multiline-text">nmap -sn 192.168.100.0/24</p>
                 </div>
               </div>
 
@@ -5399,7 +5669,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>nmap -p 22 192.168.100.42</p>
+                  <p class="multiline-text">nmap -p 22 192.168.100.42</p>
                 </div>
               </div>
 
@@ -5460,7 +5730,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>arp -a</p>
+                  <p class="multiline-text">arp -a</p>
                 </div>
               </div>
 
@@ -5521,7 +5791,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ip neigh</p>
+                  <p class="multiline-text">ip neigh</p>
                 </div>
               </div>
 
@@ -5589,7 +5859,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ssh sergio@192.168.100.42</p>
+                  <p class="multiline-text">ssh sergio@192.168.100.42</p>
                 </div>
               </div>
 
@@ -5650,7 +5920,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ssh -C sergio@192.168.100.42</p>
+                  <p class="multiline-text">ssh -C sergio@192.168.100.42</p>
                 </div>
               </div>
 
@@ -5711,7 +5981,7 @@ bash run_scraper.sh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl status ssh</p>
+                  <p class="multiline-text">sudo systemctl status ssh</p>
                 </div>
               </div>
 
@@ -5774,7 +6044,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl enable ssh</p>
+                  <p class="multiline-text">sudo systemctl enable ssh</p>
                 </div>
               </div>
 
@@ -5835,7 +6105,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/ssh/sshd_config</p>
+                  <p class="multiline-text">sudo nano /etc/ssh/sshd_config</p>
                 </div>
               </div>
 
@@ -5896,7 +6166,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>Agregar UseDNS no en /etc/ssh/sshd_config</p>
+                  <p class="multiline-text">Agregar UseDNS no en /etc/ssh/sshd_config</p>
                 </div>
               </div>
 
@@ -5957,7 +6227,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl restart ssh</p>
+                  <p class="multiline-text">sudo systemctl restart ssh</p>
                 </div>
               </div>
 
@@ -6025,7 +6295,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>python3 -m venv .venv</p>
+                  <p class="multiline-text">python3 -m venv .venv</p>
                 </div>
               </div>
 
@@ -6086,7 +6356,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>source .venv/bin/activate</p>
+                  <p class="multiline-text">source .venv/bin/activate</p>
                 </div>
               </div>
 
@@ -6147,7 +6417,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>pip install -r requirements.txt</p>
+                  <p class="multiline-text">pip install -r requirements.txt</p>
                 </div>
               </div>
 
@@ -6208,7 +6478,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>pip freeze &gt; requirements.txt</p>
+                  <p class="multiline-text">pip freeze &gt; requirements.txt</p>
                 </div>
               </div>
 
@@ -6269,7 +6539,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>python main.py</p>
+                  <p class="multiline-text">python main.py</p>
                 </div>
               </div>
 
@@ -6337,7 +6607,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>crontab -e</p>
+                  <p class="multiline-text">crontab -e</p>
                 </div>
               </div>
 
@@ -6398,7 +6668,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>crontab -l</p>
+                  <p class="multiline-text">crontab -l</p>
                 </div>
               </div>
 
@@ -6459,7 +6729,7 @@ sudo systemctl enable ssh</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>0 12 * * * /home/sergio/proyectos/ligamx_tv_scraper/scripts/run_scraper.sh</p>
+                  <p class="multiline-text">0 12 * * * /home/sergio/proyectos/ligamx_tv_scraper/scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -6528,7 +6798,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>scripts/run_scraper.sh</p>
+                  <p class="multiline-text">scripts/run_scraper.sh</p>
                 </div>
               </div>
 
@@ -6596,7 +6866,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>cat scraper.log</p>
+                  <p class="multiline-text">cat scraper.log</p>
                 </div>
               </div>
 
@@ -6657,7 +6927,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>tail -n 50 scraper.log</p>
+                  <p class="multiline-text">tail -n 50 scraper.log</p>
                 </div>
               </div>
 
@@ -6718,7 +6988,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>tail -f scraper.log</p>
+                  <p class="multiline-text">tail -f scraper.log</p>
                 </div>
               </div>
 
@@ -6786,7 +7056,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl status nginx</p>
+                  <p class="multiline-text">sudo systemctl status nginx</p>
                 </div>
               </div>
 
@@ -6847,7 +7117,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl start nginx</p>
+                  <p class="multiline-text">sudo systemctl start nginx</p>
                 </div>
               </div>
 
@@ -6908,7 +7178,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl restart ssh</p>
+                  <p class="multiline-text">sudo systemctl restart ssh</p>
                 </div>
               </div>
 
@@ -6969,7 +7239,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl enable ssh</p>
+                  <p class="multiline-text">sudo systemctl enable ssh</p>
                 </div>
               </div>
 
@@ -7030,7 +7300,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>top</p>
+                  <p class="multiline-text">top</p>
                 </div>
               </div>
 
@@ -7091,7 +7361,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>htop</p>
+                  <p class="multiline-text">htop</p>
                 </div>
               </div>
 
@@ -7159,7 +7429,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>lsblk</p>
+                  <p class="multiline-text">lsblk</p>
                 </div>
               </div>
 
@@ -7220,7 +7490,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo mkdir -p /mnt/usb</p>
+                  <p class="multiline-text">sudo mkdir -p /mnt/usb</p>
                 </div>
               </div>
 
@@ -7281,7 +7551,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo mount /dev/sdb1 /mnt/usb</p>
+                  <p class="multiline-text">sudo mount /dev/sdb1 /mnt/usb</p>
                 </div>
               </div>
 
@@ -7342,7 +7612,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>ls /mnt/usb</p>
+                  <p class="multiline-text">ls /mnt/usb</p>
                 </div>
               </div>
 
@@ -7403,7 +7673,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo umount /mnt/usb</p>
+                  <p class="multiline-text">sudo umount /mnt/usb</p>
                 </div>
               </div>
 
@@ -7471,7 +7741,7 @@ cd &quot;$(dirname &quot;$0&quot;)/..&quot; || exit 1
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/systemd/logind.conf</p>
+                  <p class="multiline-text">sudo nano /etc/systemd/logind.conf</p>
                 </div>
               </div>
 
@@ -7536,7 +7806,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>Agregar estas líneas en /etc/systemd/logind.conf</p>
+                  <p class="multiline-text">Agregar estas líneas en /etc/systemd/logind.conf</p>
                 </div>
               </div>
 
@@ -7597,7 +7867,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl restart systemd-logind</p>
+                  <p class="multiline-text">sudo systemctl restart systemd-logind</p>
                 </div>
               </div>
 
@@ -7658,7 +7928,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</p>
+                  <p class="multiline-text">sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target</p>
                 </div>
               </div>
 
@@ -7726,7 +7996,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo apt install -y nginx</p>
+                  <p class="multiline-text">sudo apt install -y nginx</p>
                 </div>
               </div>
 
@@ -7787,7 +8057,7 @@ HandleLidSwitchDocked=ignore</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl status nginx</p>
+                  <p class="multiline-text">sudo systemctl status nginx</p>
                 </div>
               </div>
 
@@ -7850,7 +8120,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl enable nginx</p>
+                  <p class="multiline-text">sudo systemctl enable nginx</p>
                 </div>
               </div>
 
@@ -7911,7 +8181,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo mkdir -p /var/www/linux-cheatsheet</p>
+                  <p class="multiline-text">sudo mkdir -p /var/www/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -7972,7 +8242,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo chown -R $USER:$USER /var/www/linux-cheatsheet</p>
+                  <p class="multiline-text">sudo chown -R $USER:$USER /var/www/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -8033,7 +8303,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nano /etc/nginx/sites-available/linux-cheatsheet</p>
+                  <p class="multiline-text">sudo nano /etc/nginx/sites-available/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -8114,7 +8384,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>Guardar este bloque en /etc/nginx/sites-available/linux-cheatsheet</p>
+                  <p class="multiline-text">Guardar este bloque en /etc/nginx/sites-available/linux-cheatsheet</p>
                 </div>
               </div>
 
@@ -8175,7 +8445,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</p>
+                  <p class="multiline-text">sudo ln -s /etc/nginx/sites-available/linux-cheatsheet /etc/nginx/sites-enabled/</p>
                 </div>
               </div>
 
@@ -8236,7 +8506,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo nginx -t</p>
+                  <p class="multiline-text">sudo nginx -t</p>
                 </div>
               </div>
 
@@ -8297,7 +8567,7 @@ sudo systemctl enable nginx</code></pre>
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>sudo systemctl reload nginx</p>
+                  <p class="multiline-text">sudo systemctl reload nginx</p>
                 </div>
               </div>
 

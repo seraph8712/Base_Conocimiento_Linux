@@ -310,6 +310,12 @@ p {
   color: var(--muted);
 }
 
+/* Conserva saltos de línea del JSON en campos como "Ejemplo"
+   sin perder el ajuste automático dentro de la tarjeta. */
+.multiline-text {
+  white-space: pre-wrap;
+}
+
 /* Estas tres rejillas se reutilizan dentro de cada item:
    item-grid para contenido principal,
    meta-grid para nivel/confianza/fecha,

@@ -161,7 +161,7 @@ def render_items(items: list[dict], section_title: str) -> str:
                 </div>
                 <div>
                   <div class="label">Ejemplo</div>
-                  <p>{example}</p>
+                  <p class="multiline-text">{example}</p>
                 </div>
               </div>
 

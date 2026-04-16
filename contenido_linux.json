@@ -69,6 +69,54 @@
           ],
           "date_learned": "2026-04-14",
           "confidence": "high"
+        },
+        {
+          "command": "apropos",
+          "description": "El comando apropos busca en las páginas del manual por palabras clave y muestra una lista de comandos relacionados con esas palabras. Es útil para encontrar comandos cuando no recuerdas su nombre exacto pero sabes qué función cumplen.",
+          "use_case": "Cuando no recuerdas el nombre de un comando específico , le puedes mandar palabras clave y te mostrará comandos relacionados.",
+          "problem_solved": "No recordaba el comando exacto para listar archivos ocultos, pero sabía que tenía que ver con 'directory' o 'files'.",
+          "example": "apropos directory",
+          "tags": [
+            "linux",
+            "comandos",
+            "ayuda"
+          ],
+          "level": "basic",
+          "notes": "Usar cuando no recuerdas el nombre del comando exacto",
+          "related": [
+            "help",
+            "type",
+            "man"
+          ],
+          "date_learned": "2026-04-15",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "Atajos comandos",
+      "title": "Atajos y trucos para comandos",
+      "items": [
+        {
+          "command": "Uso de caracter \\",
+          "description": "El carácter de barra invertida (\\) se utiliza para indicar que un comando continúa en la siguiente línea. Esto es útil para mejorar la legibilidad de comandos largos o complejos, permitiendo dividirlos en varias líneas sin ejecutarlos hasta que se complete el comando.",
+          "use_case": "Cuando quieras ejecutar un comando largo y quieras dividirlo en varias líneas para mejorar su legibilidad",
+          "problem_solved": "Tenía un comando largo que era difícil de leer en una sola línea, y al usar \\ pude dividirlo en varias líneas sin ejecutarlo hasta que estuviera completo.",
+          "example": "ls -la \\\n  /home/sergio \\\n  /home/sergio/Documents",
+          "tags": [
+            "comando",
+            "atajo",
+            "diagonal"
+          ],
+          "level": "basic",
+          "notes": "Útil para mejorar la legibilidad de comandos largos o complejos",
+          "related": [
+            "",
+            "",
+            ""
+          ],
+          "date_learned": "2026-04-15",
+          "confidence": "high"
         }
       ]
     },
